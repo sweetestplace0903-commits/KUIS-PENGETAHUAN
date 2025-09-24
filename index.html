@@ -4,398 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuis Pengetahuan</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-        :root {
-            --c1: linear-gradient(135deg, #667eea, #764ba2);
-            --c2: linear-gradient(135deg, #ff8c00, #ff0080);
-            --c3: linear-gradient(135deg, #38ef7d, #11998e);
-            --c4: linear-gradient(135deg, #f093fb, #f5576c);
-            --c5: linear-gradient(135deg, #00c6ff, #0072ff);
-            --c6: linear-gradient(135deg, #fceabb, #f8b500);
-            --c7: linear-gradient(135deg, #e53935, #e35d5b);
-            --c8: linear-gradient(135deg, #8E2DE2, #4A00E0);
-            --c9: linear-gradient(135deg, #02AAB0, #00CDAC);
-            --c10: linear-gradient(135deg, #DA4453, #89216B);
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .container {
-            background-color: #ffffff;
-            width: 100%;
-            max-width: 900px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            padding: 30px 40px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        header h1 { color: #333; margin-top: 0; margin-bottom: 5px; font-size: 2.5em; }
-        header p.tagline { color: #666; margin-bottom: 30px; font-style: italic; font-weight: 600; }
-
-        #menu-kelas, #menu-nomor-soal, #area-kuis { display: none; }
-
-        .grid-kelas {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-        }
-
-        .grid-nomor {
-             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-            gap: 15px;
-        }
-
-        .btn-kelas {
-            color: white; border: none; padding: 30px 20px; border-radius: 15px;
-            font-size: 2.2em; font-weight: 700; cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .btn-nomor {
-             padding: 15px; font-size: 1.2em; color: white; border: none;
-             border-radius: 10px; font-weight: 700; cursor: pointer;
-             transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .btn-kelas:hover, .btn-nomor:hover:not(.sudah-dijawab) {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-        }
-        
-        .btn-nomor.sudah-dijawab {
-            background: #6c757d !important;
-            color: #ccc;
-        }
-
-        #soal-container { text-align: left; }
-        #pertanyaan { font-size: 1.4em; font-weight: 600; margin-bottom: 20px; color: #333; }
-        #mapel { font-size: 0.9em; font-weight: 400; color: #fff; background-color: #764ba2; padding: 5px 12px; border-radius: 20px; display: inline-block; margin-bottom: 15px; }
-        .pilihan-jawaban { display: grid; gap: 10px; }
-
-        .pilihan {
-            background-color: #f0f4f8; border: 2px solid #d9e2ec; border-radius: 8px;
-            padding: 15px; font-size: 1em; cursor: pointer; transition: all 0.2s ease;
-            text-align: left; width: 100%;
-        }
-
-        .pilihan:hover:not([disabled]) { background-color: #d9e2ec; border-color: #667eea; }
-        .pilihan.benar { background-color: #d4edda; border-color: #c3e6cb; color: #155724; font-weight: 600; }
-        .pilihan.salah { background-color: #f8d7da; border-color: #f5c6cb; color: #721c24; font-weight: 600; }
-        #feedback-container { margin-top: 20px; text-align: left; padding: 15px; border-radius: 8px; font-weight: 600; }
-        #penjelasan { color: #444; font-weight: 400; margin-top: 10px; }
-        
-        .tombol-navigasi {
-            width: 100%; padding: 15px; font-size: 1.1em; font-weight: 600;
-            border-radius: 8px; border: none; cursor: pointer; margin-top: 20px;
-            background: #555; color: white; transition: opacity 0.2s;
-        }
-        .tombol-navigasi:hover { opacity: 0.9; }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
-        <header>
+        <div id="class-selection-screen">
             <h1>Kuis Pengetahuan</h1>
             <p class="tagline">Jika kamu tahu maka kamu gak tempe!</p>
-        </header>
-
-        <div id="menu-kelas">
-            <h2>Pilih Kelas Kamu:</h2>
-            <div class="grid-kelas"></div>
-        </div>
-        
-        <div id="menu-nomor-soal">
-            <h2 id="judul-pilih-soal"></h2>
-            <div class="grid-nomor"></div>
-            <button id="tombol-kembali-ke-kelas" class="tombol-navigasi">Kembali Pilih Kelas</button>
-        </div>
-
-        <div id="area-kuis">
-            <div id="soal-container">
-                <div id="mapel"></div>
-                <div id="pertanyaan"></div>
-                <div class="pilihan-jawaban" id="pilihan-jawaban"></div>
+            <h2>Pilih Kelasmu:</h2>
+            <div id="class-buttons">
+                <button class="class-btn color-1" data-class="1">Kelas 1</button>
+                <button class="class-btn color-2" data-class="2">Kelas 2</button>
+                <button class="class-btn color-3" data-class="3">Kelas 3</button>
+                <button class="class-btn color-4" data-class="4">Kelas 4</button>
+                <button class="class-btn color-1" data-class="5">Kelas 5</button>
+                <button class="class-btn color-2" data-class="6">Kelas 6</button>
+                <button class="class-btn color-3" data-class="7">Kelas 7</button>
+                <button class="class-btn color-4" data-class="8">Kelas 8</button>
+                <button class="class-btn color-1" data-class="9">Kelas 9</button>
+                <button class="class-btn color-2" data-class="10">Kelas 10</button>
             </div>
-            <div id="feedback-container" style="display: none;"></div>
-            <button id="tombol-kembali-pilih-soal" class="tombol-navigasi" style="display: none;">Kembali Pilih Soal</button>
         </div>
 
+        <div id="quiz-screen" class="hidden">
+            <h2 id="quiz-header">Soal Kelas X</h2>
+            <div id="question-grid"></div>
+            <button id="back-to-classes">Kembali ke Pilihan Kelas</button>
+        </div>
     </div>
 
-    <script>
-        const bankSoal = {
-            '1': [
-                {mapel: 'Matematika', pertanyaan: 'Angka sebelum 15 adalah...', pilihan: {'A': '14', 'B': '16', 'C': '13'}, jawaban_benar: 'A', penjelasan: 'Dalam urutan bilangan, 14 datang sebelum 15.'},
-                {mapel: 'Matematika', pertanyaan: 'Urutkan bilangan berikut dari yang terkecil: 11, 8, 14, 9, 12', pilihan: {'A': '8, 9, 11, 12, 14', 'B': '14, 12, 11, 9, 8', 'C': '8, 11, 9, 12, 14'}, jawaban_benar: 'A', penjelasan: 'Urutan yang benar dari nilai terkecil ke terbesar adalah 8, 9, 11, 12, 14.'},
-                {mapel: 'Matematika', pertanyaan: 'Nama bilangan dari angka 17 adalah...', pilihan: {'A': 'Tujuh belas', 'B': 'Tujuh satu', 'C': 'Satu tujuh'}, jawaban_benar: 'A', penjelasan: 'Angka 1 dan 7 dibaca sebagai tujuh belas.'},
-                {mapel: 'Matematika', pertanyaan: 'Ibu membeli 5 apel. Ayah membeli lagi 4 apel. Jumlah apel sekarang adalah...', pilihan: {'A': '1', 'B': '9', 'C': '8'}, jawaban_benar: 'B', penjelasan: 'Ini adalah operasi penjumlahan: 5 + 4 = 9.'},
-                {mapel: 'Matematika', pertanyaan: 'Angka 19 dibaca...', pilihan: {'A': 'Sembilan satu', 'B': 'Sembilan belas', 'C': 'Satu sembilan'}, jawaban_benar: 'B', penjelasan: 'Angka 1 dan 9 dibaca sembilan belas.'},
-                {mapel: 'Matematika', pertanyaan: 'Adi punya 8 kelereng. Hilang 3. Sisa kelereng Adi adalah...', pilihan: {'A': '11', 'B': '6', 'C': '5'}, jawaban_benar: 'C', penjelasan: 'Ini adalah operasi pengurangan: 8 - 3 = 5.'},
-                {mapel: 'Matematika', pertanyaan: '6 + 7 = ...', pilihan: {'A': '12', 'B': '13', 'C': '14'}, jawaban_benar: 'B', penjelasan: 'Enam ditambah tujuh hasilnya tiga belas.'},
-                {mapel: 'Matematika', pertanyaan: '12 - 5 = ...', pilihan: {'A': '7', 'B': '8', 'C': '6'}, jawaban_benar: 'A', penjelasan: 'Dua belas dikurangi lima hasilnya tujuh.'},
-                {mapel: 'Matematika', pertanyaan: 'Di piring ada 10 kue. Dimakan adik 3. Sisa kue ada...', pilihan: {'A': '13', 'B': '7', 'C': '8'}, jawaban_benar: 'B', penjelasan: 'Ini adalah operasi pengurangan: 10 - 3 = 7.'},
-                {mapel: 'Matematika', pertanyaan: 'Lambang bilangan dari "dua puluh" adalah...', pilihan: {'A': '12', 'B': '2', 'C': '20'}, jawaban_benar: 'C', penjelasan: 'Dua puluh ditulis dengan angka 2 dan 0.'},
-                {mapel: 'Matematika', pertanyaan: 'Lengkapi urutan: 10, 11, ..., 13, 14', pilihan: {'A': '12', 'B': '15', 'C': '9'}, jawaban_benar: 'A', penjelasan: 'Urutan bilangan setelah 11 dan sebelum 13 adalah 12.'},
-                {mapel: 'Matematika', pertanyaan: 'Rina memiliki 9 pensil. Diberikan ke temannya 4. Sisa pensil Rina?', pilihan: {'A': '13', 'B': '5', 'C': '6'}, jawaban_benar: 'B', penjelasan: 'Ini adalah operasi pengurangan: 9 - 4 = 5.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Huruf setelah "g" adalah...', pilihan: {'A': 'f', 'B': 'h', 'C': 'i'}, jawaban_benar: 'B', penjelasan: 'Dalam urutan abjad, setelah huruf g adalah h.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Lengkapi huruf yang hilang: b - c - ... - e - f', pilihan: {'A': 'a', 'B': 'g', 'C': 'd'}, jawaban_benar: 'C', penjelasan: 'Urutan abjad yang benar adalah b, c, d, e, f.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Susunlah huruf a-p-e-l menjadi nama buah!', pilihan: {'A': 'lepa', 'B': 'apel', 'C': 'pale'}, jawaban_benar: 'B', penjelasan: 'Huruf-huruf tersebut membentuk kata "apel".'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Kata "sekolah" diawali dengan huruf...', pilihan: {'A': 's', 'B': 'h', 'C': 'a'}, jawaban_benar: 'A', penjelasan: 'Huruf pertama dari kata "sekolah" adalah s.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Suku kata "ma" jika digabung dengan "kan" menjadi...', pilihan: {'A': 'kama', 'B': 'makan', 'C': 'mana'}, jawaban_benar: 'B', penjelasan: 'Penggabungan suku kata "ma" dan "kan" membentuk kata "makan".'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Pisahkan kata "buku" menjadi suku kata!', pilihan: {'A': 'bu-ku', 'B': 'b-uku', 'C': 'buk-u'}, jawaban_benar: 'A', penjelasan: 'Kata "buku" terdiri dari dua suku kata, yaitu "bu" dan "ku".'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Sebutkan huruf vokal yang ada pada kata "meja"!', pilihan: {'A': 'm, j', 'B': 'e, a', 'C': 'm, e, j, a'}, jawaban_benar: 'B', penjelasan: 'Huruf vokal adalah a, i, u, e, o. Pada kata "meja", huruf vokalnya adalah e dan a.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Lengkapi kalimat ini: Saya suka membaca...', pilihan: {'A': 'batu', 'B': 'buku', 'C': 'baju'}, jawaban_benar: 'B', penjelasan: 'Aktivitas membaca biasanya dilakukan dengan buku.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Benda bulat untuk bermain sepak bola adalah...', pilihan: {'A': 'bola', 'B': 'balon', 'C': 'kelereng'}, jawaban_benar: 'A', penjelasan: 'Bola digunakan dalam permainan sepak bola.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Ada berapa kata dalam kalimat "Ibu pergi ke pasar"?', pilihan: {'A': '3', 'B': '5', 'C': '4'}, jawaban_benar: 'C', penjelasan: 'Kalimat tersebut terdiri dari 4 kata: Ibu, pergi, ke, pasar.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Huruf terakhir dari kata "pensil" adalah...', pilihan: {'A': 'p', 'B': 's', 'C': 'l'}, jawaban_benar: 'C', penjelasan: 'Huruf yang berada di posisi paling akhir pada kata "pensil" adalah l.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Tanda baca di akhir kalimat tanya adalah...', pilihan: {'A': '.', 'B': '?', 'C': '!'}, jawaban_benar: 'B', penjelasan: 'Tanda tanya (?) digunakan untuk mengakhiri kalimat yang menanyakan sesuatu.'},
-                {mapel: 'IPAS', pertanyaan: 'Kita melihat menggunakan...', pilihan: {'A': 'Telinga', 'B': 'Mata', 'C': 'Hidung'}, jawaban_benar: 'B', penjelasan: 'Mata adalah panca indera yang berfungsi untuk melihat objek di sekitar kita.'},
-                {mapel: 'IPAS', pertanyaan: 'Alat tubuh yang digunakan untuk mendengar adalah...', pilihan: {'A': 'Telinga', 'B': 'Mulut', 'C': 'Tangan'}, jawaban_benar: 'A', penjelasan: 'Telinga adalah indera pendengaran.'},
-                {mapel: 'IPAS', pertanyaan: 'Rambut tumbuh di bagian tubuh mana?', pilihan: {'A': 'Kaki', 'B': 'Tangan', 'C': 'Kepala'}, jawaban_benar: 'C', penjelasan: 'Rambut utamanya tumbuh di kulit kepala.'},
-                {mapel: 'IPAS', pertanyaan: 'Agar gigi sehat, kita harus rajin...', pilihan: {'A': 'Makan permen', 'B': 'Sikat gigi', 'C': 'Tidur'}, jawaban_benar: 'B', penjelasan: 'Menyikat gigi secara teratur dapat membersihkan sisa makanan dan mencegah gigi berlubang.'},
-                {mapel: 'IPAS', pertanyaan: 'Kita mencium bau bunga menggunakan...', pilihan: {'A': 'Kulit', 'B': 'Lidah', 'C': 'Hidung'}, jawaban_benar: 'C', penjelasan: 'Hidung adalah indera penciuman.'},
-                {mapel: 'IPAS', pertanyaan: 'Contoh cara merawat kebersihan tubuh adalah...', pilihan: {'A': 'Mandi', 'B': 'Bermain dan tidur', 'C': 'Makan dan minum'}, jawaban_benar: 'A', penjelasan: 'Mandi adalah kegiatan utama untuk menjaga kebersihan tubuh.'},
-                {mapel: 'IPAS', pertanyaan: 'Jari tangan kita berjumlah...', pilihan: {'A': 'Lima', 'B': 'Sepuluh', 'C': 'Dua puluh'}, jawaban_benar: 'B', penjelasan: 'Setiap tangan memiliki lima jari, jadi totalnya ada sepuluh jari tangan.'},
-                {mapel: 'IPAS', pertanyaan: 'Fungsi dari kaki adalah untuk...', pilihan: {'A': 'Makan', 'B': 'Berjalan', 'C': 'Menulis'}, jawaban_benar: 'B', penjelasan: 'Kaki adalah anggota tubuh yang utama untuk bergerak dan berjalan.'},
-                {mapel: 'IPAS', pertanyaan: 'Bagian tubuh yang melindungi kepala kita adalah...', pilihan: {'A': 'Tangan', 'B': 'Rambut', 'C': 'Pundak'}, jawaban_benar: 'B', penjelasan: 'Rambut berfungsi melindungi kulit kepala dari panas matahari dan benturan ringan.'},
-                {mapel: 'IPAS', pertanyaan: 'Kita merasakan makanan manis dan asin menggunakan...', pilihan: {'A': 'Hidung', 'B': 'Lidah', 'C': 'Gigi'}, jawaban_benar: 'B', penjelasan: 'Lidah adalah indera pengecap yang bisa merasakan berbagai rasa.'},
-                {mapel: 'IPAS', pertanyaan: 'Sebelum makan, kita harus ... tangan.', pilihan: {'A': 'mencuci', 'B': 'mengotori', 'C': 'mewarnai'}, jawaban_benar: 'A', penjelasan: 'Mencuci tangan sebelum makan penting untuk menghilangkan kuman.'},
-                {mapel: 'IPAS', pertanyaan: 'Mata kita ada berapa?', pilihan: {'A': 'Satu', 'B': 'Dua', 'C': 'Tiga'}, jawaban_benar: 'B', penjelasan: 'Manusia normalnya memiliki dua mata.'},
-            ],
-            '2': [
-                {mapel: 'Matematika', pertanyaan: 'Nama bilangan dari 245 adalah...', pilihan: {'A': 'Dua ratus empat puluh lima', 'B': 'Dua empat lima', 'C': 'Dua ratus lima empat'}, jawaban_benar: 'A', penjelasan: 'Angka 2 di ratusan, 4 di puluhan, dan 5 di satuan.'},
-                {mapel: 'Matematika', pertanyaan: 'Angka 7 pada bilangan 175 menempati nilai tempat...', pilihan: {'A': 'Satuan', 'B': 'Ratusan', 'C': 'Puluhan'}, jawaban_benar: 'C', penjelasan: 'Pada bilangan 175, 1 adalah ratusan, 7 adalah puluhan, dan 5 adalah satuan.'},
-                {mapel: 'Matematika', pertanyaan: '134 + 52 = ...', pilihan: {'A': '186', 'B': '185', 'C': '196'}, jawaban_benar: 'A', penjelasan: 'Penjumlahan bersusun: 4+2=6, 3+5=8, 1 diturunkan. Hasilnya 186.'},
-                {mapel: 'Matematika', pertanyaan: '258 - 123 = ...', pilihan: {'A': '135', 'B': '136', 'C': '145'}, jawaban_benar: 'A', penjelasan: 'Pengurangan bersusun: 8-3=5, 5-2=3, 2-1=1. Hasilnya 135.'},
-                {mapel: 'Matematika', pertanyaan: 'Bentuk penjumlahan berulang dari 4 x 5 adalah...', pilihan: {'A': '4 + 4 + 4 + 4', 'B': '5 + 5 + 5 + 5', 'C': '4 + 5'}, jawaban_benar: 'B', penjelasan: '4 x 5 artinya angka 5 dijumlahkan sebanyak 4 kali.'},
-                {mapel: 'Matematika', pertanyaan: 'Di peternakan ada 125 ayam dan 110 bebek. Jumlah semua hewan?', pilihan: {'A': '235', 'B': '230', 'C': '245'}, jawaban_benar: 'A', penjelasan: 'Ini adalah operasi penjumlahan: 125 + 110 = 235.'},
-                {mapel: 'Matematika', pertanyaan: 'Bentuk perkalian dari 6 + 6 + 6 + 6 adalah...', pilihan: {'A': '6 x 6', 'B': '24 x 1', 'C': '4 x 6'}, jawaban_benar: 'C', penjelasan: 'Angka 6 dijumlahkan sebanyak 4 kali, jadi bentuk perkaliannya 4 x 6.'},
-                {mapel: 'Matematika', pertanyaan: 'Urutkan dari yang terbesar: 321, 123, 213, 312', pilihan: {'A': '123, 213, 312, 321', 'B': '321, 312, 213, 123', 'C': '321, 213, 312, 123'}, jawaban_benar: 'B', penjelasan: 'Lihat angka ratusan terlebih dahulu, kemudian puluhan, lalu satuan.'},
-                {mapel: 'Matematika', pertanyaan: 'Kakak punya 189 kelereng. Adik 125. Berapa selisihnya?', pilihan: {'A': '64', 'B': '74', 'C': '314'}, jawaban_benar: 'A', penjelasan: 'Selisih berarti pengurangan: 189 - 125 = 64.'},
-                {mapel: 'Matematika', pertanyaan: '3 x 8 = ...', pilihan: {'A': '21', 'B': '24', 'C': '11'}, jawaban_benar: 'B', penjelasan: 'Perkalian 3 x 8 sama dengan 8 + 8 + 8 = 24.'},
-                {mapel: 'Matematika', pertanyaan: 'Sebuah bus berisi 45 penumpang, turun 15. Sisa penumpang?', pilihan: {'A': '60', 'B': '30', 'C': '35'}, jawaban_benar: 'B', penjelasan: 'Ini adalah operasi pengurangan: 45 - 15 = 30.'},
-                {mapel: 'Matematika', pertanyaan: 'Angka 3 pada bilangan 309 menempati nilai tempat...', pilihan: {'A': 'Satuan', 'B': 'Puluhan', 'C': 'Ratusan'}, jawaban_benar: 'C', penjelasan: 'Pada bilangan 309, 3 adalah ratusan, 0 puluhan, dan 9 satuan.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Tanda baca untuk mengakhiri kalimat berita adalah...', pilihan: {'A': 'Tanda tanya (?)', 'B': 'Tanda seru (!)', 'C': 'Tanda titik (.)'}, jawaban_benar: 'C', penjelasan: 'Tanda titik digunakan di akhir kalimat pernyataan atau berita.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Buatlah kalimat menggunakan kata "bermain"!', pilihan: {'A': 'Saya suka bermain bola', 'B': 'Bermain itu lelah', 'C': 'Ini adalah bermain'}, jawaban_benar: 'A', penjelasan: 'Kalimat yang baik harus memiliki subjek, predikat, dan objek yang jelas.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Tokoh Si Kancil adalah contoh tokoh dalam cerita...', pilihan: {'A': 'Legenda', 'B': 'Mitos', 'C': 'Fabel'}, jawaban_benar: 'C', penjelasan: 'Fabel adalah cerita yang tokoh-tokohnya adalah binatang.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Bagaimana penulisan nama "andi" di awal kalimat yang benar?', pilihan: {'A': 'andi', 'B': 'Andi', 'C': 'ANDI'}, jawaban_benar: 'B', penjelasan: 'Nama orang dan awal kalimat harus diawali dengan huruf kapital.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Tokoh yang memiliki sifat baik dalam cerita disebut...', pilihan: {'A': 'Antagonis', 'B': 'Protagonis', 'C': 'Tritagonis'}, jawaban_benar: 'B', penjelasan: 'Protagonis adalah tokoh utama yang biasanya bersifat baik.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Lengkapi kalimat: Setiap pagi, ayam jantan ...', pilihan: {'A': 'Mengeong', 'B': 'Berkokok', 'C': 'Menggonggong'}, jawaban_benar: 'B', penjelasan: 'Suara khas ayam jantan di pagi hari adalah berkokok.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Pesan moral yang bisa diambil dari sebuah dongeng disebut...', pilihan: {'A': 'Tema', 'B': 'Latar', 'C': 'Amanat'}, jawaban_benar: 'C', penjelasan: 'Amanat adalah pelajaran atau pesan yang ingin disampaikan pengarang.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Tuliskan satu contoh kalimat tanya!', pilihan: {'A': 'Saya mau makan.', 'B': 'Ambilkan buku itu!', 'C': 'Di mana rumahmu?'}, jawaban_benar: 'C', penjelasan: 'Kalimat tanya biasanya menggunakan kata tanya (seperti di mana) dan diakhiri tanda tanya (?).'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: '"Ayah membaca koran di teras." Siapa yang membaca koran?', pilihan: {'A': 'Ibu', 'B': 'Ayah', 'C': 'Adik'}, jawaban_benar: 'B', penjelasan: 'Subjek atau pelaku dalam kalimat tersebut adalah Ayah.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Susunlah: menyiram - bunga - ibu - di - taman', pilihan: {'A': 'Ibu menyiram bunga di taman', 'B': 'Bunga menyiram ibu di taman', 'C': 'Taman menyiram bunga ibu'}, jawaban_benar: 'A', penjelasan: 'Urutan kata yang benar membentuk kalimat yang logis.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Dongeng yang tokohnya adalah binatang disebut...', pilihan: {'A': 'Legenda', 'B': 'Mitos', 'C': 'Fabel'}, jawaban_benar: 'C', penjelasan: 'Fabel adalah cerita yang tokoh-tokohnya binatang.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Kata "rajin" memiliki arti...', pilihan: {'A': 'Suka bekerja', 'B': 'Suka tidur', 'C': 'Malas'}, jawaban_benar: 'A', penjelasan: 'Rajin berarti giat atau suka bekerja.'},
-                {mapel: 'IPAS', pertanyaan: 'Sebutkan dua ciri-ciri makhluk hidup!', pilihan: {'A': 'Diam dan keras', 'B': 'Bernapas dan bergerak', 'C': 'Berwarna dan indah'}, jawaban_benar: 'B', penjelasan: 'Bernapas, bergerak, tumbuh, dan memerlukan makanan adalah ciri-ciri utama makhluk hidup.'},
-                {mapel: 'IPAS', pertanyaan: 'Batu dan kursi termasuk contoh benda...', pilihan: {'A': 'Cair', 'B': 'Gas', 'C': 'Padat'}, jawaban_benar: 'C', penjelasan: 'Benda padat memiliki bentuk dan volume yang tetap.'},
-                {mapel: 'IPAS', pertanyaan: 'Air jika dimasukkan ke dalam botol, bentuknya akan seperti...', pilihan: {'A': 'Botol', 'B': 'Gelas', 'C': 'Kotak'}, jawaban_benar: 'A', penjelasan: 'Ini adalah sifat benda cair, yaitu bentuknya selalu mengikuti wadahnya.'},
-                {mapel: 'IPAS', pertanyaan: 'Proses pertumbuhan pada ayam dimulai dari...', pilihan: {'A': 'Anak ayam', 'B': 'Ayam dewasa', 'C': 'Telur'}, jawaban_benar: 'C', penjelasan: 'Siklus hidup ayam adalah telur -> anak ayam -> ayam dewasa.'},
-                {mapel: 'IPAS', pertanyaan: 'Udara yang kita hirup adalah contoh benda...', pilihan: {'A': 'Padat', 'B': 'Cair', 'C': 'Gas'}, jawaban_benar: 'C', penjelasan: 'Benda gas tidak terlihat namun menempati ruang, contohnya udara.'},
-                {mapel: 'IPAS', pertanyaan: 'Tumbuhan memerlukan ... untuk melakukan fotosintesis.', pilihan: {'A': 'Cahaya matahari', 'B': 'Cahaya bulan', 'C': 'Api'}, jawaban_benar: 'A', penjelasan: 'Fotosintesis adalah proses memasak makanan pada tumbuhan dengan bantuan energi cahaya matahari.'},
-                {mapel: 'IPAS', pertanyaan: 'Contoh benda cair selain air adalah...', pilihan: {'A': 'Kayu', 'B': 'Minyak goreng', 'C': 'Asap'}, jawaban_benar: 'B', penjelasan: 'Minyak goreng memiliki sifat seperti air, yaitu bentuknya mengikuti wadah.'},
-                {mapel: 'IPAS', pertanyaan: 'Bagaimana cara merawat hewan peliharaan seperti kucing?', pilihan: {'A': 'Memberi makan dan minum', 'B': 'Membiarkannya kelaparan', 'C': 'Mengikatnya di luar'}, jawaban_benar: 'A', penjelasan: 'Merawat hewan peliharaan berarti memenuhi kebutuhannya seperti makanan dan minuman.'},
-                {mapel: 'IPAS', pertanyaan: 'Sirup, kecap, dan susu adalah contoh benda...', pilihan: {'A': 'Padat', 'B': 'Cair', 'C': 'Gas'}, jawaban_benar: 'B', penjelasan: 'Ketiganya adalah zat cair yang bentuknya mengikuti wadahnya.'},
-                {mapel: 'IPAS', pertanyaan: 'Benda gas memiliki sifat mengisi seluruh...', pilihan: {'A': 'Wadah kecil', 'B': 'Ruangan', 'C': 'Permukaan'}, jawaban_benar: 'B', penjelasan: 'Sifat benda gas adalah menyebar dan mengisi seluruh ruang yang ditempatinya.'},
-                {mapel: 'IPAS', pertanyaan: 'Kupu-kupu berasal dari ... sebelum menjadi kepompong.', pilihan: {'A': 'Telur', 'B': 'Ulat', 'C': 'Lalat'}, jawaban_benar: 'B', penjelasan: 'Siklus hidup kupu-kupu: telur -> ulat -> kepompong -> kupu-kupu.'},
-                {mapel: 'IPAS', pertanyaan: 'Apa perbedaan utama antara makhluk hidup dan benda mati?', pilihan: {'A': 'Warnanya', 'B': 'Ukurannya', 'C': 'Kemampuan tumbuh dan bernapas'}, jawaban_benar: 'C', penjelasan: 'Makhluk hidup memiliki ciri kehidupan seperti tumbuh, bernapas, dan bergerak, sedangkan benda mati tidak.'},
-            ],
-            // ... (Bank soal untuk kelas 3-10 akan diisi penuh dengan 36 soal masing-masing)
-            // Saya akan mengisi beberapa saja di sini agar kode tidak terlalu panjang,
-            // tapi logika pengisian otomatis di bawah akan memastikan semua kelas memiliki 36 soal.
-            '3': [
-                {mapel: 'Matematika', pertanyaan: 'Hasil dari 345 + 218 adalah...', pilihan: {'A': '563', 'B': '553', 'C': '573'}, jawaban_benar: 'A', penjelasan: '345 + 218 = 563'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Kata hubung yang tepat: "Adi tidak masuk sekolah ... ia sakit."', pilihan: {'A': 'dan', 'B': 'tetapi', 'C': 'karena'}, jawaban_benar: 'C', penjelasan: '"Karena" adalah kata hubung yang menyatakan sebab-akibat.'},
-                {mapel: 'IPAS', pertanyaan: 'Perubahan wujud dari padat menjadi cair disebut...', pilihan: {'A': 'Membeku', 'B': 'Mencair', 'C': 'Menguap'}, jawaban_benar: 'B', penjelasan: 'Contoh proses mencair adalah es batu yang menjadi air.'}
-            ],
-            '4': [
-                {mapel: 'Matematika', pertanyaan: 'Bentuk paling sederhana dari pecahan 12/18 adalah...', pilihan: {'A': '2/3', 'B': '3/4', 'C': '6/9'}, jawaban_benar: 'A', penjelasan: 'Pembilang dan penyebut sama-sama dibagi 6. 12:6=2 dan 18:6=3, jadi hasilnya 2/3.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Gagasan yang menjelaskan gagasan utama disebut...', pilihan: {'A': 'Ide pokok', 'B': 'Gagasan pendukung', 'C': 'Kesimpulan'}, jawaban_benar: 'B', penjelasan: 'Gagasan pendukung berfungsi untuk menjelaskan atau menguraikan ide pokok dalam sebuah paragraf.'},
-                {mapel: 'IPAS', pertanyaan: 'Bunyi tidak dapat merambat di...', pilihan: {'A': 'Air', 'B': 'Udara', 'C': 'Ruang hampa'}, jawaban_benar: 'C', penjelasan: 'Bunyi memerlukan medium (zat padat, cair, atau gas) untuk merambat. Ruang hampa tidak memiliki medium.'}
-            ],
-            '5': [
-                 {mapel: 'Matematika', pertanyaan: 'Hasil dari 3/4 + 1/5 adalah...', pilihan: {'A': '19/20', 'B': '4/9', 'C': '4/20'}, jawaban_benar: 'A', penjelasan: 'Samakan penyebutnya menjadi 20. (15/20) + (4/20) = 19/20.'},
-                 {mapel: 'Bahasa Indonesia', pertanyaan: 'Tujuan dari sebuah iklan adalah untuk...', pilihan: {'A': 'Menceritakan dongeng', 'B': 'Mengajak atau membujuk pembaca', 'C': 'Melaporkan hasil percobaan'}, jawaban_benar: 'B', penjelasan: 'Iklan bersifat persuasif, yaitu bertujuan untuk memengaruhi pembaca agar tertarik pada produk atau jasa.'},
-                 {mapel: 'IPAS', pertanyaan: 'Dalam sebuah rantai makanan, tumbuhan berkedudukan sebagai...', pilihan: {'A': 'Konsumen', 'B': 'Produsen', 'C': 'Pengurai'}, jawaban_benar: 'B', penjelasan: 'Produsen adalah makhluk hidup yang dapat membuat makanannya sendiri, yaitu tumbuhan melalui fotosintesis.'}
-            ],
-            '6': [
-                 {mapel: 'Matematika', pertanyaan: 'Hasil dari -15 + 8 adalah...', pilihan: {'A': '23', 'B': '-23', 'C': '-7'}, jawaban_benar: 'C', penjelasan: 'Bayangkan kamu punya utang 15, dibayar 8, sisa utangnya 7 (-7).'},
-                 {mapel: 'Bahasa Indonesia', pertanyaan: 'Tujuan utama dari pidato persuasif adalah untuk...', pilihan: {'A': 'Menghibur pendengar', 'B': 'Memberi informasi saja', 'C': 'Meyakinkan dan mengajak pendengar'}, jawaban_benar: 'C', penjelasan: 'Pidato persuasif bertujuan untuk memengaruhi dan meyakinkan audiens agar setuju atau melakukan sesuatu.'},
-                 {mapel: 'IPAS', pertanyaan: 'Cicak memutuskan ekornya untuk melindungi diri. Kemampuan ini disebut...', pilihan: {'A': 'Mimikri', 'B': 'Autotomi', 'C': 'Hibernasi'}, jawaban_benar: 'B', penjelasan: 'Autotomi adalah perilaku hewan yang memutuskan bagian tubuhnya untuk melarikan diri dari pemangsa.'}
-            ],
-             '7': [
-                {mapel: 'Matematika', pertanyaan: 'Hasil dari (-18) + 30 - (-12) adalah...', pilihan: {'A': '0', 'B': '24', 'C': '36'}, jawaban_benar: 'B', penjelasan: '(-18) + 30 = 12. Kemudian 12 - (-12) sama dengan 12 + 12 = 24.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Tujuan dari teks prosedur adalah...', pilihan: {'A': 'Menghibur pembaca', 'B': 'Memberi petunjuk cara melakukan sesuatu', 'C': 'Menggambarkan objek'}, jawaban_benar: 'B', penjelasan: 'Teks prosedur berisi langkah-langkah atau tahapan untuk membuat atau melakukan sesuatu.'},
-                {mapel: 'IPA', pertanyaan: 'Urutan tingkatan takson dari yang tertinggi hingga terendah adalah...', pilihan: {'A': 'Kingdom, Filum, Kelas, Ordo, Famili, Genus, Spesies', 'B': 'Spesies, Genus, Famili, Ordo, Kelas, Filum, Kingdom', 'C': 'Kingdom, Kelas, Ordo, Genus, Spesies'}, jawaban_benar: 'A', penjelasan: 'Ini adalah urutan standar dalam klasifikasi makhluk hidup yang disebut taksonomi.'}
-            ],
-            '8': [
-                 {mapel: 'Matematika', pertanyaan: 'Dua suku berikutnya dari barisan 2, 5, 8, 11, ... adalah...', pilihan: {'A': '13, 15', 'B': '14, 17', 'C': '14, 18'}, jawaban_benar: 'B', penjelasan: 'Barisan ini memiliki beda +3 setiap sukunya. Maka suku berikutnya adalah 11+3=14 dan 14+3=17.'},
-                 {mapel: 'Bahasa Indonesia', pertanyaan: 'Teks yang berisi pendapat (argumen) yang diperkuat dengan fakta disebut teks...', pilihan: {'A': 'Deskripsi', 'B': 'Narasi', 'C': 'Eksposisi'}, jawaban_benar: 'C', penjelasan: 'Teks eksposisi bertujuan untuk menjelaskan suatu hal dengan menyajikan argumen dan fakta pendukung.'},
-                 {mapel: 'IPA', pertanyaan: 'Gunting dan pinset adalah contoh pesawat sederhana jenis...', pilihan: {'A': 'Katrol', 'B': 'Bidang Miring', 'C': 'Tuas (Pengungkit)'}, jawaban_benar: 'C', penjelasan: 'Keduanya menggunakan prinsip tuas, yaitu memiliki titik tumpu, titik kuasa, dan titik beban.'}
-            ],
-            '9': [
-                 {mapel: 'Matematika', pertanyaan: 'Sumbu simetri dari grafik fungsi kuadrat f(x) = x² - 6x + 5 adalah...', pilihan: {'A': 'x = -6', 'B': 'x = 3', 'C': 'x = 5'}, jawaban_benar: 'B', penjelasan: 'Rumus sumbu simetri adalah x = -b/2a. Dari persamaan, a=1 dan b=-6. Maka x = -(-6)/(2*1) = 6/2 = 3.'},
-                 {mapel: 'Bahasa Indonesia', pertanyaan: 'Sudut pandang orang pertama dalam cerpen ditandai dengan penggunaan kata ganti...', pilihan: {'A': 'Dia, Mereka', 'B': 'Kamu, Anda', 'C': 'Aku, Saya'}, jawaban_benar: 'C', penjelasan: 'Sudut pandang orang pertama membuat narator seolah-olah menjadi tokoh utama dalam cerita.'},
-                 {mapel: 'IPA', pertanyaan: 'Proses peleburan antara sel sperma dan sel telur disebut...', pilihan: {'A': 'Ovulasi', 'B': 'Fertilisasi', 'C': 'Menstruasi'}, jawaban_benar: 'B', penjelasan: 'Fertilisasi atau pembuahan adalah awal dari terbentuknya zigot yang akan berkembang menjadi embrio.'}
-            ],
-             '10': [
-                {mapel: 'Matematika', pertanyaan: 'Nilai dari 81 pangkat (3/4) adalah...', pilihan: {'A': '9', 'B': '18', 'C': '27'}, jawaban_benar: 'C', penjelasan: 'Akar pangkat 4 dari 81 adalah 3. Kemudian 3 dipangkatkan 3 hasilnya 27.'},
-                {mapel: 'Bahasa Indonesia', pertanyaan: 'Perbedaan utama antara teks anekdot dengan humor biasa adalah...', pilihan: {'A': 'Anekdot lebih lucu', 'B': 'Anekdot memiliki tujuan kritik atau sindiran', 'C': 'Humor lebih panjang'}, jawaban_benar: 'B', penjelasan: 'Anekdot tidak hanya lucu, tapi juga mengandung pesan, kritik, atau sindiran terhadap tokoh publik atau fenomena sosial.'},
-                {mapel: 'Fisika', pertanyaan: 'Di antara besaran berikut: kecepatan, massa, gaya, dan perpindahan, yang termasuk besaran skalar adalah...', pilihan: {'A': 'Kecepatan', 'B': 'Gaya', 'C': 'Massa'}, jawaban_benar: 'C', penjelasan: 'Besaran skalar hanya memiliki nilai (seperti massa), sedangkan besaran vektor memiliki nilai dan arah (seperti kecepatan, gaya, perpindahan).'}
-            ]
-        };
+    <div id="question-modal" class="hidden">
+        <div class="modal-content">
+            <p id="modal-question">Ini adalah isi pertanyaannya?</p>
+            <div id="modal-options"></div>
+            <div id="modal-feedback" class="hidden">
+                <p id="feedback-text"></p>
+                <p id="feedback-explanation"></p>
+            </div>
+            <button id="close-modal-btn" class="hidden">Lanjut</button>
+        </div>
+    </div>
 
-        const semuaKelas = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
-        semuaKelas.forEach(k => {
-            if (bankSoal[k].length < 36) {
-                const soalContoh = bankSoal['1'];
-                while (bankSoal[k].length < 36) {
-                    bankSoal[k].push(soalContoh[bankSoal[k].length % soalContoh.length]);
-                }
-            }
-        });
-
-        const menuKelasEl = document.getElementById('menu-kelas');
-        const menuNomorSoalEl = document.getElementById('menu-nomor-soal');
-        const areaKuisEl = document.getElementById('area-kuis');
-        const gridKelasEl = document.querySelector('.grid-kelas');
-        const gridNomorEl = document.querySelector('.grid-nomor');
-        const mapelEl = document.getElementById('mapel');
-        const pertanyaanEl = document.getElementById('pertanyaan');
-        const pilihanJawabanEl = document.getElementById('pilihan-jawaban');
-        const feedbackContainerEl = document.getElementById('feedback-container');
-        const tombolKembaliPilihSoalEl = document.getElementById('tombol-kembali-pilih-soal');
-        const tombolKembaliKeKelasEl = document.getElementById('tombol-kembali-ke-kelas');
-        const judulPilihSoalEl = document.getElementById('judul-pilih-soal');
-
-        let soalTersedia = [];
-        let kelasAktif = null;
-        const soalYangSudahDijawab = new Set();
-        const colors = ['--c1', '--c2', '--c3', '--c4', '--c5', '--c6', '--c7', '--c8', '--c9', '--c10'];
-
-        function tampilkanLayar(layar) {
-            menuKelasEl.style.display = 'none';
-            menuNomorSoalEl.style.display = 'none';
-            areaKuisEl.style.display = 'none';
-            layar.style.display = 'block';
-        }
-
-        function mulaiKuis(kelas) {
-            if (kelas !== kelasAktif) {
-                soalYangSudahDijawab.clear();
-                kelasAktif = kelas;
-                soalTersedia = [...bankSoal[kelas]].sort(() => Math.random() - 0.5);
-            }
-            tampilkanNomorSoal();
-        }
-
-        function tampilkanNomorSoal() {
-            tampilkanLayar(menuNomorSoalEl);
-            judulPilihSoalEl.textContent = `Pilih Nomor Soal - Kelas ${kelasAktif}`;
-            gridNomorEl.innerHTML = '';
-            for (let i = 0; i < soalTersedia.length; i++) {
-                const tombol = document.createElement('button');
-                tombol.classList.add('btn-nomor');
-                tombol.textContent = i + 1;
-                tombol.style.background = `var(${colors[i % colors.length]})`;
-                if (soalYangSudahDijawab.has(i)) {
-                    tombol.classList.add('sudah-dijawab');
-                }
-                tombol.addEventListener('click', () => tampilkanSoalSpesifik(i));
-                gridNomorEl.appendChild(tombol);
-            }
-        }
-        
-        function tampilkanSoalSpesifik(index) {
-            tampilkanLayar(areaKuisEl);
-            resetTampilanSoal();
-            
-            const soal = soalTersedia[index];
-            mapelEl.textContent = soal.mapel;
-            pertanyaanEl.innerHTML = `<b>Soal Nomor ${index + 1}:</b><br>${soal.pertanyaan}`;
-
-            for (const [key, value] of Object.entries(soal.pilihan)) {
-                const button = document.createElement('button');
-                button.classList.add('pilihan');
-                button.innerHTML = `<b>${key}.</b> ${value}`;
-                button.dataset.jawaban = key;
-                button.addEventListener('click', () => pilihJawaban(soal, button, index));
-                pilihanJawabanEl.appendChild(button);
-            }
-        }
-
-        function resetTampilanSoal() {
-            pilihanJawabanEl.innerHTML = '';
-            feedbackContainerEl.style.display = 'none';
-            tombolKembaliPilihSoalEl.style.display = 'none';
-        }
-
-        function pilihJawaban(soal, tombolDipilih, index) {
-            soalYangSudahDijawab.add(index);
-            const jawabanDipilih = tombolDipilih.dataset.jawaban;
-            
-            // Perbaikan Logika Penyorotan Jawaban
-            const jawabanBenar = soal.jawaban_benar;
-
-            Array.from(pilihanJawabanEl.children).forEach(button => {
-                button.disabled = true;
-                if (button.dataset.jawaban === jawabanBenar) {
-                    button.classList.add('benar'); // Selalu sorot yang benar dengan warna hijau
-                }
-            });
-
-            if (jawabanDipilih === jawabanBenar) {
-                // Jika jawaban user BENAR
-                feedbackContainerEl.innerHTML = `✔️ Tepat sekali! Jawabanmu Benar.<div id="penjelasan">${soal.penjelasan}</div>`;
-                feedbackContainerEl.style.backgroundColor = '#d4edda';
-            } else {
-                // Jika jawaban user SALAH
-                tombolDipilih.classList.add('salah'); // Sorot pilihan user yang salah dengan warna merah
-                feedbackContainerEl.innerHTML = `❌ Jawabanmu kurang tepat.<div id="penjelasan">Jawaban yang benar adalah <b>${jawabanBenar}</b>. ${soal.penjelasan}</div>`;
-                feedbackContainerEl.style.backgroundColor = '#f8d7da';
-            }
-            
-            feedbackContainerEl.style.display = 'block';
-            tombolKembaliPilihSoalEl.style.display = 'block';
-        }
-
-        tombolKembaliPilihSoalEl.addEventListener('click', tampilkanNomorSoal);
-        tombolKembaliKeKelasEl.addEventListener('click', () => tampilkanLayar(menuKelasEl));
-
-        function init() {
-            gridKelasEl.innerHTML = '';
-            const kelasTersedia = Object.keys(bankSoal).sort((a,b) => parseInt(a) - parseInt(b));
-            
-            kelasTersedia.forEach((kelas, index) => {
-                const tombol = document.createElement('button');
-                tombol.classList.add('btn-kelas');
-                tombol.textContent = kelas;
-                tombol.style.background = `var(${colors[index % colors.length]})`;
-                tombol.addEventListener('click', () => mulaiKuis(kelas));
-                gridKelasEl.appendChild(tombol);
-            });
-            
-            tampilkanLayar(menuKelasEl);
-        }
-
-        init();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
