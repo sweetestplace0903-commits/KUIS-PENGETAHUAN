@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -19,19 +19,23 @@ body {
     background: #fff;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px B30px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-h1 {
+.main-title {
+    font-size: 3.5em; /* Ukuran judul lebih besar */
+    font-weight: 800;
     color: #2c3e50;
-    margin-bottom: 5px;
+    margin-bottom: 0;
+    line-height: 1.1;
 }
 
 .tagline {
+    font-size: 1.5em; /* Ukuran tagline lebih besar */
     font-style: italic;
     color: #7f8c8d;
-    margin-top: 0;
+    margin-top: 5px;
     margin-bottom: 30px;
 }
 
@@ -80,27 +84,36 @@ h1 {
 }
 
 .question-box {
-    background-color: #ecf0f1;
     height: 80px;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.8em;
-    font-weight: 700;
-    color: #34495e;
+    font-weight: 800;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: transform 0.2s;
+    color: white;
 }
 
 .question-box:hover {
-    background-color: #bdc3c7;
+    transform: scale(1.1);
 }
+
+/* Warna-warni untuk kotak soal */
+.qb-color-1 { background-color: #e74c3c; }
+.qb-color-2 { background-color: #3498db; }
+.qb-color-3 { background-color: #2ecc71; }
+.qb-color-4 { background-color: #f1c40f; }
+.qb-color-5 { background-color: #9b59b6; }
+
 
 .question-box.answered {
     background-color: #7f8c8d;
     color: #ecf0f1;
     cursor: not-allowed;
+    transform: scale(0.9);
+    opacity: 0.6;
     pointer-events: none;
 }
 

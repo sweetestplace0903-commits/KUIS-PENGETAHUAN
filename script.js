@@ -2,306 +2,872 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const quizData = {
         '1': [
-            // MATEMATIKA
-            { question: "Angka sebelum 15 adalah...", options: ["13", "14", "16", "17"], answer: "14", explanation: "Dalam urutan hitungan, angka yang berada tepat sebelum 15 adalah 14." },
-            { question: "Urutkan bilangan berikut dari yang terkecil: 11, 8, 14, 9, 12", options: ["8, 9, 11, 12, 14", "14, 12, 11, 9, 8", "8, 11, 9, 12, 14", "9, 8, 11, 12, 14"], answer: "8, 9, 11, 12, 14", explanation: "Urutan bilangan dari yang nilainya paling kecil ke paling besar adalah 8, 9, 11, 12, 14." },
-            { question: "Ibu membeli 5 buah apel. Ayah membeli lagi 4 buah apel. Berapa jumlah apel sekarang?", options: ["1 buah", "8 buah", "9 buah", "10 buah"], answer: "9 buah", explanation: "Ini adalah soal penjumlahan. Jumlah apel adalah 5 + 4 = 9 buah." },
-            { question: "Hitunglah: 12 - 5 = ...", options: ["6", "7", "8", "9"], answer: "7", explanation: "Hasil dari pengurangan 12 dengan 5 adalah 7." },
-            // BAHASA INDONESIA
-            { question: "Huruf setelah huruf 'g' adalah...", options: ["f", "h", "i", "j"], answer: "h", explanation: "Dalam urutan alfabet, setelah huruf 'g' adalah huruf 'h'." },
-            { question: "Suku kata 'ma' jika digabung dengan 'kan' menjadi...", options: ["makan", "kama", "naka", "mak"], answer: "makan", explanation: "Penggabungan suku kata 'ma' dan 'kan' membentuk kata 'makan'." },
-            { question: "Kata 'sekolah' diawali dengan huruf...", options: ["s", "e", "k", "a"], answer: "s", explanation: "Huruf pertama atau awalan dari kata 'sekolah' adalah 's'." },
-            { question: "'Ibu pergi ke pasar'. Ada berapa kata dalam kalimat tersebut?", options: ["3", "4", "5", "6"], answer: "4", explanation: "Kalimat tersebut terdiri dari 4 kata, yaitu 'Ibu', 'pergi', 'ke', dan 'pasar'." },
-            // IPAS
-            { question: "Kita melihat menggunakan...", options: ["Telinga", "Hidung", "Mata", "Mulut"], answer: "Mata", explanation: "Mata adalah panca indera yang berfungsi untuk melihat objek di sekitar kita." },
-            { question: "Alat tubuh yang digunakan untuk mendengar adalah...", options: ["Mata", "Hidung", "Lidah", "Telinga"], answer: "Telinga", explanation: "Telinga adalah panca indera yang berfungsi untuk mendengar suara." },
-            { question: "Jari tangan kita berjumlah...", options: ["5", "8", "10", "12"], answer: "10", explanation: "Manusia memiliki 5 jari di setiap tangan, sehingga totalnya adalah 10 jari tangan." },
-            { question: "Fungsi dari kaki adalah untuk...", options: ["Memegang", "Mendengar", "Berjalan", "Makan"], answer: "Berjalan", explanation: "Fungsi utama kaki pada manusia adalah untuk berjalan, berlari, dan menopang tubuh." },
-//_PASTE KODE INI DI DALAM TANDA [ ] UNTUK KELAS 1_
-            { question: "Angka 19 dibaca...", options: ["Sembilan belas", "Satu sembilan", "Sembilan satu", "Banyak"], answer: "Sembilan belas", explanation: "Angka 1 puluhan dan 9 satuan dibaca sebagai 'sembilan belas'." },
-            { question: "Lengkapi urutan bilangan ini: 10, 11, ..., 13, 14", options: ["10", "15", "12", "9"], answer: "12", explanation: "Urutan bilangan setelah 11 dan sebelum 13 adalah 12." },
-            { question: "Rina memiliki 9 pensil. Diberikan kepada temannya 4 pensil. Berapa sisa pensil Rina?", options: ["13 pensil", "5 pensil", "4 pensil", "9 pensil"], answer: "5 pensil", explanation: "Karena diberikan, jumlahnya berkurang. Sisa pensil adalah 9 - 4 = 5 pensil." },
-            { question: "Hitunglah: 6 + 7 = ...", options: ["11", "12", "13", "14"], answer: "13", explanation: "Hasil dari penjumlahan 6 ditambah 7 adalah 13." },
-            { question: "Lengkapi huruf yang hilang: b - c - ... - e - f", options: ["a", "d", "g", "h"], answer: "d", explanation: "Urutan alfabet yang benar adalah b, c, d, e, f." },
-            { question: "Pisahkan kata 'buku' menjadi suku kata!", options: ["b-u-k-u", "bu-ku", "buk-u", "b-uku"], answer: "bu-ku", explanation: "Kata 'buku' terdiri dari dua suku kata, yaitu 'bu' dan 'ku'." },
-            { question: "Sebutkan huruf vokal yang ada pada kata 'meja'!", options: ["m, j", "e, a", "m, e, j, a", "e, j"], answer: "e, a", explanation: "Huruf vokal adalah a, i, u, e, o. Pada kata 'meja', huruf vokalnya adalah 'e' dan 'a'." },
-            { question: "Huruf terakhir dari kata 'pensil' adalah...", options: ["p", "e", "s", "l"], answer: "l", explanation: "Huruf yang berada di posisi paling akhir dari kata 'pensil' adalah 'l'." },
-            { question: "Rambut tumbuh di bagian tubuh mana?", options: ["Kaki", "Tangan", "Kepala", "Perut"], answer: "Kepala", explanation: "Rambut secara alami tumbuh di kulit kepala." },
-            { question: "Agar gigi sehat, kita harus rajin...", options: ["Makan permen", "Menyikat gigi", "Minum soda", "Tidur"], answer: "Menyikat gigi", explanation: "Menyikat gigi secara teratur adalah cara utama untuk menjaga kebersihan dan kesehatan gigi." },
-            { question: "Kita mencium bau bunga menggunakan...", options: ["Mata", "Hidung", "Kulit", "Telinga"], answer: "Hidung", explanation: "Hidung adalah panca indera yang berfungsi untuk mencium berbagai macam bau." },
-            { question: "Mata kita ada berapa?", options: ["Satu", "Dua", "Tiga", "Empat"], answer: "Dua", explanation: "Manusia normalnya memiliki dua mata untuk melihat." }
+            {
+    question: "Nama bilangan dari angka 17 adalah...",
+    options: ["Tujuh belas", "Tujuh satu", "Satu tujuh"],
+    answer: "Tujuh belas",
+    explanation: "Angka 1 puluhan dan 7 satuan dibaca sebagai 'tujuh belas'."
+},
+{
+    question: "Huruf setelah huruf 'g' adalah...",
+    options: ["f", "h", "i"],
+    answer: "h",
+    explanation: "Dalam urutan alfabet, setelah huruf 'g' adalah huruf 'h'."
+},
+{
+    question: "Alat tubuh yang digunakan untuk mendengar adalah...",
+    options: ["Mata", "Hidung", "Telinga"],
+    answer: "Telinga",
+    explanation: "Telinga adalah panca indera yang berfungsi untuk mendengar suara."
+},
+{
+    question: "Ibu membeli 5 buah apel. Ayah membeli lagi 4 buah apel. Berapa jumlah apel sekarang?",
+    options: ["8 buah", "9 buah", "10 buah"],
+    answer: "9 buah",
+    explanation: "Ini adalah soal penjumlahan: 5 apel + 4 apel = 9 buah."
+},
+{
+    question: "Suku kata 'ma' jika digabung dengan 'kan' menjadi...",
+    options: ["makan", "kama", "naka"],
+    answer: "makan",
+    explanation: "Penggabungan suku kata 'ma' dan 'kan' membentuk kata 'makan'."
+},
+{
+    question: "Fungsi dari kaki adalah untuk...",
+    options: ["Memegang", "Mendengar", "Berjalan"],
+    answer: "Berjalan",
+    explanation: "Fungsi utama kaki pada manusia adalah untuk berjalan, berlari, dan menopang tubuh."
+},
+{
+    question: "Angka 19 dibaca...",
+    options: ["Sembilan belas", "Satu sembilan", "Sembilan satu"],
+    answer: "Sembilan belas",
+    explanation: "Angka 1 puluhan dan 9 satuan dibaca sebagai 'sembilan belas'."
+},
+{
+    question: "Sebutkan huruf vokal yang ada pada kata 'meja'!",
+    options: ["m, j", "e, a", "m, e, j, a"],
+    answer: "e, a",
+    explanation: "Huruf vokal adalah a, i, u, e, o. Pada kata 'meja', huruf vokalnya adalah 'e' dan 'a'."
+},
+{
+    question: "Kita mencium bau bunga menggunakan...",
+    options: ["Mata", "Hidung", "Kulit"],
+    answer: "Hidung",
+    explanation: "Hidung adalah panca indera yang berfungsi untuk mencium berbagai macam bau."
+},
+{
+    question: "Hitunglah: 12 - 5 = ...",
+    options: ["6", "7", "8"],
+    answer: "7",
+    explanation: "Hasil dari pengurangan 12 dengan 5 adalah 7."
+},
+{
+    question: "Lengkapi kalimat ini: Saya suka membaca...",
+    options: ["bola", "buku", "batu"],
+    answer: "buku",
+    explanation: "Kegiatan membaca berhubungan dengan buku."
+},
+{
+    question: "Jari tangan kita berjumlah...",
+    options: ["5", "8", "10"],
+    answer: "10",
+    explanation: "Manusia memiliki 5 jari di setiap tangan, sehingga totalnya adalah 10 jari tangan."
+},
+            { question: "Lambang sila pertama Pancasila adalah...", options: ["Rantai", "Bintang", "Pohon Beringin"], answer: "Bintang", explanation: "Sila pertama, Ketuhanan Yang Maha Esa, dilambangkan dengan bintang." },
+            { question: "Sebelum makan, sebaiknya kita ... terlebih dahulu.", options: ["Bermain", "Berdoa", "Tidur"], answer: "Berdoa", explanation: "Berdoa sebelum makan adalah bentuk rasa syukur." },
+            { question: "Datang ke sekolah harus ... waktu.", options: ["Terlambat", "Tepat", "Sesukanya"], answer: "Tepat", explanation: "Datang tepat waktu adalah salah satu aturan di sekolah." },
+            { question: "Jika berbuat salah, kita harus segera meminta ...", options: ["Hadiah", "Uang", "Maaf"], answer: "Maaf", explanation: "Meminta maaf adalah sikap yang baik jika kita berbuat salah." },
+            // BAHASA INGGRIS
+            { question: "Saat bertemu teman di pagi hari, kita mengucapkan...", options: ["Good bye", "Good night", "Good morning"], answer: "Good morning", explanation: "'Good morning' berarti 'selamat pagi'." },
+            { question: "'Buku' in English is...", options: ["Bag", "Book", "Pencil"], answer: "Book", explanation: "Bahasa Inggris dari 'buku' adalah 'book'." },
+            { question: "One, two, three, ..., five.", options: ["Four", "Six", "Ten"], answer: "Four", explanation: "Urutan angka setelah tiga (three) adalah empat (four)." },
+            { question: "The color of the sky is ... (biru)", options: ["Red", "Green", "Blue"], answer: "Blue", explanation: "Warna langit (sky) adalah biru (blue)." },
+            // BAHASA JAWA
+            { question: "Perangan awak sing gunane kanggo mlaku yaiku...", options: ["Tangan", "Sikil", "Mripat"], answer: "Sikil", explanation: "Bagian tubuh yang gunanya untuk berjalan adalah kaki (sikil)." },
+            { question: "Yen arep mangkat sekolah, pamit marang bapak lan...", options: ["Kanca", "Guru", "Ibu"], answer: "Ibu", explanation: "Saat akan berangkat sekolah, kita berpamitan kepada Bapak dan Ibu." },
+            { question: "Mripat gunane kanggo...", options: ["Mambu", "Ndeleng", "Rungokake"], answer: "Ndeleng", explanation: "Mata (mripat) gunanya untuk melihat (ndeleng)." },
+            { question: "Kuping gunane kanggo...", options: ["Mlaku", "Mangan", "Rungokake"], answer: "Rungokake", explanation: "Telinga (kuping) gunanya untuk mendengar (rungokake)." }
         ],
         '2': [
-            // MATEMATIKA
-            { question: "Nama bilangan dari 245 adalah...", options: ["Dua ratus empat lima", "Dua empat lima", "Dua ratus empat puluh lima", "Dua puluh empat lima"], answer: "Dua ratus empat puluh lima", explanation: "Angka 2 menempati ratusan, 4 puluhan, dan 5 satuan." },
-            { question: "Angka 7 pada bilangan 175 menempati nilai tempat...", options: ["Satuan", "Puluhan", "Ratusan", "Ribuan"], answer: "Puluhan", explanation: "Pada bilangan 175, angka 1 adalah ratusan, 7 adalah puluhan (bernilai 70), dan 5 adalah satuan." },
-            { question: "Bentuk perkalian dari 6 + 6 + 6 + 6 adalah...", options: ["6 x 4", "4 x 6", "6 + 4", "24"], answer: "4 x 6", explanation: "Penjumlahan berulang angka 6 sebanyak 4 kali dapat ditulis sebagai perkalian 4 x 6." },
-            { question: "3 x 8 = ...", options: ["11", "21", "24", "38"], answer: "24", explanation: "Hasil dari perkalian 3 dikali 8 adalah 24." },
-            // BAHASA INDONESIA
-            { question: "Tanda baca yang digunakan untuk mengakhiri kalimat berita adalah...", options: ["Tanda tanya (?)", "Tanda seru (!)", "Tanda koma (,)", "Tanda titik (.)"], answer: "Tanda titik (.)", explanation: "Setiap kalimat berita atau pernyataan diakhiri dengan tanda titik." },
-            { question: "Dongeng yang tokohnya adalah binatang disebut...", options: ["Legenda", "Mitos", "Fabel", "Sage"], answer: "Fabel", explanation: "Fabel adalah dongeng yang tokohnya adalah binatang yang bisa berbicara dan berperilaku seperti manusia." },
-            { question: "Tokoh yang memiliki sifat baik dalam cerita disebut tokoh...", options: ["Antagonis", "Figuran", "Tritagonis", "Protagonis"], answer: "Protagonis", explanation: "Protagonis adalah tokoh utama yang biasanya memiliki sifat baik dan menjadi pusat cerita." },
-            { question: "Pesan moral yang bisa diambil dari sebuah dongeng disebut...", options: ["Judul", "Tema", "Amanat", "Latar"], answer: "Amanat", explanation: "Amanat adalah pesan atau nasihat yang ingin disampaikan pengarang melalui ceritanya." },
-            // IPAS
-            { question: "Batu dan kursi termasuk contoh benda...", options: ["Padat", "Cair", "Gas", "Hidup"], answer: "Padat", explanation: "Benda padat memiliki bentuk dan volume yang tetap, seperti batu dan kursi." },
-            { question: "Air jika dimasukkan ke dalam botol, bentuknya akan seperti...", options: ["Botol", "Kotak", "Tetap seperti semula", "Bulat"], answer: "Botol", explanation: "Salah satu sifat benda cair adalah bentuknya berubah mengikuti wadahnya." },
-            { question: "Proses pertumbuhan pada ayam dimulai dari...", options: ["Anak ayam", "Ayam dewasa", "Telur", "Induk ayam"], answer: "Telur", explanation: "Siklus hidup ayam dimulai dari telur, kemudian menetas menjadi anak ayam, lalu tumbuh menjadi ayam dewasa." },
-            { question: "Kupu-kupu berasal dari ... sebelum menjadi kepompong.", options: ["Telur", "Ulat", "Lalat", "Nyamuk"], answer: "Ulat", explanation: "Siklus hidup kupu-kupu adalah: Telur -> Ulat (larva) -> Kepompong (pupa) -> Kupu-kupu dewasa." },
-//_PASTE KODE INI DI DALAM TANDA [ ] UNTUK KELAS 2_
-            { question: "Hitunglah: 258 - 123 = ...", options: ["125", "135", "381", "371"], answer: "135", explanation: "Hasil dari pengurangan 258 dengan 123 adalah 135." },
-            { question: "Urutkan bilangan berikut dari yang terbesar: 321, 123, 213, 312", options: ["123, 213, 312, 321", "321, 312, 213, 123", "321, 123, 213, 312", "123, 321, 312, 213"], answer: "321, 312, 213, 123", explanation: "Urutan dari nilai yang paling besar adalah 321, 312, 213, dan terakhir 123." },
-            { question: "Kakak memiliki 189 kelereng. Adik memiliki 125 kelereng. Berapa selisih kelereng mereka?", options: ["314", "64", "74", "100"], answer: "64", explanation: "Selisih adalah hasil pengurangan jumlah yang lebih banyak dengan yang lebih sedikit: 189 - 125 = 64." },
-            { question: "Angka 3 pada bilangan 309 menempati nilai tempat...", options: ["Satuan", "Puluhan", "Ratusan", "Ribuan"], answer: "Ratusan", explanation: "Pada bilangan 309, angka 3 adalah ratusan, 0 adalah puluhan, dan 9 adalah satuan." },
-            { question: "Kata 'rajin' memiliki arti...", options: ["Malas", "Suka bekerja", "Suka tidur", "Pandai"], answer: "Suka bekerja", explanation: "Rajin berarti giat, tekun, atau suka bekerja." },
-            { question: "Setiap pagi, ayam jantan...", options: ["Mengeong", "Menggonggong", "Berkokok", "Mengaum"], answer: "Berkokok", explanation: "Suara khas yang dikeluarkan ayam jantan di pagi hari adalah berkokok." },
-            { question: "Tuliskan satu contoh kalimat tanya!", options: ["Ayo bermain!", "Wah, indah sekali!", "Di mana rumahmu?", "Tolong ambilkan buku itu."], answer: "Di mana rumahmu?", explanation: "Kalimat tanya selalu berisi pertanyaan dan diakhiri dengan tanda tanya (?)." },
-            { question: "'Ayah membaca koran di teras.' Siapa yang membaca koran?", options: ["Ibu", "Adik", "Ayah", "Teras"], answer: "Ayah", explanation: "Berdasarkan kalimat tersebut, subjek atau pelaku yang melakukan kegiatan membaca koran adalah Ayah." },
-            { question: "Tumbuhan memerlukan ... untuk melakukan fotosintesis.", options: ["Oksigen", "Tanah", "Bulan", "Cahaya matahari"], answer: "Cahaya matahari", explanation: "Fotosintesis adalah proses memasak makanan pada tumbuhan yang memerlukan energi dari cahaya matahari." },
-            { question: "Sebutkan satu contoh benda cair selain air!", options: ["Batu", "Asap", "Sirup", "Kursi"], answer: "Sirup", explanation: "Sirup, minyak, dan kecap adalah contoh benda cair selain air." },
-            { question: "Sirup, kecap, dan minyak goreng adalah contoh benda...", options: ["Padat", "Gas", "Cair", "Hidup"], answer: "Cair", explanation: "Ketiga benda tersebut memiliki sifat benda cair, yaitu bentuknya mengikuti wadah dan volumenya tetap." },
-            { question: "Benda gas memiliki sifat mengisi seluruh...", options: ["Wadah", "Permukaan", "Ruangan", "Botol"], answer: "Ruangan", explanation: "Salah satu sifat utama benda gas adalah akan menyebar dan mengisi seluruh ruangan yang ditempatinya." }
+{
+    question: "Nama bilangan dari 245 adalah...",
+    options: ["Dua ratus empat lima", "Dua empat lima", "Dua ratus empat puluh lima"],
+    answer: "Dua ratus empat puluh lima",
+    explanation: "Angka 2 menempati ratusan, 4 puluhan, dan 5 satuan."
+},
+{
+    question: "Tanda baca yang digunakan untuk mengakhiri kalimat berita adalah...",
+    options: ["Tanda tanya (?)", "Tanda seru (!)", "Tanda titik (.)"],
+    answer: "Tanda titik (.)",
+    explanation: "Setiap kalimat berita atau pernyataan diakhiri dengan tanda titik."
+},
+{
+    question: "Batu dan kursi termasuk contoh benda...",
+    options: ["Padat", "Cair", "Gas"],
+    answer: "Padat",
+    explanation: "Benda padat memiliki bentuk dan volume yang tetap, seperti batu dan kursi."
+},
+{
+    question: "Bentuk perkalian dari 6 + 6 + 6 + 6 adalah...",
+    options: ["6 x 4", "4 x 6", "6 + 4"],
+    answer: "4 x 6",
+    explanation: "Penjumlahan berulang angka 6 sebanyak 4 kali dapat ditulis sebagai perkalian 4 x 6."
+},
+{
+    question: "Dongeng yang tokohnya adalah binatang disebut...",
+    options: ["Legenda", "Mitos", "Fabel"],
+    answer: "Fabel",
+    explanation: "Fabel adalah dongeng yang tokohnya adalah binatang yang bisa berbicara dan berperilaku seperti manusia."
+},
+{
+    question: "Air jika dimasukkan ke dalam botol, bentuknya akan seperti...",
+    options: ["Botol", "Kotak", "Tetap seperti semula"],
+    answer: "Botol",
+    explanation: "Salah satu sifat benda cair adalah bentuknya berubah mengikuti wadahnya."
+},
+{
+    question: "3 x 8 = ...",
+    options: ["11", "24", "38"],
+    answer: "24",
+    explanation: "Hasil dari perkalian 3 dikali 8 adalah 24."
+},
+{
+    question: "Pesan moral yang bisa diambil dari sebuah dongeng disebut...",
+    options: ["Judul", "Tema", "Amanat"],
+    answer: "Amanat",
+    explanation: "Amanat adalah pesan atau nasihat yang ingin disampaikan pengarang melalui ceritanya."
+},
+{
+    question: "Udara yang kita hirup adalah contoh benda...",
+    options: ["Padat", "Cair", "Gas"],
+    answer: "Gas",
+    explanation: "Udara merupakan campuran berbagai gas yang tidak terlihat namun menempati seluruh ruang."
+},
+{
+    question: "Sebuah bus berisi 45 penumpang. Di terminal, turun 15 penumpang. Berapa sisa penumpang di bus?",
+    options: ["30", "60", "45"],
+    answer: "30",
+    explanation: "Karena turun, jumlah penumpang berkurang. Sisa penumpang adalah 45 - 15 = 30."
+},
+{
+    question: "Susunlah kata-kata berikut: menyiram - bunga - ibu - di - taman.",
+    options: ["Ibu menyiram bunga di taman", "Taman di bunga menyiram ibu", "Bunga menyiram ibu di taman"],
+    answer: "Ibu menyiram bunga di taman",
+    explanation: "Susunan kata yang benar dan membentuk kalimat yang padu adalah 'Ibu menyiram bunga di taman'."
+},
+{
+    question: "Kupu-kupu berasal dari ... sebelum menjadi kepompong.",
+    options: ["Telur", "Ulat", "Lalat"],
+    answer: "Ulat",
+    explanation: "Siklus hidup kupu-kupu adalah: Telur -> Ulat (larva) -> Kepompong (pupa) -> Kupu-kupu dewasa."
+},
+            { question: "Membantu teman yang sedang kesusahan sesuai dengan pengamalan sila ke...", options: ["Satu", "Dua", "Tiga"], answer: "Dua", explanation: "Sila kedua, 'Kemanusiaan yang adil dan beradab', mengajarkan kita untuk saling tolong-menolong." },
+            { question: "Simbol rantai emas pada Pancasila melambangkan sila ke...", options: ["2", "3", "4"], answer: "2", explanation: "Rantai emas adalah lambang sila kedua Pancasila." },
+            { question: "Kepala banteng adalah simbol sila ke...", options: ["Tiga", "Empat", "Lima"], answer: "Empat", explanation: "Kepala banteng adalah lambang sila keempat Pancasila." },
+            { question: "Saat berdiskusi, kita harus menghargai ... orang lain.", options: ["Hinaan", "Pendapat", "Kekurangan"], answer: "Pendapat", explanation: "Menghargai pendapat orang lain adalah kunci dari musyawarah." },
+            { question: "A cow is a big animal. 'Cow' means...", options: ["Kucing", "Sapi", "Ayam"], answer: "Sapi", explanation: "Arti dari kata 'cow' dalam bahasa Inggris adalah sapi." },
+            { question: "A bird can...", options: ["Swim", "Fly", "Run"], answer: "Fly", explanation: "Seekor burung bisa terbang (fly)." },
+            { question: "There are ... days in a week.", options: ["Five", "Six", "Seven"], answer: "Seven", explanation: "Ada tujuh (seven) hari dalam seminggu." },
+            { question: "The opposite of 'big' is...", options: ["Long", "Small", "Tall"], answer: "Small", explanation: "Lawan kata dari 'big' (besar) adalah 'small' (kecil)." },
+            { question: "Pandhawa iku cacahe ana...", options: ["Papat", "Lima", "Enem"], answer: "Lima", explanation: "Jumlah (cacahe) Pandawa ada lima (lima)." },
+            { question: "Piranti ing omah sing gunane kanggo turu yaiku...", options: ["Meja", "Kursi", "Kasur"], answer: "Kasur", explanation: "Peralatan di rumah yang gunanya untuk tidur adalah kasur." },
+            { question: "Kewan sing sikile loro lan bisa kluruk yaiku...", options: ["Pitik", "Kucing", "Sapi"], answer: "Pitik", explanation: "Hewan yang kakinya dua dan bisa berkokok adalah ayam (pitik)." },
+            { question: "Bapake bapak diarani...", options: ["Pakdhe", "Paklik", "Eyang Kakung"], answer: "Eyang Kakung", explanation: "Ayahnya ayah kita disebut kakek (Eyang Kakung)." }
         ],
         '3': [
-            // MATEMATIKA
-            { question: "Hasil dari 521 - 135 adalah...", options: ["386", "396", "486", "496"], answer: "386", explanation: "Hasil dari pengurangan 521 - 135 adalah 386." },
-            { question: "2 meter sama dengan ... sentimeter.", options: ["20 cm", "200 cm", "2000 cm", "2 cm"], answer: "200 cm", explanation: "Konversi satuan: 1 meter = 100 sentimeter. Jadi, 2 meter = 2 x 100 = 200 cm." },
-            { question: "Ibu membeli 3 kg gula pasir. Berapa gram berat gula pasir yang dibeli ibu?", options: ["30 gram", "300 gram", "3000 gram", "30000 gram"], answer: "3000 gram", explanation: "Konversi satuan: 1 kg = 1000 gram. Jadi, 3 kg = 3 x 1000 = 3000 gram." },
-            { question: "Panjang sebuah pensil 15 cm. Panjang sebuah buku 25 cm. Berapa selisih panjang keduanya?", options: ["40 cm", "15 cm", "25 cm", "10 cm"], answer: "10 cm", explanation: "Selisih adalah hasil pengurangan nilai yang lebih besar dengan yang lebih kecil: 25 cm - 15 cm = 10 cm." },
-            // BAHASA INDONESIA
-            { question: "Kata hubung yang tepat untuk kalimat ini: 'Adi tidak masuk sekolah ... ia sakit.'", options: ["dan", "tetapi", "karena", "atau"], answer: "karena", explanation: "Kata hubung 'karena' digunakan untuk menyatakan alasan atau sebab-akibat." },
-            { question: "Karangan yang menceritakan urutan kejadian disebut karangan...", options: ["Deskripsi", "Narasi", "Argumentasi", "Persuasi"], answer: "Narasi", explanation: "Teks narasi adalah jenis teks yang menceritakan suatu peristiwa atau kejadian secara kronologis." },
-            { question: "Ide utama yang dibahas dalam sebuah paragraf disebut...", options: ["Kalimat penjelas", "Judul", "Gagasan pokok", "Kesimpulan"], answer: "Gagasan pokok", explanation: "Gagasan pokok atau ide pokok adalah inti dari informasi yang menjadi dasar pengembangan sebuah paragraf." },
-            { question: "Kata 'dan' berfungsi untuk menghubungkan dua hal yang...", options: ["berlawanan", "setara", "menjadi pilihan", "menjadi sebab"], answer: "setara", explanation: "Kata hubung 'dan' digunakan untuk menggabungkan dua unsur yang setara atau sejajar." },
-            // IPAS
-            { question: "Perubahan wujud dari cair menjadi padat disebut...", options: ["Mencair", "Menguap", "Membeku", "Menyublim"], answer: "Membeku", explanation: "Membeku adalah proses perubahan wujud benda dari cair menjadi padat, contohnya air menjadi es." },
-            { question: "Sumber energi terbesar di bumi adalah...", options: ["Baterai", "Listrik", "Matahari", "Minyak bumi"], answer: "Matahari", explanation: "Matahari adalah sumber energi panas dan cahaya terbesar yang menjadi asal dari hampir semua energi di Bumi." },
-            { question: "Saat kita menyalakan kipas angin, terjadi perubahan energi dari ... menjadi energi gerak.", options: ["listrik", "panas", "kimia", "cahaya"], answer: "listrik", explanation: "Kipas angin adalah alat elektronik yang mengubah energi listrik menjadi energi gerak untuk memutar baling-baling." },
-            { question: "Tahapan setelah telur dalam siklus hidup kupu-kupu adalah...", options: ["Kupu-kupu", "Kepompong", "Ulat", "Kumbang"], answer: "Ulat", explanation: "Siklus hidup kupu-kupu adalah Telur -> Ulat -> Kepompong -> Kupu-kupu." },
-//_PASTE KODE INI DI DALAM TANDA [ ] UNTUK KELAS 3_
-            { question: "15 x 7 = ...", options: ["95", "105", "115", "125"], answer: "105", explanation: "Hasil dari perkalian 15 dikali 7 adalah 105." },
-            { question: "Seorang pedagang memiliki 240 telur. Telur itu dimasukkan ke dalam 8 kantong plastik dengan isi sama banyak. Berapa isi setiap kantong?", options: ["20 telur", "30 telur", "40 telur", "50 telur"], answer: "30 telur", explanation: "Ini adalah soal pembagian: 240 telur dibagi 8 kantong = 30 telur per kantong." },
-            { question: "4500 gram sama dengan ... kg.", options: ["450 kg", "45 kg", "4,5 kg", "0,45 kg"], answer: "4,5 kg", explanation: "Konversi satuan: 1000 gram = 1 kg. Maka, 4500 gram = 4500 / 1000 = 4,5 kg." },
-            { question: "Hitunglah: (50 x 2) + 125 = ...", options: ["177", "200", "225", "275"], answer: "225", explanation: "Kerjakan operasi dalam kurung terlebih dahulu: (100) + 125 = 225." },
-            { question: "Sebutkan satu contoh kata hubung!", options: ["Makan", "Sekolah", "Dan", "Cantik"], answer: "Dan", explanation: "'Dan', 'atau', 'tetapi', 'karena' adalah beberapa contoh kata hubung (konjungsi)." },
-            { question: "Apa langkah pertama yang harus dilakukan sebelum menulis sebuah karangan?", options: ["Menulis isi", "Menentukan judul", "Membuat kesimpulan", "Menentukan tema"], answer: "Menentukan tema", explanation: "Langkah paling awal dalam mengarang adalah menentukan tema atau topik utama yang akan dibahas." },
-            { question: "'Meskipun hujan, Rina tetap berangkat ke sekolah.' Kata hubung dalam kalimat tersebut adalah...", options: ["hujan", "tetap", "berangkat", "Meskipun"], answer: "Meskipun", explanation: "Kata 'meskipun' adalah konjungsi (kata hubung) yang menyatakan pertentangan." },
-            { question: "Jelaskan secara singkat apa yang dimaksud dengan teks laporan!", options: ["Teks berisi khayalan", "Teks berisi langkah-langkah", "Teks berisi hasil pengamatan", "Teks berisi ajakan"], answer: "Teks berisi hasil pengamatan", explanation: "Teks laporan menyajikan informasi mengenai suatu hal secara apa adanya berdasarkan hasil pengamatan atau penelitian." },
-            { question: "Contoh proses mencair adalah...", options: ["Air menjadi es", "Es menjadi air", "Air menjadi uap", "Kapur barus menghilang"], answer: "Es menjadi air", explanation: "Mencair adalah perubahan wujud dari padat menjadi cair, contohnya es yang dipanaskan menjadi air." },
-            { question: "Sebutkan dua contoh sumber energi alternatif!", options: ["Bensin dan solar", "Angin dan air", "Batu bara dan minyak tanah", "Listrik dan baterai"], answer: "Angin dan air", explanation: "Energi alternatif adalah energi yang berasal dari sumber terbarukan, seperti angin, air, dan matahari." },
-            { question: "Proses perubahan wujud dari gas menjadi cair disebut...", options: ["Menguap", "Membeku", "Menyublim", "Mengembun"], answer: "Mengembun", explanation: "Mengembun adalah kebalikan dari menguap, contohnya titik-titik air di bagian luar gelas berisi es." },
-            { question: "Apa fungsi utama panel surya?", options: ["Menghasilkan angin", "Menyimpan air hujan", "Mengubah energi cahaya matahari menjadi listrik", "Mendinginkan ruangan"], answer: "Mengubah energi cahaya matahari menjadi listrik", explanation: "Panel surya bekerja dengan menangkap energi foton dari cahaya matahari dan mengubahnya menjadi energi listrik." }
+{
+    question: "Hasil dari 345 + 218 adalah...",
+    options: ["553", "563", "573"],
+    answer: "563",
+    explanation: "Penjumlahan bersusun: 345 + 218 = 563."
+},
+{
+    question: "'Meskipun hujan, Rina tetap berangkat ke sekolah.' Kata hubung dalam kalimat tersebut adalah...",
+    options: ["hujan", "tetap", "Meskipun"],
+    answer: "Meskipun",
+    explanation: "Kata 'meskipun' adalah konjungsi (kata hubung) yang menyatakan pertentangan."
+},
+{
+    question: "Urutan siklus hidup katak yang benar adalah...",
+    options: ["Telur - Berudu - Katak Berekor - Katak Dewasa", "Berudu - Telur - Katak Berekor - Katak Dewasa", "Telur - Katak Berekor - Berudu - Katak Dewasa"],
+    answer: "Telur - Berudu - Katak Berekor - Katak Dewasa",
+    explanation: "Siklus hidup katak dimulai dari telur, menetas menjadi berudu (kecebong), tumbuh kaki menjadi katak berekor, dan akhirnya menjadi katak dewasa."
+},
+{
+    question: "Ibu membeli 3 kg gula pasir. Berapa gram berat gula pasir yang dibeli ibu?",
+    options: ["30 gram", "300 gram", "3000 gram"],
+    answer: "3000 gram",
+    explanation: "Konversi satuan berat: 1 kg sama dengan 1000 gram. Jadi, 3 kg = 3 x 1000 = 3000 gram."
+},
+{
+    question: "Ide utama yang dibahas dalam sebuah paragraf disebut...",
+    options: ["Kalimat penjelas", "Judul", "Gagasan pokok"],
+    answer: "Gagasan pokok",
+    explanation: "Gagasan pokok atau ide pokok adalah inti dari informasi yang menjadi dasar pengembangan sebuah paragraf."
+},
+{
+    question: "Air yang dipanaskan terus-menerus akan berubah wujud menjadi uap. Proses ini disebut...",
+    options: ["Mencair", "Membeku", "Menguap"],
+    answer: "Menguap",
+    explanation: "Menguap adalah proses perubahan wujud benda dari cair menjadi gas (uap) karena adanya pemanasan."
+},
+{
+    question: "Ayah membeli 4 kantong apel. Setiap kantong berisi 12 apel. Berapa jumlah semua apel yang dibeli Ayah?",
+    options: ["16 apel", "48 apel", "42 apel"],
+    answer: "48 apel",
+    explanation: "Ini adalah soal perkalian. Jumlah total apel adalah 4 kantong × 12 apel = 48 apel."
+},
+{
+    question: "Buatlah kalimat dengan kata hubung 'tetapi'!",
+    options: ["Saya suka apel dan jeruk", "Adik menangis tetapi kakak tertawa", "Dia tidak masuk karena sakit"],
+    answer: "Adik menangis tetapi kakak tertawa",
+    explanation: "Kata hubung 'tetapi' digunakan untuk menunjukkan pertentangan."
+},
+{
+    question: "Makanan yang kita makan memberikan energi ... bagi tubuh kita.",
+    options: ["Listrik", "Kimia", "Panas"],
+    answer: "Kimia",
+    explanation: "Makanan diubah menjadi energi kimia di dalam tubuh melalui proses metabolisme."
+},
+{
+    question: "4500 gram sama dengan ... kg.",
+    options: ["450 kg", "45 kg", "4,5 kg"],
+    answer: "4,5 kg",
+    explanation: "Konversi satuan: 1000 gram = 1 kg. Maka, 4500 gram = 4500 / 1000 = 4,5 kg."
+},
+{
+    question: "Apa fungsi utama panel surya?",
+    options: ["Menghasilkan angin", "Mengubah energi cahaya matahari menjadi listrik", "Mendinginkan ruangan"],
+    answer: "Mengubah energi cahaya matahari menjadi listrik",
+    explanation: "Panel surya bekerja dengan menangkap energi foton dari cahaya matahari dan mengubahnya menjadi energi listrik."
+},
+{
+    question: "15 x 7 = ...",
+    options: ["95", "105", "115"],
+    answer: "105",
+    explanation: "Hasil dari perkalian 15 dikali 7 adalah 105."
+},
+            { question: "Mengerjakan tugas piket di kelas adalah salah satu bentuk... siswa.", options: ["Hak", "Keinginan", "Kewajiban"], answer: "Kewajiban", explanation: "Piket kelas adalah kewajiban atau tanggung jawab setiap siswa." },
+            { question: "Saat ada teman yang berbeda pendapat, sikap kita sebaiknya...", options: ["Memaksa teman setuju", "Menghargai pendapatnya", "Meninggalkannya"], answer: "Menghargai pendapatnya", explanation: "Menghargai perbedaan pendapat adalah sikap yang baik." },
+            { question: "Kerja sama membersihkan lingkungan sekolah akan membuat pekerjaan menjadi...", options: ["Lebih berat", "Lebih ringan", "Lebih lama"], answer: "Lebih ringan", explanation: "Dengan kerja sama, pekerjaan yang berat akan terasa lebih ringan." },
+            { question: "Kewajiban harus dilaksanakan dengan penuh rasa tanggung...", options: ["Paksa", "Malas", "Jawab"], answer: "Jawab", explanation: "Kewajiban selalu diikuti dengan tanggung jawab." },
+            { question: "We eat breakfast in the...", options: ["Morning", "Afternoon", "Night"], answer: "Morning", explanation: "Sarapan (breakfast) dilakukan di pagi hari (morning)." },
+            { question: "My father's sister is my...", options: ["Uncle", "Aunt", "Cousin"], answer: "Aunt", explanation: "Saudara perempuan ayah (father's sister) adalah bibi (aunt)." },
+            { question: "A pilot works in an...", options: ["Hospital", "School", "Airport"], answer: "Airport", explanation: "Seorang pilot bekerja di bandara (airport)." },
+            { question: "The day between Tuesday and Thursday is...", options: ["Monday", "Wednesday", "Friday"], answer: "Wednesday", explanation: "Hari di antara Selasa (Tuesday) dan Kamis (Thursday) adalah Rabu (Wednesday)." },
+            { question: "Dongeng sing paragane kewan diarani...", options: ["Mite", "Legenda", "Fabel"], answer: "Fabel", explanation: "Dongeng yang tokohnya (paragane) hewan disebut fabel." },
+            { question: "Becak, montor, lan sepur iku arane piranti...", options: ["Pawon", "Tetanen", "Transportasi"], answer: "Transportasi", explanation: "Becak, motor, dan kereta api adalah contoh alat transportasi." },
+            { question: "Supaya pinter, bocah-bocah kudu sregep...", options: ["Turu", "Dolanan", "Sinau"], answer: "Sinau", explanation: "Agar pintar, anak-anak harus rajin belajar (sinau)." },
+            { question: "Bapak maca koran. Jejer (subjek) ing ukara kasebut yaiku...", options: ["Maca", "Koran", "Bapak"], answer: "Bapak", explanation: "Subjek (jejer) atau pelaku dalam kalimat tersebut adalah 'Bapak'." }
         ],
         '4': [
-            // MATEMATIKA
-            { question: "Bentuk paling sederhana dari pecahan 12/18 adalah...", options: ["6/9", "4/6", "2/3", "1/2"], answer: "2/3", explanation: "Pecahan disederhanakan dengan membagi pembilang dan penyebut dengan FPB-nya, yaitu 6. (12 ÷ 6) / (18 ÷ 6) = 2/3." },
-            { question: "Kelipatan persekutuan terkecil (KPK) dari 8 dan 12 adalah...", options: ["16", "24", "36", "48"], answer: "24", explanation: "Kelipatan 8: {8, 16, 24,...}. Kelipatan 12: {12, 24,...}. Kelipatan terkecil yang sama adalah 24." },
-            { question: "Faktor persekutuan terbesar (FPB) dari 18 dan 24 adalah...", options: ["4", "6", "8", "12"], answer: "6", explanation: "Faktor 18: {1,2,3,6,9,18}. Faktor 24: {1,2,3,4,6,8,12,24}. Faktor terbesar yang sama adalah 6." },
-            { question: "Urutkan pecahan berikut dari yang terbesar: 1/2, 3/4, 1/3", options: ["1/2, 3/4, 1/3", "3/4, 1/2, 1/3", "1/3, 1/2, 3/4", "3/4, 1/3, 1/2"], answer: "3/4, 1/2, 1/3", explanation: "Jika diubah ke desimal: 3/4 = 0.75, 1/2 = 0.5, 1/3 = 0.33. Jadi urutan terbesar adalah 3/4, 1/2, 1/3." },
-            // BAHASA INDONESIA
-            { question: "Antonim (lawan kata) dari kata 'menjaga' adalah...", options: ["Merawat", "Memelihara", "Melindungi", "Merusak"], answer: "Merusak", explanation: "Antonim atau lawan kata dari 'menjaga' adalah 'merusak'." },
-            { question: "Sinonim (persamaan kata) dari kata 'manfaat' adalah...", options: ["Kerugian", "Kegunaan", "Kesulitan", "Kekuatan"], answer: "Kegunaan", explanation: "Sinonim atau persamaan kata dari 'manfaat' adalah 'kegunaan' atau 'faedah'." },
-            { question: "Gagasan yang menjelaskan gagasan utama disebut...", options: ["Gagasan pokok", "Gagasan utama", "Gagasan pendukung", "Gagasan baru"], answer: "Gagasan pendukung", explanation: "Gagasan pendukung atau gagasan penjelas berfungsi untuk menguraikan dan memperkuat gagasan utama." },
-            { question: "Menuliskan kembali isi bacaan dengan bahasa sendiri secara singkat disebut...", options: ["Membaca", "Meringkas", "Menyalin", "Mengarang"], answer: "Meringkas", explanation: "Meringkas adalah kegiatan menyajikan kembali isi bacaan secara singkat dengan bahasa sendiri." },
-            // IPAS
-            { question: "Bunyi tidak dapat merambat di ruang...", options: ["Padat", "Cair", "Gas", "Hampa"], answer: "Hampa", explanation: "Bunyi memerlukan medium (partikel) untuk merambat. Ruang hampa tidak memiliki partikel." },
-            { question: "Bagian tumbuhan yang berfungsi untuk menyerap air dan mineral dari dalam tanah adalah...", options: ["Daun", "Batang", "Bunga", "Akar"], answer: "Akar", explanation: "Fungsi utama akar adalah menancapkan tumbuhan ke tanah serta menyerap air dan mineral dari dalam tanah." },
-            { question: "Proses memasak makanan pada tumbuhan yang terjadi di daun disebut...", options: ["Respirasi", "Fotosintesis", "Evaporasi", "Transpirasi"], answer: "Fotosintesis", explanation: "Fotosintesis adalah proses di mana tumbuhan hijau menggunakan sinar matahari untuk mengubah air dan karbon dioksida menjadi makanan." },
-            { question: "Gaya yang menyebabkan buah jatuh dari pohon ke bawah adalah gaya...", options: ["Gesek", "Magnet", "Pegas", "Gravitasi"], answer: "Gravitasi", explanation: "Gaya gravitasi bumi adalah gaya tarik yang menyebabkan semua benda jatuh ke bawah menuju pusat bumi." },
-//_PASTE KODE INI DI DALAM TANDA [ ] UNTUK KELAS 4_
-            { question: "Pecahan senilai dari 2/3 adalah...", options: ["3/4", "4/6", "5/7", "1/2"], answer: "4/6", explanation: "Pecahan senilai didapat dengan mengalikan pembilang dan penyebut dengan angka yang sama. 2/3 x 2/2 = 4/6." },
-            { question: "Faktor dari bilangan 24 adalah...", options: ["1, 2, 3, 4, 6, 8, 12, 24", "2, 4, 6, 8, 12, 24", "1, 2, 3, 4, 5, 6, 24", "24, 12, 8, 6, 4, 2"], answer: "1, 2, 3, 4, 6, 8, 12, 24", explanation: "Faktor adalah semua bilangan yang dapat membagi habis bilangan tersebut." },
-            { question: "Ibu memotong kue menjadi 8 bagian sama besar. Adi memakan 3 bagian. Berapa bagian kue yang dimakan Adi?", options: ["8/3", "3/8", "5/8", "1/8"], answer: "3/8", explanation: "Adi memakan 3 bagian dari total 8 bagian, sehingga dapat ditulis dalam bentuk pecahan 3/8." },
-            { question: "Hitunglah: 4/9 + 2/9 = ...", options: ["6/18", "2/9", "6/9", "8/81"], answer: "6/9", explanation: "Jika penyebut sudah sama, cukup jumlahkan pembilangnya: 4 + 2 = 6. Hasilnya adalah 6/9." },
-            { question: "Kalimat utama paragraf tentang manfaat tumbuhan terletak di...", options: ["Awal paragraf", "Tengah paragraf", "Akhir paragraf", "Setiap kalimat"], answer: "Awal paragraf", explanation: "Kalimat utama 'Tumbuhan sangat bermanfaat bagi kehidupan manusia' berada di awal paragraf, lalu dijelaskan oleh kalimat berikutnya." },
-            { question: "Tujuan dibuatnya peta pikiran adalah untuk...", options: ["Memperpanjang tulisan", "Memudahkan pemahaman dan penataan informasi", "Membuat cerita baru", "Menghias buku catatan"], answer: "Memudahkan pemahaman dan penataan informasi", explanation: "Peta pikiran membantu mengorganisir informasi secara visual sehingga lebih mudah dipahami dan diingat." },
-            { question: "'Keragaman budaya Indonesia menjadi daya tarik wisatawan.' Kalimat tanya yang tepat adalah...", options: ["Di mana keragaman budaya Indonesia?", "Kapan keragaman itu muncul?", "Siapa yang memiliki keragaman budaya?", "Mengapa keragaman budaya Indonesia menarik wisatawan?"], answer: "Mengapa keragaman budaya Indonesia menarik wisatawan?", explanation: "Jawaban 'menjadi daya tarik' menjelaskan alasan (mengapa)." },
-            { question: "Informasi penting dalam suatu teks biasanya menjawab pertanyaan apa, di mana, kapan, siapa, mengapa, dan...", options: ["berapa", "bagaimana", "akankah", "bolehkah"], answer: "bagaimana", explanation: "Unsur informasi lengkap dikenal dengan 5W + 1H (What, Where, When, Who, Why + How/Bagaimana)." },
-            { question: "Pemantulan bunyi yang terdengar setelah bunyi asli disebut...", options: ["Gaung", "Nada", "Desah", "Suara"], answer: "Gaung", explanation: "Gaung atau gema adalah bunyi pantul yang terdengar beberapa saat setelah bunyi asli." },
-            { question: "Contoh peristiwa yang membuktikan cahaya dapat dipantulkan adalah...", options: ["Pelangi", "Dasar kolam terlihat dangkal", "Bayangan tubuh", "Kita bisa bercermin"], answer: "Kita bisa bercermin", explanation: "Cermin memantulkan cahaya dari objek ke mata kita, sehingga kita bisa melihat bayangan." },
-            { question: "Bagian tumbuhan yang berfungsi sebagai alat perkembangbiakan adalah...", options: ["Akar", "Daun", "Batang", "Bunga"], answer: "Bunga", explanation: "Bunga memiliki putik dan benang sari yang merupakan organ reproduksi pada tumbuhan." },
-            { question: "Aktivitas mendorong meja menunjukkan bahwa gaya dapat mengubah ... benda.", options: ["Warna", "Wujud", "Posisi", "Ukuran"], answer: "Posisi", explanation: "Gaya dorong menyebabkan meja yang semula diam menjadi bergerak, artinya posisinya berubah." }
+{
+    question: "Bentuk paling sederhana dari pecahan 12/18 adalah...",
+    options: ["6/9", "4/6", "2/3"],
+    answer: "2/3",
+    explanation: "Pecahan disederhanakan dengan membagi pembilang dan penyebut dengan FPB-nya, yaitu 6. (12 ÷ 6) / (18 ÷ 6) = 2/3."
+},
+{
+    question: "Informasi yang tidak sesuai dengan paragraf tentang manfaat tumbuhan adalah...",
+    options: ["Tumbuhan adalah sumber makanan", "Tumbuhan menghasilkan karbon dioksida", "Kita harus menjaga kelestarian tumbuhan"],
+    answer: "Tumbuhan menghasilkan karbon dioksida",
+    explanation: "Paragraf tersebut menyatakan tumbuhan menghasilkan oksigen, bukan karbon dioksida."
+},
+{
+    question: "Aktivitas mendorong meja menunjukkan bahwa gaya dapat mengubah ... benda.",
+    options: ["Warna", "Wujud", "Posisi"],
+    answer: "Posisi",
+    explanation: "Gaya dorong menyebabkan meja yang semula diam menjadi bergerak, artinya posisinya berubah."
+},
+{
+    question: "Kelipatan persekutuan terkecil (KPK) dari 8 dan 12 adalah...",
+    options: ["16", "24", "36"],
+    answer: "24",
+    explanation: "Kelipatan 8: {8, 16, 24,...}. Kelipatan 12: {12, 24,...}. Kelipatan terkecil yang sama adalah 24."
+},
+{
+    question: "Sinonim (persamaan kata) dari kata 'manfaat' adalah...",
+    options: ["Kerugian", "Kegunaan", "Kesulitan"],
+    answer: "Kegunaan",
+    explanation: "Sinonim atau persamaan kata dari 'manfaat' adalah 'kegunaan' atau 'faedah'."
+},
+{
+    question: "Bagian tumbuhan yang berfungsi sebagai alat perkembangbiakan adalah...",
+    options: ["Akar", "Daun", "Bunga"],
+    answer: "Bunga",
+    explanation: "Bunga memiliki putik dan benang sari yang merupakan organ reproduksi pada tumbuhan."
+},
+{
+    question: "Lampu A menyala setiap 6 menit, lampu B setiap 9 menit. Kapan keduanya menyala bersamaan lagi?",
+    options: ["Menit ke-12", "Menit ke-18", "Menit ke-27"],
+    answer: "Menit ke-18",
+    explanation: "Ini adalah soal mencari KPK (Kelipatan Persekutuan Terkecil) dari 6 dan 9, yaitu 18."
+},
+{
+    question: "Informasi penting dalam suatu teks biasanya menjawab pertanyaan apa, di mana, kapan, siapa, mengapa, dan...",
+    options: ["berapa", "bagaimana", "akankah"],
+    answer: "bagaimana",
+    explanation: "Unsur informasi lengkap dikenal dengan 5W + 1H (What, Where, When, Who, Why + How/Bagaimana)."
+},
+{
+    question: "Benda-benda yang tidak dapat ditembus cahaya disebut benda...",
+    options: ["Bening", "Tembus pandang", "Gelap"],
+    answer: "Gelap",
+    explanation: "Benda gelap atau tidak tembus cahaya adalah benda yang tidak dapat meneruskan cahaya yang mengenainya."
+},
+{
+    question: "Ani memiliki 20 kue donat dan 25 kue bolu untuk dimasukkan ke kotak. Berapa kotak paling banyak yang dibutuhkan?",
+    options: ["4", "5", "10"],
+    answer: "5",
+    explanation: "Ini adalah soal mencari FPB (Faktor Persekutuan Terbesar) dari 20 dan 25, yaitu 5."
+},
+{
+    question: "Cabang-cabang dalam peta pikiran biasanya berisi...",
+    options: ["Judul", "Topik utama", "Kata kunci"],
+    answer: "Kata kunci",
+    explanation: "Cabang-cabang dalam peta pikiran diisi dengan kata kunci atau ide turunan dari topik utama."
+},
+{
+    question: "Gaya gesek antara ban mobil dengan aspal berfungsi untuk...",
+    options: ["Mempercepat laju mobil", "Membuat mobil tergelincir", "Menghentikan laju mobil"],
+    answer: "Menghentikan laju mobil",
+    explanation: "Gaya gesek pada sistem pengereman mobil berfungsi untuk memperlambat atau menghentikan laju kendaraan."
+},
+            { question: "Menyelesaikan masalah dengan cara berdiskusi untuk mencapai kesepakatan bersama disebut...", options: ["Musyawarah", "Debat", "Pemaksaan"], answer: "Musyawarah", explanation: "Musyawarah adalah ciri khas demokrasi Pancasila, sesuai sila keempat." },
+            { question: "Indonesia memiliki banyak suku, agama, dan budaya. Sikap yang harus kita kembangkan adalah...", options: ["Egois", "Toleransi", "Acuh tak acuh"], answer: "Toleransi", explanation: "Toleransi adalah sikap saling menghargai di tengah perbedaan." },
+            { question: "Jumlah bulu pada masing-masing sayap Garuda Pancasila melambangkan...", options: ["Tanggal kemerdekaan", "Bulan kemerdekaan", "Tahun kemerdekaan"], answer: "Tanggal kemerdekaan", explanation: "Jumlah bulu pada sayap (17 helai) melambangkan tanggal 17, hari kemerdekaan Indonesia." },
+            { question: "Kewajiban utama seorang pelajar adalah...", options: ["Bermain", "Jajan", "Belajar"], answer: "Belajar", explanation: "Tugas dan kewajiban paling utama dari seorang pelajar adalah belajar." },
+            { question: "A giraffe has a long...", options: ["Leg", "Tail", "Neck"], answer: "Neck", explanation: "Jerapah (giraffe) memiliki leher (neck) yang panjang." },
+            { question: "The book is ... the table. (di atas)", options: ["In", "On", "Under"], answer: "On", explanation: "Kata depan untuk menyatakan posisi 'di atas' permukaan adalah 'on'." },
+            { question: "A ... works in the library.", options: ["Librarian", "Teacher", "Doctor"], answer: "Librarian", explanation: "Orang yang bekerja di perpustakaan (library) disebut pustakawan (librarian)." },
+            { question: "My classroom is clean and tidy. The opposite of 'clean' is...", options: ["Beautiful", "Dirty", "Large"], answer: "Dirty", explanation: "Lawan kata dari 'clean' (bersih) adalah 'dirty' (kotor)." },
+            { question: "Ing ngisor iki sing kelebu tembang macapat yaiku...", options: ["Gundhul Pacul", "Jaranan", "Pocung"], answer: "Pocung", explanation: "Pocung adalah salah satu contoh dari tembang macapat, sedangkan yang lain adalah tembang dolanan." },
+            { question: "Bapak nembe sare. 'Sare' iku basa kramane...", options: ["Mangan", "Turu", "Lunga"], answer: "Turu", explanation: "'Sare' adalah bahasa krama (halus) dari 'turu' (tidur)." },
+            { question: "Ukara 'Adhikku mangan sega' yen dikramakake dadi...", options: ["Adhik kula nedha sekul", "Rayi kula nedha sekul", "Rayi kula dhahar sekul"], answer: "Rayi kula nedha sekul", explanation: "Bentuk krama yang tepat adalah 'Rayi kula nedha sekul'." },
+            { question: "Crita rakyat saka Jawa Tengah sing misuwur yaiku crita...", options: ["Malin Kundang", "Sangkuriang", "Rawa Pening"], answer: "Rawa Pening", explanation: "Rawa Pening adalah legenda terkenal yang berasal dari Jawa Tengah." }
         ],
         '5': [
-            // MATEMATIKA
-            { question: "Hasil dari 3/4 + 1/5 adalah...", options: ["4/9", "19/20", "4/20", "15/20"], answer: "19/20", explanation: "Samakan penyebutnya menjadi 20. (15/20) + (4/20) = 19/20." },
-            { question: "Hasil dari 2/5 × 3/4 adalah...", options: ["5/9", "8/15", "6/20", "5/20"], answer: "6/20", explanation: "Perkalian pecahan dilakukan dengan mengalikan pembilang dengan pembilang dan penyebut dengan penyebut. (2×3)/(5×4) = 6/20." },
-            { question: "Ayah mengendarai mobil dengan kecepatan 60 km/jam. Jika ayah berkendara selama 2 jam, jarak yang ditempuh adalah...", options: ["30 km", "62 km", "120 km", "260 km"], answer: "120 km", explanation: "Rumus Jarak = Kecepatan × Waktu. Maka, Jarak = 60 km/jam × 2 jam = 120 km." },
-            { question: "Sebuah keran air dapat mengisi bak bervolume 100 liter dalam waktu 20 menit. Debit air keran tersebut adalah...", options: ["5 liter/menit", "20 liter/menit", "80 liter/menit", "2000 liter/menit"], answer: "5 liter/menit", explanation: "Rumus Debit = Volume / Waktu. Maka, Debit = 100 liter / 20 menit = 5 liter/menit." },
-            // BAHASA INDONESIA
-            { question: "Kalimat yang bertujuan untuk mengajak atau membujuk pembaca disebut kalimat...", options: ["Deskriptif", "Naratif", "Tanya", "Persuasif"], answer: "Persuasif", explanation: "Kalimat persuasif berisi ajakan atau bujukan untuk meyakinkan pembaca." },
-            { question: "Bahasa yang digunakan dalam iklan sebaiknya...", options: ["Rumit dan panjang", "Singkat, padat, dan menarik", "Baku dan formal", "Menggunakan istilah ilmiah"], answer: "Singkat, padat, dan menarik", explanation: "Bahasa iklan harus mudah dipahami dan menarik perhatian agar pesan yang disampaikan efektif." },
-            { question: "Kapan Perang Diponegoro terjadi?", options: ["1800-1805", "1825-1830", "1850-1855", "1900-1905"], answer: "1825-1830", explanation: "Berdasarkan teks, Perang Diponegoro adalah perang besar yang terjadi di Jawa dari tahun 1825 hingga 1830." },
-            { question: "Tokoh utama dalam teks sejarah tentang Perang Diponegoro adalah...", options: ["Pasukan Belanda", "Pangeran Diponegoro", "Rakyat Jawa", "Leluhur Pangeran"], answer: "Pangeran Diponegoro", explanation: "Teks tersebut berpusat pada perjuangan yang dipimpin oleh Pangeran Diponegoro." },
-            // IPAS
-            { question: "Organ pernapasan utama pada manusia adalah...", options: ["Jantung", "Hidung", "Paru-paru", "Insang"], answer: "Paru-paru", explanation: "Paru-paru adalah organ utama dalam sistem pernapasan manusia tempat terjadinya pertukaran oksigen dan karbon dioksida." },
-            { question: "Organ tubuh yang berfungsi memompa darah ke seluruh tubuh adalah...", options: ["Paru-paru", "Ginjal", "Hati", "Jantung"], answer: "Jantung", explanation: "Jantung adalah organ vital dalam sistem peredaran darah yang bertugas memompa darah." },
-            { question: "Dalam sebuah rantai makanan, tumbuhan berkedudukan sebagai...", options: ["Konsumen", "Produsen", "Pengurai", "Predator"], answer: "Produsen", explanation: "Tumbuhan dapat membuat makanannya sendiri (fotosintesis), sehingga berperan sebagai produsen." },
-            { question: "Hubungan timbal balik antara makhluk hidup dengan lingkungannya disebut...", options: ["Simbiosis", "Rantai makanan", "Ekosistem", "Komunitas"], answer: "Ekosistem", explanation: "Ekosistem adalah sistem ekologi yang terbentuk oleh hubungan timbal balik antara makhluk hidup dengan lingkungannya." },
-//_PASTE KODE INI DI DALAM TANDA [ ] UNTUK KELAS 5_
-            { question: "Hasil dari 2 1/2 - 3/4 adalah...", options: ["1 3/4", "1 1/4", "2 1/4", "1 1/2"], answer: "1 3/4", explanation: "Ubah menjadi pecahan biasa: 5/2 - 3/4. Samakan penyebut: 10/4 - 3/4 = 7/4 atau 1 3/4." },
-            { question: "Hasil dari 5/6 : 1/3 adalah...", options: ["5/18", "1/6", "2 1/2", "3/5"], answer: "2 1/2", explanation: "Pembagian pecahan sama dengan perkalian dengan kebalikannya: 5/6 x 3/1 = 15/6 = 2 3/6 = 2 1/2." },
-            { question: "Ibu memiliki persediaan tepung 3 1/2 kg. Ibu menggunakan 1 1/4 kg. Sisa tepung ibu adalah...", options: ["2 1/4 kg", "2 3/4 kg", "4 3/4 kg", "1 1/2 kg"], answer: "2 1/4 kg", explanation: "3 1/2 - 1 1/4 = 7/2 - 5/4 = 14/4 - 5/4 = 9/4 = 2 1/4 kg." },
-            { question: "Paman membeli 5 kg jeruk. 2/5 bagian diberikan kepada tetangga. Berapa kg jeruk yang diberikan?", options: ["1 kg", "2 kg", "3 kg", "2.5 kg"], answer: "2 kg", explanation: "Jeruk yang diberikan = 2/5 dari 5 kg = (2/5) x 5 = 2 kg." },
-            { question: "Siapa yang menjadi lawan Pangeran Diponegoro dalam perang tersebut?", options: ["Pasukan Inggris", "Pasukan Jepang", "Pasukan kolonial Belanda", "Kerajaan lain"], answer: "Pasukan kolonial Belanda", explanation: "Berdasarkan teks, Perang Diponegoro adalah perang melawan pasukan kolonial Belanda." },
-            { question: "Kata tanya yang digunakan untuk menanyakan sebab suatu peristiwa adalah...", options: ["Apa", "Kapan", "Siapa", "Mengapa"], answer: "Mengapa", explanation: "Kata tanya 'mengapa' digunakan untuk menanyakan alasan atau sebab terjadinya sesuatu." },
-            { question: "Merangkai pokok-pokok informasi menjadi sebuah tulisan singkat adalah kegiatan...", options: ["Mengarang", "Membaca", "Meringkas", "Menyunting"], answer: "Meringkas", explanation: "Meringkas adalah kegiatan menyajikan kembali informasi penting dari sebuah teks secara singkat." },
-            { question: "Tujuan dari sebuah iklan komersial adalah...", options: ["Memberi informasi sosial", "Menawarkan produk atau jasa", "Mendidik masyarakat", "Menghibur pembaca"], answer: "Menawarkan produk atau jasa", explanation: "Iklan komersial dibuat dengan tujuan utama untuk mempromosikan dan menjual suatu produk atau jasa." },
-            { question: "Pembuluh darah yang membawa darah kaya oksigen dari jantung ke seluruh tubuh adalah pembuluh...", options: ["Vena", "Arteri", "Kapiler", "Nadi"], answer: "Arteri", explanation: "Arteri (pembuluh nadi) berfungsi membawa darah bersih yang kaya oksigen dari jantung, kecuali arteri pulmonalis." },
-            { question: "Contoh simbiosis mutualisme adalah...", options: ["Benalu dan pohon mangga", "Ikan hiu dan ikan remora", "Kupu-kupu dan bunga", "Tali putri dan inangnya"], answer: "Kupu-kupu dan bunga", explanation: "Mutualisme adalah hubungan yang saling menguntungkan. Kupu-kupu mendapat nektar, bunga dibantu penyerbukannya." },
-            { question: "Penyakit yang disebabkan oleh penyempitan saluran pernapasan disebut...", options: ["Anemia", "Asma", "TBC", "Hipertensi"], answer: "Asma", explanation: "Asma adalah penyakit kronis pada saluran pernapasan yang ditandai dengan peradangan dan penyempitan saluran napas." },
-            { question: "Kumpulan dari beberapa rantai makanan dalam sebuah ekosistem disebut...", options: ["Jaring-jaring makanan", "Simbiosis", "Komunitas", "Populasi"], answer: "Jaring-jaring makanan", explanation: "Jaring-jaring makanan adalah gabungan dari rantai-rantai makanan yang saling berhubungan dan tumpang tindih dalam suatu ekosistem." }
+{
+    question: "Hasil dari 2 1/2 - 3/4 adalah...",
+    options: ["1 3/4", "1 1/4", "2 1/4"],
+    answer: "1 3/4",
+    explanation: "Ubah menjadi pecahan biasa: 5/2 - 3/4. Samakan penyebut: 10/4 - 3/4 = 7/4 atau 1 3/4."
+},
+{
+    question: "Siapa yang menjadi lawan Pangeran Diponegoro dalam perang tersebut?",
+    options: ["Pasukan Inggris", "Pasukan Jepang", "Pasukan kolonial Belanda"],
+    answer: "Pasukan kolonial Belanda",
+    explanation: "Berdasarkan teks, Perang Diponegoro adalah perang melawan pasukan kolonial Belanda."
+},
+{
+    question: "Contoh simbiosis mutualisme adalah...",
+    options: ["Benalu dan pohon mangga", "Ikan hiu dan ikan remora", "Kupu-kupu dan bunga"],
+    answer: "Kupu-kupu dan bunga",
+    explanation: "Mutualisme adalah hubungan yang saling menguntungkan. Kupu-kupu mendapat nektar, bunga dibantu penyerbukannya."
+},
+{
+    question: "Sebuah keran air dapat mengisi bak bervolume 100 liter dalam waktu 20 menit. Debit air keran tersebut adalah...",
+    options: ["5 liter/menit", "20 liter/menit", "80 liter/menit"],
+    answer: "5 liter/menit",
+    explanation: "Rumus Debit = Volume / Waktu. Maka, Debit = 100 liter / 20 menit = 5 liter/menit."
+},
+{
+    question: "Unsur penting yang harus ada dalam iklan agar menarik perhatian adalah...",
+    options: ["Harga yang mahal", "Gambar dan kalimat ajakan", "Penjelasan yang panjang"],
+    answer: "Gambar dan kalimat ajakan",
+    explanation: "Visual yang menarik dan kalimat persuasif (ajakan) adalah unsur penting dalam sebuah iklan."
+},
+{
+    question: "Darah terdiri dari beberapa komponen, salah satunya adalah sel darah merah yang disebut juga...",
+    options: ["Leukosit", "Trombosit", "Eritrosit"],
+    answer: "Eritrosit",
+    explanation: "Sel darah merah disebut eritrosit, sel darah putih disebut leukosit, dan keping darah disebut trombosit."
+},
+{
+    question: "Hasil dari 0,5 × 1,2 adalah...",
+    options: ["0,6", "6,0", "0,17"],
+    answer: "0,6",
+    explanation: "Hasil perkalian 0,5 dengan 1,2 adalah 0,60 atau 0,6."
+},
+{
+    question: "Apa yang dimaksud dengan unsur 'di mana' (where) dalam sebuah berita?",
+    options: ["Menjelaskan waktu kejadian", "Menjelaskan lokasi kejadian", "Menjelaskan orang yang terlibat"],
+    answer: "Menjelaskan lokasi kejadian",
+    explanation: "Unsur 'di mana' (where) dalam berita berfungsi untuk memberitahukan tempat atau lokasi terjadinya peristiwa."
+},
+{
+    question: "Proses pertukaran oksigen dan karbon dioksida di dalam paru-paru terjadi di bagian...",
+    options: ["Bronkus", "Trakea", "Alveolus"],
+    answer: "Alveolus",
+    explanation: "Alveolus adalah gelembung-gelembung kecil di ujung saluran paru-paru tempat pertukaran gas terjadi."
+},
+{
+    question: "Hasil dari 5/6 : 1/3 adalah...",
+    options: ["5/18", "1/6", "2 1/2"],
+    answer: "2 1/2",
+    explanation: "Pembagian pecahan sama dengan perkalian dengan kebalikannya: 5/6 x 3/1 = 15/6 = 2 3/6 atau 2 1/2."
+},
+{
+    question: "Ular yang memakan tikus di sawah dalam rantai makanan berperan sebagai...",
+    options: ["Produsen", "Konsumen tingkat I", "Konsumen tingkat II"],
+    answer: "Konsumen tingkat II",
+    explanation: "Padi (produsen) dimakan tikus (konsumen I), kemudian tikus dimakan ular (konsumen II)."
+},
+{
+    question: "'Ayo, jaga kebersihan lingkungan kita!' Kalimat tersebut termasuk jenis kalimat...",
+    options: ["Tanya", "Perintah", "Ajakan"],
+    answer: "Ajakan",
+    explanation: "Penggunaan kata 'Ayo' menunjukkan bahwa kalimat tersebut adalah kalimat ajakan."
+},
+            { question: "Kegiatan membersihkan selokan bersama-sama di lingkungan masyarakat merupakan wujud nyata dari semangat...", options: ["Individualisme", "Gotong royong", "Persaingan"], answer: "Gotong royong", explanation: "Gotong royong adalah nilai luhur bangsa Indonesia yang berarti bekerja bersama-sama." },
+            { question: "Lembaga negara yang bertugas membuat undang-undang bersama Presiden adalah...", options: ["Mahkamah Agung (MA)", "Dewan Perwakilan Rakyat (DPR)", "Komisi Yudisial (KY)"], answer: "Dewan Perwakilan Rakyat (DPR)", explanation: "Fungsi legislasi (membuat UU) dipegang oleh DPR bersama dengan Presiden." },
+            { question: "Menghormati teman yang sedang menjalankan ibadah puasa adalah contoh perilaku...", options: ["Toleransi beragama", "Kebebasan berpendapat", "Kewajiban belajar"], answer: "Toleransi beragama", explanation: "Sikap tersebut menunjukkan rasa hormat dan toleransi terhadap keyakinan orang lain." },
+            { question: "Setiap warga negara memiliki hak dan ... yang sama di mata hukum.", options: ["Kekayaan", "Kewajiban", "Kekuasaan"], answer: "Kewajiban", explanation: "Prinsipnya adalah kesetaraan di mata hukum, mencakup hak dan kewajiban yang seimbang." },
+            { question: "Tomorrow, I... visit my grandmother.", options: ["am", "will", "was"], answer: "will", explanation: "'Tomorrow' (besok) menunjukkan masa depan, sehingga menggunakan 'will'." },
+            { question: "A place where we can save money is a...", options: ["Library", "Bank", "Post office"], answer: "Bank", explanation: "Bank adalah tempat kita bisa menabung atau menyimpan uang (save money)." },
+            { question: "We can travel to another island by...", options: ["Car", "Bicycle", "Ship"], answer: "Ship", explanation: "Untuk bepergian ke pulau lain (another island), alat transportasi yang paling umum adalah kapal (ship)." },
+            { question: "The opposite of 'expensive' (mahal) is ... (murah)", options: ["Beautiful", "Large", "Cheap"], answer: "Cheap", explanation: "Lawan kata dari 'expensive' (mahal) adalah 'cheap' (murah)." },
+            { question: "Becik ketitik, ala ketara. Paribasan kasebut nduweni teges...", options: ["Sing apik lan sing ala bakal ketara ing tembe mburine", "Wong ala bakal cilaka, wong apik bakal slamet", "Kabeh tumindak ana akibate"], answer: "Sing apik lan sing ala bakal ketara ing tembe mburine", explanation: "Peribahasa ini berarti perbuatan baik dan buruk pada akhirnya akan terlihat juga." },
+            { question: "Bapak lagi maos koran. Tembung 'maos' iku basa kramane...", options: ["Nulis", "Turu", "Maca"], answer: "Maca", explanation: "'Maos' adalah bahasa krama (halus) dari 'maca' (membaca)." },
+            { question: "Ukara ing ngisor iki sing nggunakake basa krama alus yaiku...", options: ["Bapak mangan sega pecel.", "Bapak nedha sekul pecel.", "Bapak dhahar sekul pecel."], answer: "Bapak dhahar sekul pecel.", explanation: "Penggunaan 'dhahar' untuk orang yang lebih tua atau dihormati adalah tingkatan krama yang paling halus." },
+            { question: "Wong sing pagaweyane nambani wong lara arane...", options: ["Guru", "Polisi", "Dhokter"], answer: "Dhokter", explanation: "Orang yang pekerjaannya mengobati orang sakit adalah dokter (dhokter)." }
         ],
         '6': [
-            // MATEMATIKA
-            { question: "Hasil dari -15 + 8 adalah...", options: ["-23", "-7", "7", "23"], answer: "-7", explanation: "Memiliki utang 15 dan membayar 8, sisa utangnya adalah 7 (-7)." },
-            { question: "Hasil dari -7 - (-10) adalah...", options: ["-17", "-3", "3", "17"], answer: "3", explanation: "Mengurangi dengan bilangan negatif sama dengan menjumlahkan: -7 + 10 = 3." },
-            { question: "Hasil dari 25 + (50 : 2) - 5 x 3 adalah...", options: ["35", "45", "60", "90"], answer: "35", explanation: "Kerjakan pembagian dan perkalian dulu: 25 + 25 - 15. Hasilnya adalah 35." },
-            { question: "Sebuah lingkaran memiliki jari-jari 7 cm. Keliling lingkaran tersebut adalah... (π = 22/7)", options: ["22 cm", "44 cm", "154 cm", "49 cm"], answer: "44 cm", explanation: "Rumus keliling lingkaran adalah K = 2 × π × r. Maka, K = 2 × (22/7) × 7 cm = 44 cm." },
-            // BAHASA INDONESIA
-            { question: "Tujuan utama dari pidato persuasif adalah untuk...", options: ["Memberi informasi", "Menghibur pendengar", "Mengajak atau membujuk", "Menceritakan pengalaman"], answer: "Mengajak atau membujuk", explanation: "Pidato persuasif dirancang untuk meyakinkan dan memengaruhi audiens agar setuju dengan gagasan pembicara." },
-            { question: "Orang yang ahli berpidato disebut...", options: ["Narator", "Proklamator", "Orator", "Aktor"], answer: "Orator", explanation: "Orator adalah sebutan untuk seseorang yang memiliki keahlian dalam berpidato di depan umum." },
-            { question: "Informasi yang disajikan dalam sebuah laporan harus berdasarkan...", options: ["Opini penulis", "Imajinasi", "Kabar burung", "Fakta"], answer: "Fakta", explanation: "Sebuah laporan harus objektif dan menyajikan informasi sesuai dengan data atau fakta yang ada." },
-            { question: "Bagian penutup dalam sebuah pidato biasanya berisi...", options: ["Pembukaan", "Salam pembuka", "Isi pidato", "Kesimpulan dan permohonan maaf"], answer: "Kesimpulan dan permohonan maaf", explanation: "Bagian penutup pidato umumnya berisi rangkuman, kesimpulan, harapan, serta permohonan maaf dan salam penutup." },
-            // IPAS
-            { question: "Cicak memutuskan ekornya untuk melindungi diri dari musuh. Kemampuan ini disebut...", options: ["Mimikri", "Hibernasi", "Autotomi", "Ekolokasi"], answer: "Autotomi", explanation: "Autotomi adalah perilaku hewan memutuskan bagian tubuhnya untuk melarikan diri dari pemangsa." },
-            { question: "Perubahan fisik yang terjadi pada anak laki-laki saat masa pubertas adalah...", options: ["Pinggul melebar", "Mengalami menstruasi", "Tumbuh jakun", "Suara melengking"], answer: "Tumbuh jakun", explanation: "Tumbuh jakun dan suara menjadi lebih berat adalah ciri-ciri pubertas primer pada anak laki-laki." },
-            { question: "Hewan yang berkembang biak dengan cara bertelur disebut...", options: ["Vivipar", "Ovipar", "Ovovivipar", "Fragmentasi"], answer: "Ovipar", explanation: "Ovipar berasal dari kata 'ovum' yang berarti telur. Contoh hewan ovipar adalah ayam dan burung." },
-            { question: "Tujuan utama makhluk hidup beradaptasi dengan lingkungannya adalah untuk...", options: ["Mencari teman", "Berpindah tempat", "Bertahan hidup", "Mengubah lingkungan"], answer: "Bertahan hidup", explanation: "Adaptasi adalah cara makhluk hidup menyesuaikan diri agar dapat bertahan hidup, mencari makan, dan berkembang biak." },
-//_PASTE KODE INI DI DALAM TANDA [ ] UNTUK KELAS 6_
-            { question: "Suhu udara di puncak gunung pagi hari -4°C. Siang hari, suhunya naik 10°C. Suhu udara siang hari adalah...", options: ["-14°C", "-6°C", "6°C", "14°C"], answer: "6°C", explanation: "Suhu awal -4°C, naik 10°C artinya ditambah 10. -4 + 10 = 6°C." },
-            { question: "Hasil dari 12 x (-4) + 100 adalah...", options: ["-48", "52", "148", "68"], answer: "52", explanation: "Kerjakan perkalian terlebih dahulu: 12 x (-4) = -48. Kemudian -48 + 100 = 52." },
-            { question: "Jari-jari sebuah lingkaran adalah setengah dari...", options: ["Keliling", "Luas", "Diameter", "Busur"], answer: "Diameter", explanation: "Diameter adalah garis tengah lingkaran, dan panjangnya adalah dua kali panjang jari-jari." },
-            { question: "Hitunglah: (120 - 20) : 5 + 8 = ...", options: ["28", "20", "30", "15"], answer: "28", explanation: "Kerjakan dalam kurung: 100 : 5 + 8. Kerjakan pembagian: 20 + 8 = 28." },
-            { question: "Apa masalah utama yang dibahas dalam teks tentang sampah plastik?", options: ["Cara membuat plastik", "Daur ulang botol", "Sampah plastik sebagai masalah lingkungan", "Jenis-jenis plastik"], answer: "Sampah plastik sebagai masalah lingkungan", explanation: "Teks tersebut secara jelas membahas sampah plastik sebagai masalah serius bagi lingkungan." },
-            { question: "Menurut teks, apa saja yang termasuk dalam prinsip 3R?", options: ["Reduce, Reuse, Recycle", "Read, Write, Remember", "Right, Rotate, Roll", "Run, Rest, Repeat"], answer: "Reduce, Reuse, Recycle", explanation: "Teks tersebut menyebutkan prinsip 3R adalah Reduce (mengurangi), Reuse (menggunakan kembali), dan Recycle (mendaur ulang)." },
-            { question: "Bagian pidato yang berisi ucapan salam, sapaan, dan puji syukur disebut bagian...", options: ["Isi", "Penutup", "Pembukaan", "Judul"], answer: "Pembukaan", explanation: "Pembukaan pidato berfungsi untuk menyapa audiens dan memberikan pengantar sebelum masuk ke isi." },
-            { question: "Kata-kata seperti 'ayo', 'marilah', 'hendaknya' sering digunakan dalam pidato yang bertujuan untuk...", options: ["Melarang", "Mengajak", "Menjelaskan", "Bercerita"], answer: "Mengajak", explanation: "Kata-kata tersebut adalah kata ajakan yang merupakan ciri khas dari pidato persuasif." },
-            { question: "Perkembangbiakan tumbuhan dengan cara menanam batangnya disebut...", options: ["Cangkok", "Okulasi", "Stek", "Merunduk"], answer: "Stek", explanation: "Stek adalah metode perbanyakan tanaman dengan menggunakan potongan tubuh tanaman (batang, akar, atau daun)." },
-            { question: "Bebek memiliki kaki berselaput yang berfungsi untuk membantunya...", options: ["Mencengkeram dahan", "Berlari kencang", "Berenang di air", "Menggali tanah"], answer: "Berenang di air", explanation: "Kaki berselaput pada bebek merupakan bentuk adaptasi untuk memudahkannya bergerak (berenang) di air." },
-            { question: "Mimpi basah adalah salah satu ciri pubertas yang dialami oleh...", options: ["Anak perempuan", "Anak laki-laki", "Bayi", "Orang tua"], answer: "Anak laki-laki", explanation: "Mimpi basah adalah tanda bahwa sistem reproduksi pada anak laki-laki sudah mulai berfungsi." },
-            { question: "Unta menyimpan cadangan makanan di punuknya dalam bentuk...", options: ["Air", "Otot", "Tulang", "Lemak"], answer: "Lemak", explanation: "Punuk unta berisi cadangan lemak yang dapat diubah menjadi air dan energi saat dibutuhkan." }
+{
+    question: "Hasil dari -7 - (-10) adalah...",
+    options: ["-17", "-3", "3"],
+    answer: "3",
+    explanation: "Mengurangi dengan bilangan negatif sama dengan menjumlahkan: -7 + 10 = 3."
+},
+{
+    question: "Apa masalah utama yang dibahas dalam teks tentang sampah plastik?",
+    options: ["Cara membuat plastik", "Daur ulang botol", "Sampah plastik sebagai masalah lingkungan"],
+    answer: "Sampah plastik sebagai masalah lingkungan",
+    explanation: "Teks tersebut secara jelas membahas sampah plastik sebagai masalah serius bagi lingkungan."
+},
+{
+    question: "Ayam, burung, dan ikan adalah contoh hewan yang berkembang biak secara...",
+    options: ["Vivipar", "Ovipar", "Ovovivipar"],
+    answer: "Ovipar",
+    explanation: "Ovipar adalah cara berkembang biak dengan bertelur, yang dilakukan oleh ayam, burung, dan ikan."
+},
+{
+    question: "Seekor ikan berada di kedalaman 12 meter di bawah permukaan laut. Penulisan posisi ikan menggunakan bilangan bulat adalah...",
+    options: ["12 meter", "-12 meter", "+12 meter"],
+    answer: "-12 meter",
+    explanation: "Posisi 'di bawah permukaan laut' dinyatakan dengan bilangan bulat negatif."
+},
+{
+    question: "Bagian pidato yang berisi ucapan salam, sapaan, dan puji syukur disebut bagian...",
+    options: ["Isi", "Penutup", "Pembukaan"],
+    answer: "Pembukaan",
+    explanation: "Pembukaan pidato berfungsi untuk menyapa audiens dan memberikan pengantar sebelum masuk ke isi."
+},
+{
+    question: "Bebek memiliki kaki berselaput yang berfungsi untuk membantunya...",
+    options: ["Mencengkeram dahan", "Berlari kencang", "Berenang di air"],
+    answer: "Berenang di air",
+    explanation: "Kaki berselaput pada bebek merupakan bentuk adaptasi untuk memudahkannya bergerak (berenang) di air."
+},
+{
+    question: "Hasil dari 12 x (-4) + 100 adalah...",
+    options: ["-48", "52", "68"],
+    answer: "52",
+    explanation: "Kerjakan perkalian terlebih dahulu: 12 x (-4) = -48. Kemudian -48 + 100 = 52."
+},
+{
+    question: "Menemukan inti sari atau informasi pokok dari sebuah bacaan disebut kegiatan...",
+    options: ["Menulis", "Menyunting", "Menyimpulkan"],
+    answer: "Menyimpulkan",
+    explanation: "Menyimpulkan adalah proses mengambil inti sari atau informasi penting dari suatu teks."
+},
+{
+    question: "Perkembangbiakan yang terjadi tanpa melalui proses penyerbukan atau pembuahan disebut perkembangbiakan...",
+    options: ["Generatif", "Vegetatif", "Seksual"],
+    answer: "Vegetatif",
+    explanation: "Perkembangbiakan vegetatif adalah perkembangbiakan aseksual (tanpa perkawinan)."
+},
+{
+    question: "Jari-jari sebuah lingkaran adalah setengah dari...",
+    options: ["Keliling", "Luas", "Diameter"],
+    answer: "Diameter",
+    explanation: "Diameter adalah garis tengah lingkaran, dan panjangnya adalah dua kali panjang jari-jari."
+},
+{
+    question: "Menstruasi atau haid adalah salah satu ciri pubertas yang dialami oleh...",
+    options: ["Anak laki-laki", "Anak perempuan", "Semua anak"],
+    answer: "Anak perempuan",
+    explanation: "Menstruasi adalah tanda bahwa sistem reproduksi pada anak perempuan sudah mulai aktif."
+},
+{
+    question: "Mengapa data dalam sebuah laporan harus akurat?",
+    options: ["Agar terlihat panjang", "Agar dapat dipercaya", "Agar mudah dibaca"],
+    answer: "Agar dapat dipercaya",
+    explanation: "Keakuratan data adalah kunci agar sebuah laporan dapat dipercaya dan dipertanggungjawabkan."
+},
+            { question: "Alinea pertama Pembukaan UUD 1945 menyatakan bahwa kemerdekaan adalah hak...", options: ["Para penjajah", "Segala bangsa", "Bangsa Indonesia saja"], answer: "Segala bangsa", explanation: "Bunyi alinea pertama adalah 'Bahwa sesungguhnya Kemerdekaan itu ialah hak segala bangsa'." },
+            { question: "Salah satu dampak positif globalisasi adalah...", options: ["Budaya asing masuk tanpa filter", "Mudahnya mendapatkan informasi dan ilmu pengetahuan", "Sifat individualisme meningkat"], answer: "Mudahnya mendapatkan informasi dan ilmu pengetahuan", explanation: "Globalisasi, terutama melalui internet, memudahkan akses terhadap informasi dan pengetahuan dari seluruh dunia." },
+            { question: "Cinta terhadap produk dalam negeri merupakan salah satu wujud...", options: ["Bela negara", "Chauvinisme", "Ekstrimisme"], answer: "Bela negara", explanation: "Mendukung produk dalam negeri membantu perekonomian negara dan merupakan wujud dari sikap bela negara." },
+            { question: "Pahlawan tanpa tanda jasa adalah sebutan untuk...", options: ["Dokter", "Polisi", "Guru"], answer: "Guru", explanation: "Guru disebut pahlawan tanpa tanda jasa karena pengabdiannya dalam mencerdaskan bangsa." },
+            { question: "Yesterday, my family ... to the zoo.", options: ["go", "goes", "went"], answer: "went", explanation: "'Yesterday' (kemarin) menunjukkan masa lampau, sehingga menggunakan Verb 2 dari 'go', yaitu 'went'." },
+            { question: "I wanted to buy an ice cream, ... I didn't have enough money.", options: ["so", "but", "and"], answer: "but", explanation: "Kata hubung 'but' (tetapi) digunakan untuk menunjukkan pertentangan antara dua kalimat." },
+            { question: "A person who is not afraid of anything is ... (berani)", options: ["Shy", "Brave", "Scared"], answer: "Brave", explanation: "Orang yang berani dalam bahasa Inggris disebut 'brave'." },
+            { question: "My father bought a new car last .... (minggu lalu)", options: ["Day", "Month", "Week"], answer: "Week", explanation: "Minggu lalu dalam bahasa Inggris adalah 'last week'." },
+            { question: "Struktur sesorah (pidhato) sing isine atur panuwun lan njaluk pangapura yaiku...", options: ["Pambuka", "Surasa basa (isi)", "Panutup"], answer: "Panutup", explanation: "Bagian penutup pidato berisi kesimpulan, ucapan terima kasih (atur panuwun), dan permohonan maaf." },
+            { question: "Raden Werkudara utawa Bima iku satriya ing...", options: ["Jodhipati", "Amarta", "Madukara"], answer: "Jodhipati", explanation: "Dalam pewayangan, Raden Werkudara adalah kesatria dari Jodhipati." },
+            { question: "Pusakane Raden Werkudara sing wujude kuku yaiku Kuku...", options: ["Bimapaksa", "Pancanaka", "Wijayakusuma"], answer: "Pancanaka", explanation: "Senjata pusaka Werkudara yang berupa kuku sakti adalah Kuku Pancanaka." },
+            { question: "Eyang lagi nonton wayang. Basa kramane 'nonton' yaiku...", options: ["Nyawang", "Ndeleng", "Mirsani"], answer: "Mirsani", explanation: "Bahasa krama (halus) dari 'nonton' adalah 'mirsani'." }
         ],
         '7': [
-            // MATEMATIKA
-            { question: "Hasil dari (−18) + 30 − (−12) adalah...", options: ["0", "24", "36", "-6"], answer: "24", explanation: "(-18 + 30) = 12. Kemudian 12 - (-12) sama dengan 12 + 12 = 24." },
-            { question: "Bentuk sederhana dari ekspresi aljabar 5x − 3y + 7x + 5y adalah...", options: ["12x + 2y", "12x - 2y", "2x + 8y", "-2x - 8y"], answer: "12x + 2y", explanation: "Kelompokkan suku sejenis: (5x + 7x) + (-3y + 5y) = 12x + 2y." },
-            { question: "Jika A={huruf vokal} dan B={a,b,c,d,e}, maka A∩B adalah...", options: ["{a, e, i, o, u}", "{a, b, c, d, e}", "{a, e}", "{b, c, d}"], answer: "{a, e}", explanation: "Himpunan A = {a,e,i,o,u}. Irisan (∩) adalah anggota yang ada di kedua himpunan, yaitu {a, e}." },
-            { question: "KPK dari 12a²b dan 18ab³ adalah...", options: ["36a²b³", "6ab", "36a³b³", "6a²b³"], answer: "36a²b³", explanation: "KPK dari 12 dan 18 adalah 36. Untuk variabel, ambil pangkat tertinggi dari masing-masing, yaitu a² dan b³. Jadi KPK-nya 36a²b³." },
-            // BAHASA INDONESIA
-            { question: "Tujuan dari teks prosedur adalah...", options: ["Menceritakan pengalaman", "Menggambarkan objek", "Memberikan petunjuk atau langkah-langkah", "Mengkritik"], answer: "Memberikan petunjuk atau langkah-langkah", explanation: "Teks prosedur dibuat untuk memandu pembaca dalam melakukan sesuatu secara urut." },
-            { question: "Teks yang bertujuan menggambarkan suatu objek sehingga pembaca seolah-olah melihatnya langsung disebut teks...", options: ["Narasi", "Prosedur", "Deskripsi", "Fantasi"], answer: "Deskripsi", explanation: "Teks deskripsi berfokus pada penggambaran detail suatu objek menggunakan panca indera." },
-            { question: "Ciri utama yang membedakan teks cerita fantasi dengan teks narasi lainnya adalah...", options: ["Adanya tokoh dan alur", "Adanya unsur keajaiban atau fiksi", "Menggunakan bahasa baku", "Berdasarkan kisah nyata"], answer: "Adanya unsur keajaiban atau fiksi", explanation: "Cerita fantasi memiliki unsur magis, supranatural, atau futuristik yang tidak ada dalam realitas." },
-            { question: "Tokoh yang menjadi lawan dari tokoh utama (protagonis) dalam sebuah cerita disebut...", options: ["Tritagonis", "Figuran", "Antagonis", "Narator"], answer: "Antagonis", explanation: "Antagonis adalah tokoh yang memiliki konflik dengan dan menjadi penentang dari tokoh protagonis." },
-            // IPA
-            { question: "Kelompok hewan yang tidak memiliki tulang belakang disebut...", options: ["Vertebrata", "Avertebrata", "Mamalia", "Reptilia"], answer: "Avertebrata", explanation: "Avertebrata (Invertebrata) adalah klasifikasi untuk hewan tanpa tulang belakang." },
-            { question: "Perpindahan panas melalui zat perantara tanpa disertai perpindahan partikel zat tersebut disebut...", options: ["Konduksi", "Konveksi", "Radiasi", "Isolasi"], answer: "Konduksi", explanation: "Konduksi adalah perpindahan panas melalui getaran antar partikel, biasanya pada benda padat." },
-            { question: "Besaran pokok yang memiliki satuan internasional (SI) Ampere adalah...", options: ["Suhu", "Panjang", "Massa", "Kuat arus listrik"], answer: "Kuat arus listrik", explanation: "Dalam 7 besaran pokok SI, Ampere (A) adalah satuan untuk kuat arus listrik." },
-            { question: "Perubahan suhu dari 25°C ke dalam skala Kelvin (K) adalah...", options: ["25 K", "273 K", "298 K", "-248 K"], answer: "298 K", explanation: "Rumus konversi Celcius ke Kelvin adalah K = °C + 273. Jadi, K = 25 + 273 = 298 K." },
-//_PASTE KODE INI DI DALAM TANDA [ ] UNTUK KELAS 7_
-            { question: "Urutkan pecahan berikut dari yang terkecil: 3/4, 70%, 0.8, 5/7", options: ["3/4, 70%, 0.8, 5/7", "70%, 5/7, 3/4, 0.8", "5/7, 70%, 3/4, 0.8", "0.8, 3/4, 5/7, 70%"], answer: "70%, 5/7, 3/4, 0.8", explanation: "Ubah semua ke desimal: 3/4=0.75; 70%=0.7; 0.8; 5/7≈0.71. Urutan terkecil: 0.7, 0.71, 0.75, 0.8." },
-            { question: "Ibu membeli 2 1/2 kg gula dan 3 1/4 kg tepung. Total berat belanjaan ibu adalah...", options: ["5 1/4 kg", "5 2/6 kg", "5 3/4 kg", "6 kg"], answer: "5 3/4 kg", explanation: "2 1/2 + 3 1/4 = 2 2/4 + 3 1/4 = 5 3/4 kg." },
-            { question: "Dari 40 siswa, 25 suka pop, 20 suka rock, 10 suka keduanya. Berapa siswa yang tidak suka keduanya?", options: ["5", "10", "15", "20"], answer: "5", explanation: "Total = (Suka Pop + Suka Rock - Suka Keduanya) + Tidak Suka Keduanya. 40 = (25+20-10) + x. 40 = 35 + x. Jadi x = 5." },
-            { question: "Jika x=4 dan y=−2, maka nilai dari 3x − 5y adalah...", options: ["2", "12", "22", "32"], answer: "22", explanation: "Substitusi nilai: 3(4) - 5(-2) = 12 - (-10) = 12 + 10 = 22." },
-            { question: "Latar tempat, waktu, dan suasana dalam sebuah cerita disebut...", options: ["Alur", "Penokohan", "Sudut pandang", "Setting"], answer: "Setting", explanation: "Setting atau latar adalah unsur intrinsik cerita yang meliputi tempat, waktu, dan suasana terjadinya peristiwa." },
-            { question: "'Tambahkan garam secukupnya, lalu aduk hingga rata.' Kalimat tersebut merupakan contoh kalimat...", options: ["Perintah", "Tanya", "Berita", "Seru"], answer: "Perintah", explanation: "Kalimat tersebut memberikan instruksi atau perintah untuk melakukan sesuatu, ciri khas teks prosedur." },
-            { question: "Dalam cerita fantasi 'Harry Potter', tokoh utama dapat menggunakan sihir. Hal ini menunjukkan ciri...", options: ["Logis", "Berdasarkan fakta", "Adanya keajaiban (anomali)", "Alur yang lambat"], answer: "Adanya keajaiban (anomali)", explanation: "Kemampuan sihir yang tidak ada di dunia nyata merupakan unsur keajaiban atau anomali yang menjadi ciri utama cerita fantasi." },
-            { question: "Kata penghubung seperti 'kemudian', 'selanjutnya', 'setelah itu' sering ditemukan dalam teks...", options: ["Deskripsi", "Eksposisi", "Prosedur", "Laporan"], answer: "Prosedur", explanation: "Kata-kata tersebut adalah konjungsi temporal yang menunjukkan urutan waktu atau langkah-langkah, yang merupakan ciri teks prosedur." },
-            { question: "Sebuah balok memiliki panjang 10 cm, lebar 5 cm, dan tinggi 2 cm. Volume balok tersebut adalah...", options: ["17 cm³", "50 cm³", "100 cm³", "200 cm³"], answer: "100 cm³", explanation: "Rumus volume balok adalah V = panjang × lebar × tinggi. V = 10 × 5 × 2 = 100 cm³." },
-            { question: "Pegangan setrika dibuat dari bahan plastik karena plastik merupakan bahan yang bersifat...", options: ["Konduktor", "Isolator", "Semikonduktor", "Radiator"], answer: "Isolator", explanation: "Isolator adalah bahan yang sulit menghantarkan panas. Plastik digunakan agar panas dari setrika tidak sampai ke tangan." },
-            { question: "Contoh perpindahan panas secara radiasi dalam kehidupan sehari-hari adalah...", options: ["Ujung sendok panas", "Gerakan air mendidih", "Panas matahari sampai ke bumi", "Asap membumbung tinggi"], answer: "Panas matahari sampai ke bumi", explanation: "Radiasi adalah perpindahan panas tanpa memerlukan medium, seperti panas matahari yang melewati ruang hampa." },
-            { question: "Mikroskop adalah alat yang digunakan dalam pengamatan IPA untuk...", options: ["Melihat benda jauh", "Melihat benda yang sangat kecil", "Mengukur berat benda", "Mengukur suhu"], answer: "Melihat benda yang sangat kecil", explanation: "Mikroskop berfungsi untuk memperbesar bayangan objek yang sangat kecil sehingga dapat diamati." }
+{
+    question: "Suhu di kota A adalah −5°C dan suhu di kota B adalah 27°C. Selisih suhu kedua kota tersebut adalah...",
+    options: ["22°C", "32°C", "-32°C"],
+    answer: "32°C",
+    explanation: "Selisih suhu dihitung dengan mengurangi suhu yang lebih tinggi dengan yang lebih rendah: 27°C - (-5°C) = 27 + 5 = 32°C."
+},
+{
+    question: "Bagian dari teks deskripsi yang berisi gambaran rinci dari objek disebut...",
+    options: ["Identifikasi", "Klasifikasi", "Deskripsi bagian"],
+    answer: "Deskripsi bagian",
+    explanation: "Setelah identifikasi umum, teks deskripsi akan merinci objek pada bagian yang disebut 'deskripsi bagian'."
+},
+{
+    question: "Nama ilmiah untuk padi adalah Oryza sativa. Kata 'Oryza' menunjukkan tingkatan takson...",
+    options: ["Spesies", "Genus", "Famili"],
+    answer: "Genus",
+    explanation: "Dalam sistem binomial nomenclature, kata pertama (Oryza) menunjukkan Genus dan kata kedua (sativa) menunjukkan penunjuk spesies."
+},
+{
+    question: "Hasil dari (2p+3q)−(p−4q) adalah...",
+    options: ["p - q", "p + 7q", "3p - q"],
+    answer: "p + 7q",
+    explanation: "Buka kurung: 2p + 3q - p + 4q. Kelompokkan suku sejenis: (2p-p) + (3q+4q) = p + 7q."
+},
+{
+    question: "Tokoh yang menjadi lawan dari tokoh utama (protagonis) dalam sebuah cerita disebut...",
+    options: ["Tritagonis", "Figuran", "Antagonis"],
+    answer: "Antagonis",
+    explanation: "Antagonis adalah tokoh yang memiliki konflik dengan dan menjadi penentang dari tokoh protagonis."
+},
+{
+    question: "Tumbuhan lumut dan paku diklasifikasikan ke dalam kelompok tumbuhan tidak berbiji. Apa perbedaan utama antara keduanya?",
+    options: ["Lumut punya akar, paku tidak", "Paku punya pembuluh angkut, lumut tidak", "Lumut berfotosintesis, paku tidak"],
+    answer: "Paku punya pembuluh angkut, lumut tidak",
+    explanation: "Tumbuhan paku sudah memiliki jaringan pembuluh (xilem dan floem), sedangkan lumut belum."
+},
+{
+    question: "Seorang pedagang rugi Rp15.000 setelah menjual barang seharga Rp135.000. Berapa harga beli barang tersebut?",
+    options: ["Rp120.000", "Rp135.000", "Rp150.000"],
+    answer: "Rp150.000",
+    explanation: "Harga Beli = Harga Jual + Rugi. Maka, Harga Beli = Rp135.000 + Rp15.000 = Rp150.000."
+},
+{
+    question: "'Matikan kompor jika air sudah mendidih.' Kalimat tersebut termasuk jenis kalimat...",
+    options: ["Saran", "Perintah", "Tanya"],
+    answer: "Perintah",
+    explanation: "Kalimat tersebut memberikan instruksi atau perintah yang jelas untuk melakukan sesuatu."
+},
+{
+    question: "Contoh perpindahan panas secara radiasi dalam kehidupan sehari-hari adalah...",
+    options: ["Ujung sendok panas saat mengaduk teh", "Gerakan air saat direbus", "Panas api unggun terasa di wajah kita"],
+    answer: "Panas api unggun terasa di wajah kita",
+    explanation: "Radiasi adalah perpindahan panas tanpa memerlukan medium, seperti panas api yang sampai ke kita."
+},
+{
+    question: "KPK dari 12a²b dan 18ab³ adalah...",
+    options: ["36a²b³", "6ab", "36a³b³"],
+    answer: "36a²b³",
+    explanation: "KPK dari 12 dan 18 adalah 36. Untuk variabel, ambil pangkat tertinggi dari masing-masing, yaitu a² dan b³. Jadi KPK-nya 36a²b³."
+},
+{
+    question: "Mikroskop adalah alat yang digunakan dalam pengamatan IPA untuk...",
+    options: ["Melihat benda jauh", "Melihat benda yang sangat kecil", "Mengukur berat benda"],
+    answer: "Melihat benda yang sangat kecil",
+    explanation: "Mikroskop berfungsi untuk memperbesar bayangan objek yang sangat kecil sehingga dapat diamati."
+},
+{
+    question: "Diketahui H={x | 1<x≤10, x ∈ bilangan prima}. Anggota dari himpunan H adalah...",
+    options: ["{2, 3, 5, 7}", "{3, 5, 7}", "{1, 2, 3, 5, 7}"],
+    answer: "{2, 3, 5, 7}",
+    explanation: "Bilangan prima antara 1 dan 10 (inklusif) adalah 2, 3, 5, dan 7. Angka 1 bukan bilangan prima."
+},
+            { question: "Badan yang dibentuk Jepang untuk mempersiapkan kemerdekaan Indonesia adalah...", options: ["PPKI", "BPUPKI", "PETA"], answer: "BPUPKI", explanation: "BPUPKI (Badan Penyelidik Usaha-usaha Persiapan Kemerdekaan) dibentuk untuk merumuskan dasar negara." },
+            { question: "Norma yang memiliki sanksi paling tegas dan memaksa yang diatur oleh negara adalah norma...", options: ["Agama", "Kesusilaan", "Kesopanan", "Hukum"], answer: "Hukum", explanation: "Norma hukum memiliki sanksi yang nyata, tegas, dan memaksa yang ditegakkan oleh aparat negara." },
+            { question: "Ketua dari BPUPKI adalah...", options: ["Ir. Soekarno", "Moh. Hatta", "Dr. K.R.T. Radjiman Wedyodiningrat", "Mr. Soepomo"], answer: "Dr. K.R.T. Radjiman Wedyodiningrat", explanation: "BPUPKI diketuai oleh Dr. K.R.T. Radjiman Wedyodiningrat." },
+            { question: "Rumusan Pancasila yang sah dan resmi tercantum dalam ... UUD NRI Tahun 1945.", options: ["Pasal 1", "Pembukaan", "Batang Tubuh", "Penjelasan"], answer: "Pembukaan", explanation: "Rumusan Pancasila yang final dan sah tercantum dalam alinea keempat Pembukaan UUD 1945." },
+            { question: "What is Anita's hobby?", options: ["Studying", "Reading books", "Going to the library"], answer: "Reading books", explanation: "Teks menyatakan 'I have a hobby, it is reading books'." },
+            { question: "My father is a doctor. He ... in a hospital.", options: ["work", "works", "is working"], answer: "works", explanation: "Untuk subjek tunggal (He, She, It) dalam simple present tense, kata kerjanya ditambah -s atau -es." },
+            { question: "A: ... you have any pets? B: Yes, I do.", options: ["Do", "Does", "Is", "Are"], answer: "Do", explanation: "Untuk subjek I, You, We, They, kalimat tanya menggunakan 'Do'." },
+            { question: "The opposite of 'diligent' (rajin) is...", options: ["Smart", "Lazy", "Kind"], answer: "Lazy", explanation: "Lawan kata dari 'diligent' (rajin) adalah 'lazy' (malas)." },
+            { question: "Pawongan sing ahli nggurit (ngarang geguritan) diarani...", options: ["Dhalang", "Panggurit", "Niyaga"], answer: "Panggurit", explanation: "Orang yang ahli membuat geguritan (puisi Jawa) disebut panggurit." },
+            { question: "Tulisan Jawa iki diwaca... (ꦩꦔꦤ꧀ꦤꦱꦶ)", options: ["Mangan nasi", "Mangan sega", "Mangan roti"], answer: "Mangan nasi", explanation: "Rangkaian aksara tersebut dibaca 'mangan nasi'." },
+            { question: "Geguritan yaiku salah siji karya sastra Jawa gagrag ... (lawas/anyar).", options: ["Anyar", "Lawas", "Campuran"], answer: "Anyar", explanation: "Geguritan adalah puisi Jawa gaya baru (gagrag anyar) yang tidak terikat aturan seperti tembang macapat." },
+            { question: "Simbah nembe sare. Basa ngokone 'sare' yaiku...", options: ["Mangan", "Lunga", "Turu"], answer: "Turu", explanation: "'Sare' adalah bahasa krama dari 'turu' (tidur)." }
         ],
         '8': [
-            // MATEMATIKA
-            { question: "Dua suku berikutnya dari barisan bilangan 2, 5, 8, 11, ... adalah...", options: ["14, 17", "13, 15", "14, 18", "15, 19"], answer: "14, 17", explanation: "Ini adalah barisan aritmetika dengan beda +3. Suku berikutnya adalah 11+3=14, dan 14+3=17." },
-            { question: "Gradien dari garis yang melalui titik (2,1) dan (4,5) adalah...", options: ["-2", "1/2", "2", "4"], answer: "2", explanation: "Rumus gradien (m) = (y₂ - y₁) / (x₂ - x₁). Maka m = (5 - 1) / (4 - 2) = 4 / 2 = 2." },
-            { question: "Sebuah fungsi didefinisikan dengan rumus f(x) = 3x − 5. Nilai dari f(4) adalah...", options: ["7", "12", "17", "2"], answer: "7", explanation: "Substitusikan nilai x=4 ke dalam rumus fungsi: f(4) = 3(4) - 5 = 12 - 5 = 7." },
-            { question: "Rumus suku ke-n dari barisan bilangan 3, 7, 11, 15, ... adalah...", options: ["3n", "n + 4", "4n - 1", "3n + 1"], answer: "4n - 1", explanation: "Barisan ini memiliki beda 4. Rumus Un = a + (n-1)b = 3 + (n-1)4 = 3 + 4n - 4 = 4n - 1." },
-            // BAHASA INDONESIA
-            { question: "'Membaca adalah membuka jendela dunia.' Kalimat ini merupakan contoh dari sebuah...", options: ["Iklan", "Slogan", "Poster", "Berita"], answer: "Slogan", explanation: "Slogan adalah kalimat singkat dan menarik yang digunakan untuk menyampaikan suatu gagasan." },
-            { question: "Teks yang berisi pendapat (argumen) yang diperkuat dengan fakta untuk meyakinkan pembaca disebut teks...", options: ["Narasi", "Deskripsi", "Eksposisi", "Berita"], answer: "Eksposisi", explanation: "Teks eksposisi bertujuan untuk memaparkan suatu gagasan yang disertai argumen logis dan fakta." },
-            { question: "Unsur berita yang menjawab pertanyaan 'siapa' disebut...", options: ["What (Apa)", "When (Kapan)", "Who (Siapa)", "Why (Mengapa)"], answer: "Who (Siapa)", explanation: "Dalam unsur berita 5W+1H, unsur 'Who' menjelaskan tentang orang-orang yang terlibat dalam peristiwa." },
-            { question: "Bagian dari struktur teks eksposisi yang berisi pengenalan isu atau masalah adalah...", options: ["Argumen", "Tesis", "Penegasan ulang", "Judul"], answer: "Tesis", explanation: "Tesis adalah bagian pembuka dari teks eksposisi yang berisi pernyataan pendapat atau pengenalan isu." },
-            // IPA
-            { question: "Jaringan pada tumbuhan yang berfungsi untuk mengangkut air dan mineral dari akar ke daun adalah...", options: ["Floem", "Xilem", "Epidermis", "Kambium"], answer: "Xilem", explanation: "Xilem (pembuluh kayu) bertugas mengangkut air dan unsur hara dari akar ke seluruh bagian tumbuhan." },
-            { question: "Proses fotosintesis pada tumbuhan terjadi di organel sel yang disebut...", options: ["Mitokondria", "Ribosom", "Inti sel", "Kloroplas"], answer: "Kloroplas", explanation: "Kloroplas adalah organel yang mengandung klorofil dan menjadi tempat berlangsungnya fotosintesis." },
-            { question: "Sebuah gaya sebesar 50 N digunakan untuk mendorong meja sejauh 2 meter. Usaha yang dilakukan adalah...", options: ["25 Joule", "52 Joule", "100 Joule", "200 Joule"], answer: "100 Joule", explanation: "Rumus Usaha (W) = Gaya (F) × Perpindahan (s). Maka, W = 50 N × 2 m = 100 Joule." },
-            { question: "Gunting, pinset, dan pembuka botol adalah contoh dari pesawat sederhana jenis...", options: ["Katrol", "Bidang miring", "Roda berporos", "Tuas (Pengungkit)"], answer: "Tuas (Pengungkit)", explanation: "Ketiga alat tersebut bekerja berdasarkan prinsip tuas, yang memiliki titik tumpu, kuasa, dan beban." },
-//_PASTE KODE INI DI DALAM TANDA [ ] UNTUK KELAS 8_
-            { question: "Sebuah titik berada di Kuadran III. Koordinat yang mungkin untuk titik tersebut adalah...", options: ["(2, 3)", "(-2, 3)", "(-2, -3)", "(2, -3)"], answer: "(-2, -3)", explanation: "Kuadran III adalah area di mana nilai koordinat x dan y keduanya negatif." },
-            { question: "Diketahui P={1,2,3} dan Q={a,b}. Banyaknya fungsi yang mungkin dari P ke Q adalah...", options: ["6", "8", "9", "5"], answer: "8", explanation: "Banyak fungsi dari P ke Q adalah n(Q)^n(P) = 2³ = 8." },
-            { question: "Jika g(a)=13 untuk fungsi g(x)=2x+7, maka nilai a adalah...", options: ["3", "4", "5", "10"], answer: "3", explanation: "g(a) = 2a+7 = 13. Maka 2a = 13-7 = 6. Jadi, a = 6/2 = 3." },
-            { question: "Persamaan garis lurus yang melalui titik (0,3) dan bergradien 2 adalah...", options: ["y = 3x + 2", "y = 2x + 3", "y = 2x - 3", "y = 3x - 2"], answer: "y = 2x + 3", explanation: "Gunakan rumus y = mx + c. Gradien (m)=2. Titik (0,3) menunjukkan c=3. Jadi, persamaannya y = 2x + 3." },
-            { question: "Bagian teks berita yang merupakan inti dari keseluruhan berita disebut...", options: ["Judul (headline)", "Teras berita (lead)", "Tubuh berita (body)", "Ekor berita (tail)"], answer: "Teras berita (lead)", explanation: "Teras berita (lead) biasanya terletak di paragraf pertama dan merangkum unsur-unsur terpenting dari berita." },
-            { question: "Perbedaan utama antara iklan dan slogan adalah...", options: ["Warnanya", "Ukurannya", "Tujuannya", "Bentuknya (iklan bisa berupa gambar/teks, slogan hanya tulisan singkat)"], answer: "Bentuknya (iklan bisa berupa gambar/teks, slogan hanya tulisan singkat)", explanation: "Iklan adalah presentasi yang lebih lengkap (bisa ada gambar, video, teks), sedangkan slogan adalah frasa pendek yang menjadi bagian dari iklan." },
-            { question: "Fakta dalam teks eksposisi berfungsi untuk...", options: ["Menghibur pembaca", "Memperkuat argumen", "Membuat cerita", "Menjadi hiasan"], answer: "Memperkuat argumen", explanation: "Fakta dan data digunakan untuk mendukung dan memperkuat argumen penulis sehingga lebih meyakinkan." },
-            { question: "Ciri kebahasaan teks berita yang utama adalah menggunakan bahasa yang...", options: ["Puitis dan indah", "Baku, sederhana, dan komunikatif", "Rumit dan ilmiah", "Penuh singkatan"], answer: "Baku, sederhana, dan komunikatif", explanation: "Bahasa berita harus formal (baku) namun mudah dipahami (sederhana dan komunikatif) oleh masyarakat luas." },
-            { question: "Contoh penerapan Hukum I Newton dalam kehidupan sehari-hari adalah...", options: ["Benda jatuh ke bawah", "Saat mobil direm, tubuh terdorong ke depan", "Mendayung perahu", "Bermain ketapel"], answer: "Saat mobil direm, tubuh terdorong ke depan", explanation: "Hukum I Newton (Inersia) menyatakan benda cenderung mempertahankan keadaannya. Saat mobil berhenti, tubuh kita cenderung tetap bergerak maju." },
-            { question: "Keuntungan mekanis sebuah tuas dapat diperbesar dengan cara...", options: ["Memperpendek lengan kuasa", "Memperpanjang lengan kuasa", "Memindahkan beban ke dekat kuasa", "Memperberat beban"], answer: "Memperpanjang lengan kuasa", explanation: "Keuntungan mekanis (KM = Lengan Kuasa / Lengan Beban) akan semakin besar jika lengan kuasa diperpanjang." },
-            { question: "Gerak menutupnya daun putri malu saat disentuh merupakan contoh gerak...", options: ["Nasti", "Tropisme", "Taksis", "Pasif"], answer: "Nasti", explanation: "Gerak nasti adalah gerak bagian tumbuhan yang arahnya tidak dipengaruhi oleh arah datangnya rangsang, seperti sentuhan." },
-            { question: "Batang pada tumbuhan dikotil memiliki kambium yang berfungsi untuk...", options: ["Mengangkut air", "Menyimpan makanan", "Pertumbuhan sekunder (membesar)", "Fotosintesis"], answer: "Pertumbuhan sekunder (membesar)", explanation: "Aktivitas kambium menyebabkan pertumbuhan sekunder, yaitu pertambahan diameter (membesarnya) batang." }
+{
+    question: "Rumus suku ke-n dari barisan bilangan 3, 7, 11, 15, ... adalah...",
+    options: ["3n", "n + 4", "4n - 1"],
+    answer: "4n - 1",
+    explanation: "Barisan ini memiliki beda 4. Rumus Un = a + (n-1)b = 3 + (n-1)4 = 3 + 4n - 4 = 4n - 1."
+},
+{
+    question: "Bagian teks berita yang merupakan inti dari keseluruhan berita disebut...",
+    options: ["Judul (headline)", "Teras berita (lead)", "Tubuh berita (body)"],
+    answer: "Teras berita (lead)",
+    explanation: "Teras berita (lead) biasanya terletak di paragraf pertama dan merangkum unsur-unsur terpenting dari berita (5W+1H)."
+},
+{
+    question: "Sebuah mobil bergerak dengan kecepatan tetap 20 m/s. Jarak yang ditempuh mobil selama 10 detik adalah...",
+    options: ["2 meter", "200 meter", "30 meter"],
+    answer: "200 meter",
+    explanation: "Jarak = kecepatan × waktu. Jarak = 20 m/s × 10 s = 200 meter."
+},
+{
+    question: "Relasi dari himpunan A={1,2,3} ke B={2,4,6} yang menyatakan 'setengah dari' adalah...",
+    options: ["{(1,2), (2,4), (3,6)}", "{(1,2), (2,3), (3,4)}", "{(2,1), (4,2), (6,3)}"],
+    answer: "{(1,2), (2,4), (3,6)}",
+    explanation: "Pasangan yang sesuai dengan relasi 'setengah dari' adalah 1 setengah dari 2, 2 setengah dari 4, dan 3 setengah dari 6."
+},
+{
+    question: "Bagian penegasan ulang dalam teks eksposisi berisi...",
+    options: ["Pengenalan isu", "Argumen penulis", "Simpulan atau rangkuman"],
+    answer: "Simpulan atau rangkuman",
+    explanation: "Bagian penegasan ulang berfungsi untuk menyimpulkan dan menegaskan kembali pendapat yang telah disampaikan."
+},
+{
+    question: "Sebuah benda bermassa 5 kg ditarik dengan gaya 15 N. Percepatan yang dialami benda tersebut adalah... m/s².",
+    options: ["3", "10", "75"],
+    answer: "3",
+    explanation: "Gunakan rumus F = m × a. Maka a = F / m = 15 N / 5 kg = 3 m/s²."
+},
+{
+    question: "Garis yang sejajar dengan sumbu-X memiliki posisi...",
+    options: ["Vertikal", "Miring", "Horizontal"],
+    answer: "Horizontal",
+    explanation: "Sumbu-X adalah garis horizontal, maka garis yang sejajar dengannya juga horizontal."
+},
+{
+    question: "Unsur-unsur yang harus ada dalam sebuah iklan komersial meliputi nama produk dan...",
+    options: ["Tanggal produksi", "Kelebihan produk", "Nama direktur perusahaan"],
+    answer: "Kelebihan produk",
+    explanation: "Iklan harus menonjolkan kelebihan atau keunggulan produk untuk menarik minat konsumen."
+},
+{
+    question: "Bidang miring digunakan untuk mempermudah pekerjaan dengan cara...",
+    options: ["Memperbesar gaya", "Mengubah arah gaya", "Memperkecil gaya"],
+    answer: "Memperkecil gaya",
+    explanation: "Bidang miring memungkinkan kita memindahkan benda dengan gaya yang lebih kecil meskipun menempuh jarak yang lebih jauh."
+},
+{
+    question: "Persamaan garis lurus yang melalui titik (0,3) dan bergradien 2 adalah...",
+    options: ["y = 3x + 2", "y = 2x + 3", "y = 2x - 3"],
+    answer: "y = 2x + 3",
+    explanation: "Gunakan rumus y = mx + c. Gradien (m)=2. Titik (0,3) menunjukkan c=3. Jadi, persamaannya y = 2x + 3."
+},
+{
+    question: "Batang pada tumbuhan dikotil memiliki kambium yang berfungsi untuk...",
+    options: ["Mengangkut air", "Menyimpan makanan", "Pertumbuhan sekunder (membesar)"],
+    answer: "Pertumbuhan sekunder (membesar)",
+    explanation: "Aktivitas kambium menyebabkan pertumbuhan sekunder, yaitu pertambahan diameter (membesarnya) batang."
+},
+{
+    question: "Dari himpunan pasangan berurutan berikut, manakah yang merupakan fungsi?",
+    options: ["{(1,a),(2,b),(1,c)}", "{(1,a),(2,a),(3,a)}", "{(a,1),(b,1),(c,2)}"],
+    answer: "{(1,a),(2,a),(3,a)}",
+    explanation: "Syarat fungsi adalah setiap anggota domain (daerah asal) harus memiliki tepat satu pasangan di kodomain. Pilihan A tidak memenuhi karena 1 memiliki dua pasangan (a dan c)."
+},
+            { question: "Kedudukan Pancasila sebagai sumber dari segala sumber hukum berarti...", options: ["Pancasila adalah satu-satunya hukum", "Semua peraturan tidak boleh bertentangan dengan Pancasila", "Pancasila dapat diubah oleh hukum"], answer: "Semua peraturan tidak boleh bertentangan dengan Pancasila", explanation: "Artinya, semua hukum dan peraturan yang dibuat di Indonesia harus bersumber dan tidak boleh menyimpang dari nilai-nilai Pancasila." },
+            { question: "Peraturan yang kedudukannya paling tinggi di Indonesia adalah...", options: ["Undang-Undang (UU)", "TAP MPR", "UUD NRI Tahun 1945", "Perda"], answer: "UUD NRI Tahun 1945", explanation: "Berdasarkan tata urutan perundang-undangan, UUD NRI Tahun 1945 menempati posisi tertinggi." },
+            { question: "Proses mengubah atau melakukan penyesuaian terhadap UUD NRI Tahun 1945 disebut...", options: ["Amandemen", "Yudikatif", "Legislatif", "Konstitusi"], answer: "Amandemen", explanation: "Amandemen adalah proses perubahan resmi terhadap dokumen, khususnya konstitusi atau UUD." },
+            { question: "Lembaga negara yang berwenang melakukan perubahan terhadap UUD NRI Tahun 1945 adalah...", options: ["Presiden", "DPR", "MPR", "MA"], answer: "MPR", explanation: "Majelis Permusyawaratan Rakyat (MPR) adalah satu-satunya lembaga yang memiliki wewenang untuk mengubah dan menetapkan UUD." },
+            { question: "What is the purpose of the text about going to the beach?", options: ["To describe the beach", "To tell how to go to the beach", "To retell the writer's past experience"], answer: "To retell the writer's past experience", explanation: "Teks tersebut menggunakan kata kerja lampau (went, swam) untuk menceritakan kembali pengalaman (recount text)." },
+            { question: "My little brother fell from the bicycle yesterday. He ... his leg.", options: ["break", "broke", "breaks"], answer: "broke", explanation: "'Yesterday' (kemarin) menunjukkan kejadian lampau, sehingga menggunakan Verb 2 dari 'break', yaitu 'broke'." },
+            { question: "The simple past tense of the verb 'eat' is...", options: ["eats", "eaten", "ate"], answer: "ate", explanation: "Bentuk lampau (simple past) dari kata kerja 'eat' adalah 'ate'." },
+            { question: "A text that retells events or experiences in the past is called a ... text.", options: ["Descriptive", "Procedure", "Recount"], answer: "Recount", explanation: "Recount text adalah jenis teks yang bertujuan untuk menceritakan kembali kejadian atau pengalaman di masa lalu." },
+            { question: "Iklan kang isine ngajak-ajak masyarakat nindakake babagan kang becik diarani iklan...", options: ["Komersial", "Panjaluk", "Layanan masyarakat"], answer: "Layanan masyarakat", explanation: "Iklan layanan masyarakat bertujuan untuk memberikan edukasi atau ajakan positif kepada publik." },
+            { question: "Cacahe wanda (suku kata) ing saben gatra (baris) tembang macapat diarani guru...", options: ["Gatra", "Lagu", "Wilangan"], answer: "Wilangan", explanation: "Guru wilangan adalah aturan jumlah suku kata dalam setiap baris tembang macapat." },
+            { question: "Guru lagu yaiku tibaning swara ... ing pungkasaning gatra.", options: ["Konsonan", "Vokal", "Suku kata"], answer: "Vokal", explanation: "Guru lagu adalah aturan persamaan bunyi vokal di akhir setiap baris tembang macapat." },
+            { question: "Tembang Pangkur nduweni watak...", options: ["Sedhih", "Tresna", "Sereng/semangat"], answer: "Sereng/semangat", explanation: "Tembang Pangkur biasanya memiliki karakter (watak) yang bersemangat, kuat, atau terkadang marah." }
         ],
         '9': [
-            // MATEMATIKA
-            { question: "Hasil dari (2³)² × 2⁻⁴ adalah...", options: ["2", "4", "8", "16"], answer: "4", explanation: "(2³)² = 2⁶. Lalu 2⁶ × 2⁻⁴ = 2⁶⁻⁴ = 2² = 4." },
-            { question: "Bentuk sederhana dari √75 adalah...", options: ["3√5", "5√3", "25√3", "15√5"], answer: "5√3", explanation: "√75 = √(25 × 3) = √25 × √3 = 5√3." },
-            { question: "Akar-akar dari persamaan kuadrat x² − 5x + 6 = 0 adalah...", options: ["2 dan 3", "-2 dan -3", "1 dan 6", "-1 dan -6"], answer: "2 dan 3", explanation: "Faktorkan persamaan menjadi (x-2)(x-3)=0. Maka, akar-akarnya adalah x=2 dan x=3." },
-            { question: "Jika x₁ dan x₂ adalah akar-akar dari persamaan x²+2x−8=0, maka nilai dari x₁+x₂ adalah...", options: ["-8", "-2", "2", "8"], answer: "-2", explanation: "Rumus jumlah akar-akar persamaan kuadrat (x₁+x₂) adalah -b/a. Dari persamaan, a=1 dan b=2. Maka, x₁+x₂ = -2/1 = -2." },
-            // BAHASA INDONESIA
-            { question: "Sudut pandang orang pertama dalam cerpen ditandai dengan penggunaan kata ganti...", options: ["Dia, ia", "Mereka", "Kamu, Anda", "Aku, saya"], answer: "Aku, saya", explanation: "Sudut pandang orang pertama menggunakan kata ganti 'aku' atau 'saya', seolah-olah penulis adalah tokoh utama." },
-            { question: "Pesan atau pelajaran yang ingin disampaikan pengarang melalui cerpennya disebut...", options: ["Tema", "Alur", "Amanat", "Latar"], answer: "Amanat", explanation: "Amanat adalah pesan moral atau pelajaran berharga yang dapat dipetik oleh pembaca dari sebuah cerita." },
-            { question: "Teks yang menyajikan informasi hasil pengamatan secara objektif disebut teks...", options: ["Laporan Percobaan", "Cerpen", "Pidato", "Eksposisi"], answer: "Laporan Percobaan", explanation: "Teks laporan percobaan berisi paparan data dan hasil pengamatan secara sistematis dan apa adanya." },
-            { question: "Tahapan alur dalam cerpen di mana masalah mulai memuncak disebut...", options: ["Orientasi", "Komplikasi", "Klimaks", "Resolusi"], answer: "Klimaks", explanation: "Klimaks adalah titik puncak ketegangan atau konflik dalam sebuah alur cerita." },
-            // IPA
-            { question: "Proses peleburan antara sel sperma dan sel telur disebut...", options: ["Ovulasi", "Polinasi", "Fertilisasi", "Menstruasi"], answer: "Fertilisasi", explanation: "Fertilisasi (pembuahan) adalah proses bersatunya sel sperma dengan sel telur." },
-            { question: "Molekul yang membawa informasi genetik dan diwariskan dari induk kepada keturunannya adalah...", options: ["RNA", "Protein", "Kromosom", "DNA"], answer: "DNA", explanation: "DNA (Deoxyribonucleic acid) adalah materi genetik yang berisi instruksi untuk semua organisme." },
-            { question: "Dua benda bermuatan listrik sejenis jika didekatkan akan saling...", options: ["Tarik-menarik", "Tolak-menolak", "Diam", "Menempel"], answer: "Tolak-menolak", explanation: "Sifat dasar muatan listrik adalah muatan sejenis akan saling tolak-menolak." },
-            { question: "Penyakit pada sistem reproduksi yang disebabkan oleh virus HIV adalah...", options: ["Sifilis", "Gonore", "Herpes", "AIDS"], answer: "AIDS", explanation: "AIDS (Acquired Immuno Deficiency Syndrome) adalah stadium akhir dari infeksi virus HIV yang menyerang sistem kekebalan tubuh." },
-//_PASTE KODE INI DI DALAM TANDA [ ] UNTUK KELAS 9_
-            { question: "Bentuk baku dari 2.340.000.000 adalah...", options: ["2,34 x 10⁹", "2,34 x 10⁻⁹", "23,4 x 10⁸", "0,234 x 10¹⁰"], answer: "2,34 x 10⁹", explanation: "Bentuk baku ditulis sebagai a x 10ⁿ dengan 1 ≤ a < 10. Koma digeser 9 kali ke kiri." },
-            { question: "Persamaan kuadrat yang akar-akarnya 3 dan -5 adalah...", options: ["x² - 2x - 15 = 0", "x² + 2x - 15 = 0", "x² - 2x + 15 = 0", "x² + 2x + 15 = 0"], answer: "x² + 2x - 15 = 0", explanation: "Gunakan rumus: x² - (x₁+x₂)x + (x₁x₂) = 0. x² - (3-5)x + (3)(-5) = 0. Menjadi x² + 2x - 15 = 0." },
-            { question: "Nilai diskriminan (D) dari 2x²−3x−5=0 adalah...", options: ["-31", "49", "31", "-49"], answer: "49", explanation: "Rumus D = b² - 4ac. D = (-3)² - 4(2)(-5) = 9 - (-40) = 9 + 40 = 49." },
-            { question: "Bentuk rasional dari penyebut pecahan 6/√3 adalah...", options: ["2√3", "3√2", "6√3", "√18"], answer: "2√3", explanation: "Kalikan dengan √3/√3. (6√3) / (√3 x √3) = 6√3 / 3 = 2√3." },
-            { question: "Urutan struktur teks laporan percobaan yang benar adalah...", options: ["Tujuan - Hasil - Langkah - Simpulan", "Judul - Tujuan - Bahan & Alat - Langkah - Hasil - Simpulan", "Langkah - Hasil - Tujuan - Simpulan", "Judul - Simpulan - Hasil - Langkah"], answer: "Judul - Tujuan - Bahan & Alat - Langkah - Hasil - Simpulan", explanation: "Struktur teks laporan percobaan yang sistematis adalah Judul, Tujuan, Kajian Teori, Alat & Bahan, Prosedur/Langkah, Hasil, Pembahasan, dan Simpulan." },
-            { question: "'Hadirin yang saya hormati, marilah kita senantiasa menjaga kebersihan.' Kalimat tersebut merupakan contoh kalimat...", options: ["Deskriptif", "Naratif", "Argumentatif", "Persuasif"], answer: "Persuasif", explanation: "Kata 'marilah' adalah kata ajakan, yang merupakan ciri utama dari kalimat persuasif (mengajak)." },
-            { question: "Bagian awal sebuah pidato yang berfungsi untuk menarik perhatian audiens disebut...", options: ["Isi", "Salam pembuka", "Pendahuluan (pengantar)", "Penutup"], answer: "Pendahuluan (pengantar)", explanation: "Setelah salam, bagian pendahuluan berfungsi untuk membangun koneksi dan menarik perhatian audiens terhadap topik yang akan dibahas." },
-            { question: "Perbedaan mendasar antara cerpen dan novel terletak pada...", options: ["Jumlah tokoh", "Adanya konflik", "Panjang cerita dan kompleksitas alur", "Adanya amanat"], answer: "Panjang cerita dan kompleksitas alur", explanation: "Novel memiliki alur cerita yang lebih panjang dan kompleks, dengan lebih banyak tokoh dan konflik dibandingkan cerpen." },
-            { question: "Organ reproduksi pada pria yang berfungsi sebagai tempat produksi sperma adalah...", options: ["Penis", "Skrotum", "Testis", "Vas deferens"], answer: "Testis", explanation: "Testis adalah organ gonad jantan yang berfungsi utama untuk memproduksi sel sperma dan hormon testosteron." },
-            { question: "Hukum Mendel I dikenal juga dengan sebutan Hukum...", options: ["Dominansi", "Pewarisan", "Asortasi (Pemisahan)", "Segregasi (Pemisahan)"], answer: "Segregasi (Pemisahan)", explanation: "Hukum I Mendel atau Hukum Segregasi menyatakan bahwa pada pembentukan gamet, alel akan berpisah secara bebas." },
-            { question: "Alat yang digunakan untuk mendeteksi adanya muatan listrik pada suatu benda adalah...", options: ["Termometer", "Barometer", "Elektroskop", "Amperemeter"], answer: "Elektroskop", explanation: "Elektroskop adalah alat sederhana yang bekerja berdasarkan prinsip induksi listrik untuk mendeteksi muatan." },
-            { question: "Menstruasi pada wanita terjadi karena...", options: ["Terjadinya pembuahan", "Tidak terjadinya pembuahan", "Aktivitas berat", "Masa subur"], answer: "Tidak terjadinya pembuahan", explanation: "Menstruasi adalah proses luruhnya dinding rahim (endometrium) yang telah menebal karena sel telur tidak dibuahi oleh sperma." }
+{
+    question: "Hasil dari 4√3 + 2√12 - √27 adalah...",
+    options: ["5√3", "4√3", "6√3"],
+    answer: "5√3",
+    explanation: "Sederhanakan akar: 4√3 + 2(2√3) - 3√3 = 4√3 + 4√3 - 3√3 = 5√3."
+},
+{
+    question: "Kalimat yang tidak mengandung unsur subjektivitas atau pendapat pribadi disebut kalimat...",
+    options: ["Opini", "Fakta", "Persuasif"],
+    answer: "Fakta",
+    explanation: "Kalimat fakta adalah kalimat yang menyajikan informasi secara objektif dan dapat dibuktikan kebenarannya."
+},
+{
+    question: "Bagian dari sel yang berfungsi sebagai pusat pengendali seluruh aktivitas sel dan mengandung materi genetik adalah...",
+    options: ["Sitoplasma", "Membran sel", "Inti sel (Nukleus)"],
+    answer: "Inti sel (Nukleus)",
+    explanation: "Inti sel atau nukleus adalah organel utama yang mengontrol semua kegiatan sel."
+},
+{
+    question: "Sebuah persegi panjang memiliki panjang (x+5) cm dan lebar (x-2) cm. Jika luasnya 50 cm², maka persamaan kuadrat yang sesuai adalah...",
+    options: ["x² + 3x - 60 = 0", "x² + 3x + 10 = 0", "x² + 7x - 50 = 0"],
+    answer: "x² + 3x - 60 = 0",
+    explanation: "Luas = p × l. (x+5)(x-2) = 50. x² - 2x + 5x - 10 = 50. Maka, x² + 3x - 60 = 0."
+},
+{
+    question: "Ciri kebahasaan teks laporan percobaan adalah banyak menggunakan istilah...",
+    options: ["Daerah", "Populer", "Teknis/Ilmiah"],
+    answer: "Teknis/Ilmiah",
+    explanation: "Laporan percobaan menggunakan istilah teknis atau ilmiah yang spesifik sesuai bidang yang diuji."
+},
+{
+    question: "Gaya tarik atau tolak antara dua muatan listrik dipengaruhi oleh besar muatan dan...",
+    options: ["Suhu", "Jarak", "Massa"],
+    answer: "Jarak",
+    explanation: "Menurut Hukum Coulomb, gaya listrik berbanding terbalik dengan kuadrat jarak antara dua muatan."
+},
+{
+    question: "Titik puncak dari grafik fungsi f(x)=(x−2)²+3 adalah...",
+    options: ["(-2, 3)", "(2, 3)", "(2, -3)"],
+    answer: "(2, 3)",
+    explanation: "Dari bentuk f(x)=a(x-p)²+q, titik puncaknya adalah (p, q). Maka, titik puncaknya adalah (2, 3)."
+},
+{
+    question: "Tujuan utama dari pidato persuasif adalah untuk...",
+    options: ["Menghibur", "Memberi informasi", "Meyakinkan atau membujuk"],
+    answer: "Meyakinkan atau membujuk",
+    explanation: "Pidato persuasif dirancang untuk memengaruhi sikap dan tindakan audiens agar setuju dengan gagasan pembicara."
+},
+{
+    question: "Jika seorang pria bergenotipe homozigot dominan (TT) disilangkan dengan wanita bergenotipe resesif (tt), maka kemungkinan fenotipe keturunannya adalah...",
+    options: ["Semua pendek", "Semua tinggi", "Setengah tinggi, setengah pendek"],
+    answer: "Semua tinggi",
+    explanation: "Semua keturunan (F1) akan memiliki genotipe heterozigot (Tt) dan menunjukkan sifat dominan, yaitu tinggi."
+},
+{
+    question: "Bentuk rasional dari penyebut pecahan 6/√3 adalah...",
+    options: ["2√3", "3√2", "6√3"],
+    answer: "2√3",
+    explanation: "Kalikan dengan √3/√3. (6√3) / (√3 x √3) = 6√3 / 3 = 2√3."
+},
+{
+    question: "Perbedaan mendasar antara cerpen dan novel terletak pada...",
+    options: ["Jumlah tokoh", "Adanya konflik", "Panjang cerita dan kompleksitas alur"],
+    answer: "Panjang cerita dan kompleksitas alur",
+    explanation: "Novel memiliki alur cerita yang lebih panjang dan kompleks, dengan lebih banyak tokoh dan konflik dibandingkan cerpen."
+},
+{
+    question: "Sebuah penggaris plastik yang digosokkan ke rambut kering dapat menarik kertas kecil karena penggaris menjadi bermuatan listrik...",
+    options: ["Positif", "Negatif", "Netral"],
+    answer: "Negatif",
+    explanation: "Saat digosokkan ke rambut, elektron dari rambut pindah ke penggaris, sehingga penggaris kelebihan elektron dan bermuatan negatif."
+},
+            { question: "Upaya pemberontakan DI/TII bertujuan untuk mengganti ideologi Pancasila dengan ideologi...", options: ["Komunisme", "Liberalisme", "Syariat Islam (Negara Islam)"], answer: "Syariat Islam (Negara Islam)", explanation: "Pemberontakan DI/TII (Darul Islam/Tentara Islam Indonesia) bertujuan untuk mendirikan Negara Islam Indonesia." },
+            { question: "Teori kedaulatan yang menyatakan bahwa kekuasaan tertinggi dalam negara berada di tangan rakyat disebut...", options: ["Kedaulatan Tuhan", "Kedaulatan Raja", "Kedaulatan Hukum", "Kedaulatan Rakyat"], answer: "Kedaulatan Rakyat", explanation: "Kedaulatan rakyat (demokrasi) adalah teori di mana rakyat memegang kekuasaan tertinggi." },
+            { question: "Ciri utama dari demokrasi Pancasila dalam mengambil keputusan adalah mengutamakan...", options: ["Suara terbanyak (voting)", "Keputusan pemimpin", "Musyawarah untuk mufakat"], answer: "Musyawarah untuk mufakat", explanation: "Musyawarah untuk mufakat adalah prinsip utama dalam demokrasi Pancasila, sesuai sila keempat." },
+            { question: "Pemberontakan G30S/PKI pada tahun 1965 merupakan upaya mengganti Pancasila dengan ideologi...", options: ["Liberal", "Kapitalis", "Komunis"], answer: "Komunis", explanation: "Gerakan 30 September oleh PKI bertujuan untuk mengganti ideologi Pancasila dengan ideologi komunis." },
+            { question: "What is the goal of the text 'How to Make Fried Rice'?", options: ["To describe fried rice", "To tell how to make fried rice", "To persuade people to eat fried rice"], answer: "To tell how to make fried rice", explanation: "Teks tersebut berisi langkah-langkah (procedure text) yang tujuannya adalah memberitahu cara membuat sesuatu." },
+            { question: "You will likely find 'take this medicine 3 times a day' on a...", options: ["Food label", "Drink label", "Medicine label"], answer: "Medicine label", explanation: "Informasi cara pemakaian obat ditemukan pada label obat (medicine label)." },
+            { question: "A product that is good to be consumed before a certain date. This refers to the...", options: ["Ingredients", "Brand name", "Expiration date"], answer: "Expiration date", explanation: "Tanggal kedaluwarsa (expiration date) menunjukkan batas waktu produk baik untuk dikonsumsi." },
+            { question: "The verbs used in a procedure text are usually in the... form (e.g., cut, mix, add).", options: ["Past", "Continuous", "Imperative"], answer: "Imperative", explanation: "Teks prosedur menggunakan kalimat perintah (imperative), di mana kata kerjanya dalam bentuk dasar." },
+            { question: "Perang gedhe antarane Pandhawa lan Kurawa diarani perang...", options: ["Ramayana", "Kresna Duta", "Bharatayudha"], answer: "Bharatayudha", explanation: "Perang besar antara keluarga Pandhawa dan Kurawa di padang Kurusetra disebut Perang Bharatayudha." },
+            { question: "Ing crita wayang, Kurawa cacahe ana...", options: ["Sepuluh", "Selawe", "Satus"], answer: "Satus", explanation: "Jumlah Kurawa dalam kisah Mahabharata adalah seratus orang." },
+            { question: "Aksara Jawa sing gunane kanggo nulis tembung saka basa manca yaiku aksara...", options: ["Murda", "Swara", "Rekan"], answer: "Rekan", explanation: "Aksara Rekan (contohnya kh, f, dz, gh, z) digunakan untuk menulis kata-kata serapan dari bahasa asing." },
+            { question: "Pidhato sing ditindakake kanthi dadakan tanpa persiapan diarani metode...", options: ["Naskah", "Hapalan", "Impromptu"], answer: "Impromptu", explanation: "Metode pidato yang dilakukan secara spontan dan mendadak disebut impromptu." }
         ],
         '10': [
-            // MATEMATIKA
-            { question: "Nilai dari 81^(3/4) adalah...", options: ["9", "18", "27", "36"], answer: "27", explanation: "81^(3/4) = (⁴√81)³ = (3)³ = 27." },
-            { question: "Jika ²log8 = x, maka nilai x adalah...", options: ["2", "3", "4", "8"], answer: "3", explanation: "Bentuk logaritma ²log8 = x sama artinya dengan 2ˣ = 8. Nilai x yang memenuhi adalah 3." },
-            { question: "Nilai dari ³log18 − ³log2 adalah...", options: ["2", "3", "9", "16"], answer: "2", explanation: "Menggunakan sifat logaritma, ³log(18/2) = ³log9. Karena 3² = 9, maka hasilnya adalah 2." },
-            { question: "Suku ke-6 dari barisan geometri 3, 6, 12, ... adalah...", options: ["36", "48", "72", "96"], answer: "96", explanation: "Barisan ini memiliki suku pertama (a) = 3 dan rasio (r) = 2. Un = ar^(n-1). U6 = 3 × 2⁵ = 3 × 32 = 96." },
-            // BAHASA INDONESIA
-            { question: "Perbedaan utama antara teks anekdot dengan teks humor biasa adalah...", options: ["Kelucuannya", "Adanya kritikan atau sindiran", "Jumlah paragrafnya", "Tokohnya"], answer: "Adanya kritikan atau sindiran", explanation: "Anekdot tidak hanya lucu, tetapi juga mengandung kritikan atau sindiran terhadap isu sosial atau tokoh publik." },
-            { question: "Sifat utama dari informasi yang disajikan dalam Teks Laporan Hasil Observasi (LHO) adalah...", options: ["Subjektif dan imajinatif", "Persuasif dan mengajak", "Objektif dan faktual", "Naratif dan kronologis"], answer: "Objektif dan faktual", explanation: "Teks LHO harus menyajikan informasi apa adanya sesuai hasil pengamatan (faktual) dan tidak dipengaruhi pendapat pribadi (objektif)." },
-            { question: "Struktur teks eksposisi adalah tesis, ..., dan penegasan ulang.", options: ["Argumentasi", "Orientasi", "Koda", "Deskripsi Bagian"], answer: "Argumentasi", explanation: "Struktur lengkap teks eksposisi adalah Tesis (pembukaan), Rangkaian Argumen (isi), dan Penegasan Ulang (penutup)." },
-            { question: "Tokoh yang sering menjadi sasaran kritik dalam teks anekdot adalah...", options: ["Hewan", "Orang biasa", "Tokoh publik atau pejabat", "Tokoh fiksi"], answer: "Tokoh publik atau pejabat", explanation: "Anekdot seringkali digunakan sebagai media untuk menyampaikan kritik sosial secara halus kepada figur publik atau pejabat." },
-            // IPA (FISIKA, KIMIA, BIOLOGI)
-            { question: "(Fisika) Di antara besaran berikut: kecepatan, massa, gaya, dan perpindahan, yang termasuk besaran skalar adalah...", options: ["Kecepatan", "Massa", "Gaya", "Perpindahan"], answer: "Massa", explanation: "Besaran skalar hanya memiliki nilai (contoh: massa), sedangkan besaran vektor memiliki nilai dan arah (contoh: kecepatan)." },
-            { question: "(Kimia) Partikel dasar penyusun atom yang bermuatan negatif adalah...", options: ["Proton", "Neutron", "Elektron", "Nukleon"], answer: "Elektron", explanation: "Proton bermuatan positif, Neutron netral, dan Elektron bermuatan negatif." },
-            { question: "(Kimia) Unsur dengan konfigurasi elektron 2, 8, 7 dalam sistem periodik terletak pada golongan ... dan periode ...", options: ["VIIA dan Periode 3", "IIIA dan Periode 7", "VIIA dan Periode 2", "IIA dan Periode 3"], answer: "VIIA dan Periode 3", explanation: "Elektron valensi (kulit terluar) 7 menunjukkan Golongan VIIA. Jumlah kulit (3) menunjukkan Periode 3." },
-            { question: "(Biologi) Sistem penamaan ganda pada makhluk hidup (binomial nomenclature) diperkenalkan oleh...", options: ["Charles Darwin", "Gregor Mendel", "Aristoteles", "Carolus Linnaeus"], answer: "Carolus Linnaeus", explanation: "Carolus Linnaeus dikenal sebagai Bapak Taksonomi Modern yang memperkenalkan sistem penamaan binomial nomenclature." },
-//_PASTE KODE INI DI DALAM TANDA [ ] UNTUK KELAS 10_
-            { question: "Bentuk sederhana dari (a⁵b²c⁻¹)/(a³b⁻³c²) adalah...", options: ["a²b⁵c⁻³", "a⁻²b⁻¹c⁻¹", "a⁸b⁻¹c¹", "a²b⁻¹c³"], answer: "a²b⁵c⁻³", explanation: "Gunakan sifat pangkat: xᵐ/xⁿ = xᵐ⁻ⁿ. a⁵⁻³ = a²; b²⁻⁽⁻³⁾ = b⁵; c⁻¹⁻² = c⁻³." },
-            { question: "Suku ke-15 dari barisan aritmetika 2, 5, 8, 11, ... adalah", options: ["41", "44", "47", "50"], answer: "44", explanation: "a=2, b=3. Un = a + (n-1)b. U15 = 2 + (15-1)3 = 2 + 14*3 = 2 + 42 = 44." },
-            { question: "Jumlah tak hingga dari deret geometri 16+8+4+... adalah...", options: ["24", "30", "32", "Tidak terhingga"], answer: "32", explanation: "a=16, r=1/2. Rumus S∞ = a / (1-r) = 16 / (1 - 1/2) = 16 / (1/2) = 32." },
-            { question: "Penyelesaian dari persamaan eksponen 3²ˣ⁻¹ = 27 adalah...", options: ["1", "2", "3", "4"], answer: "2", explanation: "3²ˣ⁻¹ = 3³. Samakan pangkatnya: 2x-1 = 3. Maka 2x=4, dan x=2." },
-            { question: "Bagian dalam struktur anekdot yang berisi puncak kelucuan atau kritikan disebut...", options: ["Abstraksi", "Orientasi", "Krisis", "Reaksi"], answer: "Krisis", explanation: "Krisis adalah tahap di mana masalah utama atau kelucuan puncak dalam anekdot muncul." },
-            { question: "Makna tersirat atau sindiran yang ingin disampaikan dalam sebuah anekdot disebut...", options: ["Humor", "Kritik sosial", "Tema", "Amanat"], answer: "Kritik sosial", explanation: "Salah satu fungsi utama anekdot adalah untuk menyampaikan kritik sosial melalui cerita lucu yang memiliki makna tersirat." },
-            { question: "Penggunaan konjungsi kausalitas (sebab-akibat) seperti 'karena' banyak ditemukan dalam teks...", options: ["LHO", "Anekdot", "Eksposisi", "Prosedur"], answer: "Eksposisi", explanation: "Teks eksposisi sering menggunakan konjungsi kausalitas untuk menghubungkan argumen dengan fakta atau alasan pendukungnya." },
-            { question: "Aspek yang dilaporkan dalam Teks LHO dapat berupa benda, fenomena alam, atau fenomena...", options: ["Khayalan", "Masa lalu", "Sosial", "Misterius"], answer: "Sosial", explanation: "Objek observasi dalam LHO bisa berupa benda mati, fenomena alam, atau fenomena sosial (perilaku, budaya, dll)." },
-            { question: "(Fisika) Notasi ilmiah dari hasil pengukuran 0,00025 kg adalah...", options: ["2,5 x 10⁴ kg", "2,5 x 10⁻⁴ kg", "25 x 10⁻⁵ kg", "0,25 x 10⁻³ kg"], answer: "2,5 x 10⁻⁴ kg", explanation: "Bentuk notasi ilmiah adalah a x 10ⁿ dengan 1 ≤ a < 10. Koma digeser ke kanan 4 kali." },
-            { question: "(Kimia) Suatu atom memiliki nomor atom 11 dan nomor massa 23. Jumlah proton, elektron, dan neutron adalah...", options: ["11, 11, 12", "11, 12, 11", "12, 11, 11", "11, 11, 23"], answer: "11, 11, 12", explanation: "Proton = Nomor Atom = 11. Elektron = Proton = 11. Neutron = Nomor Massa - Nomor Atom = 23 - 11 = 12." },
-            { question: "(Kimia) Unsur-unsur yang terletak dalam satu golongan pada sistem periodik memiliki kesamaan dalam hal...", options: ["Jumlah kulit atom", "Jumlah elektron valensi", "Nomor atom", "Nomor massa"], answer: "Jumlah elektron valensi", explanation: "Golongan dalam sistem periodik ditentukan oleh jumlah elektron di kulit terluar (elektron valensi)." },
-            { question: "(Biologi) Keanekaragaman hayati tingkat gen ditunjukkan oleh adanya variasi pada...", options: ["Berbagai jenis ikan di laut", "Ekosistem gurun dan hutan hujan", "Perbedaan warna pada bunga mawar", "Berbagai jenis burung di taman"], answer: "Perbedaan warna pada bunga mawar", explanation: "Keanekaragaman gen adalah variasi dalam satu spesies, seperti warna yang berbeda pada bunga mawar (mawar merah, putih, kuning)." }
+{
+    question: "Bentuk sederhana dari (a⁵b²c⁻¹)/(a³b⁻³c²) adalah...",
+    options: ["a²b⁵c⁻³", "a⁻²b⁻¹c⁻¹", "a⁸b⁻¹c¹"],
+    answer: "a²b⁵c⁻³",
+    explanation: "Gunakan sifat pangkat: xᵐ/xⁿ = xᵐ⁻ⁿ. a⁵⁻³ = a²; b²⁻⁽⁻³⁾ = b⁵; c⁻¹⁻² = c⁻³."
+},
+{
+    question: "Teks yang bertujuan untuk mengklarifikasi atau menyampaikan gagasan berdasarkan sudut pandang tertentu dengan argumen yang kuat disebut teks...",
+    options: ["LHO", "Anekdot", "Eksposisi"],
+    answer: "Eksposisi",
+    explanation: "Teks eksposisi bertujuan untuk meyakinkan pembaca tentang suatu isu dengan menyajikan argumen yang didukung fakta."
+},
+{
+    question: "(Fisika) Sebuah mobil bergerak ke timur sejauh 80 km, kemudian berbalik ke barat sejauh 20 km. Perpindahan mobil tersebut adalah...",
+    options: ["100 km ke timur", "60 km ke timur", "60 km ke barat"],
+    answer: "60 km ke timur",
+    explanation: "Perpindahan adalah perubahan posisi dari titik awal ke akhir. 80 km (timur) - 20 km (barat) = 60 km dari titik awal ke arah timur."
+},
+{
+    question: "Jika ²log3=a dan ³log5=b, maka nilai dari ²log5 adalah...",
+    options: ["a + b", "a / b", "ab"],
+    answer: "ab",
+    explanation: "Gunakan sifat logaritma: ˣlogy × ʸlogz = ˣlogz. Maka ²log3 × ³log5 = ²log5. Jadi, nilainya adalah a × b = ab."
+},
+{
+    question: "Bagian dalam struktur anekdot yang berisi puncak kelucuan atau kritikan disebut...",
+    options: ["Abstraksi", "Orientasi", "Krisis"],
+    answer: "Krisis",
+    explanation: "Krisis adalah tahap di mana masalah utama atau kelucuan puncak dalam anekdot muncul."
+},
+{
+    question: "(Kimia) Cabang biologi yang khusus mempelajari tentang virus adalah...",
+    options: ["Sitologi", "Bakteriologi", "Virologi"],
+    answer: "Virologi",
+    explanation: "Virologi berasal dari kata 'virus' dan 'logos' (ilmu), sehingga merupakan ilmu yang mempelajari tentang virus."
+},
+{
+    question: "Sebuah modal Rp1.000.000 dibungakan dengan bunga majemuk 10% per tahun. Besar modal setelah 2 tahun adalah...",
+    options: ["Rp1.200.000", "Rp1.210.000", "Rp1.100.000"],
+    answer: "Rp1.210.000",
+    explanation: "Tahun 1: 1.000.000 + (10% x 1.000.000) = 1.100.000. Tahun 2: 1.100.000 + (10% x 1.100.000) = 1.100.000 + 110.000 = Rp1.210.000."
+},
+{
+    question: "Tingkatan organisasi kehidupan setelah sel adalah...",
+    options: ["Organ", "Jaringan", "Sistem organ"],
+    answer: "Jaringan",
+    explanation: "Urutan tingkatan organisasi kehidupan adalah Sel -> Jaringan -> Organ -> Sistem Organ -> Organisme."
+},
+{
+    question: "Seutas tali dipotong menjadi 5 bagian membentuk barisan geometri. Jika potongan terpendek 4 cm dan terpanjang 324 cm, panjang tali semula adalah...",
+    options: ["484 cm", "480 cm", "496 cm"],
+    answer: "484 cm",
+    explanation: "a=4, U5=324. ar⁴=324 -> 4r⁴=324 -> r⁴=81 -> r=3. Sn = a(rⁿ-1)/(r-1). S5 = 4(3⁵-1)/(3-1) = 4(242)/2 = 484 cm."
+},
+{
+    question: "Jenis argumen yang digunakan dalam teks eksposisi harus didukung oleh...",
+    options: ["Perasaan", "Opini populer", "Fakta dan data"],
+    answer: "Fakta dan data",
+    explanation: "Argumen dalam teks eksposisi harus kuat dan meyakinkan, oleh karena itu perlu didukung oleh fakta dan data yang valid."
+},
+{
+    question: "'Paus adalah salah satu mamalia laut.' Kalimat ini merupakan contoh kalimat definisi yang sering ditemukan pada bagian... Teks LHO.",
+    options: ["Deskripsi bagian", "Deskripsi manfaat", "Pernyataan umum/klasifikasi"],
+    answer: "Pernyataan umum/klasifikasi",
+    explanation: "Bagian awal Teks LHO biasanya berisi pernyataan umum atau klasifikasi yang mendefinisikan objek yang diamati."
+},
+{
+    question: "Makna tersirat atau sindiran yang ingin disampaikan dalam sebuah anekdot disebut...",
+    options: ["Humor", "Kritik sosial", "Amanat"],
+    answer: "Kritik sosial",
+    explanation: "Salah satu fungsi utama anekdot adalah untuk menyampaikan kritik sosial melalui cerita lucu yang memiliki makna tersirat."
+},
+            { question: "Menurut teori Montesquieu, kekuasaan untuk melaksanakan undang-undang disebut kekuasaan...", options: ["Legislatif", "Eksekutif", "Yudikatif"], answer: "Eksekutif", explanation: "Menurut Trias Politica, Eksekutif adalah kekuasaan untuk menjalankan UU, Legislatif membuat UU, dan Yudikatif mengadili pelanggaran UU." },
+            { question: "Pancasila sebagai dasar negara (philosophische grondslag) memiliki arti bahwa Pancasila adalah...", options: ["Pandangan hidup bangsa", "Fondasi dalam penyelenggaraan negara", "Cita-cita dan tujuan bangsa"], answer: "Fondasi dalam penyelenggaraan negara", explanation: "Sebagai dasar negara, Pancasila menjadi fondasi atau landasan bagi seluruh aktivitas penyelenggaraan negara." },
+            { question: "Di Indonesia, kekuasaan yudikatif atau kehakiman dipegang oleh...", options: ["DPR dan MPR", "Presiden dan Wakil Presiden", "Mahkamah Agung dan Mahkamah Konstitusi"], answer: "Mahkamah Agung dan Mahkamah Konstitusi", explanation: "Kekuasaan yudikatif sebagai lembaga peradilan dipegang oleh MA dan MK." },
+            { question: "Kekuasaan untuk membuat atau membentuk undang-undang di Indonesia dipegang oleh...", options: ["Presiden", "DPR (bersama Presiden)", "MPR"], answer: "DPR (bersama Presiden)", explanation: "Fungsi legislasi (pembentukan UU) di Indonesia dijalankan oleh DPR dengan persetujuan bersama Presiden." },
+            { question: "What is the main idea of the text about R.A. Kartini?", options: ["The history of Jepara", "The biography of R.A. Kartini", "The education system in the past"], answer: "The biography of R.A. Kartini", explanation: "Teks tersebut menceritakan riwayat hidup dan perjuangan R.A. Kartini." },
+            { question: "'She founded the first school...' The word 'founded' means...", options: ["built", "destroyed", "established"], answer: "established", explanation: "Kata 'founded' berarti mendirikan atau membangun (established/built)." },
+            { question: "The social function of a narrative text, such as a legend or a fable, is to...", options: ["Inform about an event", "Describe how to do something", "Amuse or entertain the readers"], answer: "Amuse or entertain the readers", explanation: "Tujuan utama teks naratif adalah untuk menghibur (amuse/entertain) pembaca dengan sebuah cerita." },
+            { question: "The generic structure of a narrative text is Orientation, ..., and Resolution.", options: ["Steps", "Arguments", "Complication"], answer: "Complication", explanation: "Struktur umum teks naratif adalah Orientasi (pengenalan), Komplikasi (munculnya masalah), dan Resolusi (penyelesaian)." },
+            { question: "Serat Wedhatama iku anggitane (karya)...", options: ["R.Ng. Ranggawarsita", "KGPAA Mangkunegara IV", "Pakubuwana IV"], answer: "KGPAA Mangkunegara IV", explanation: "Serat Wedhatama adalah karya sastra terkenal dari KGPAA Mangkunegara IV." },
+            { question: "'Lila lamun kelangan nora gegetun.' Tembung 'gegetun' nduweni teges...", options: ["Seneng banget", "Nesu banget", "Getun banget (sangat menyesal)"], answer: "Getun banget (sangat menyesal)", explanation: "Kalimat itu berarti 'Ikhlas jika kehilangan, tidak akan sangat menyesal'. Jadi 'gegetun' artinya sangat menyesal." },
+            { question: "Guru gatra, guru wilangan, lan guru lagu ing tembang macapat diarani...", options: ["Purwakanthi", "Gancaran", "Paugeran"], answer: "Paugeran", explanation: "Ketiga aturan (jumlah baris, suku kata, dan vokal akhir) dalam tembang macapat secara kolektif disebut paugeran." },
+            { question: "Paugeran tembang macapat Pocung yaiku...", options: ["8a, 11i, 8u, 7a, 12u, 8a, 8i", "12u, 6a, 8i, 12a", "7u, 10u, 12i, 8u, 8o"], answer: "12u, 6a, 8i, 12a", explanation: "Aturan (paugeran) tembang Pocung adalah 12u, 6a, 8i, 12a." }
         ]
     };
+    
+    // =========================================================================================
+    // BAGIAN DI BAWAH INI ADALAH LOGIKA KUIS, TIDAK PERLU DIUBAH
+    // =========================================================================================
 
     const classSelectionScreen = document.getElementById('class-selection-screen');
     const quizScreen = document.getElementById('quiz-screen');
@@ -329,21 +895,17 @@ document.addEventListener('DOMContentLoaded', () => {
         return array;
     }
 
-    function showQuiz(classNumber) {
-        currentClass = classNumber;
-        if (!answeredState[currentClass]) {
-            answeredState[currentClass] = [];
-        }
-        
-        currentQuestions = shuffleArray([...quizData[classNumber]]);
-        quizHeader.textContent = `Soal Kelas ${classNumber}`;
-        
+    // --- FUNGSI BARU UNTUK MENGGAMBAR GRID SOAL ---
+    function renderGrid() {
         questionGrid.innerHTML = '';
         currentQuestions.forEach((_, index) => {
             const questionBox = document.createElement('div');
             questionBox.classList.add('question-box');
             questionBox.textContent = index + 1;
             questionBox.dataset.index = index;
+
+            const colorIndex = (index % 5) + 1;
+            questionBox.classList.add(`qb-color-${colorIndex}`);
             
             if (answeredState[currentClass].includes(index)) {
                 questionBox.classList.add('answered');
@@ -351,6 +913,20 @@ document.addEventListener('DOMContentLoaded', () => {
             
             questionGrid.appendChild(questionBox);
         });
+    }
+
+    // --- FUNGSI showQuiz KINI HANYA MENGACAK SOAL SEKALI ---
+    function showQuiz(classNumber) {
+        currentClass = classNumber;
+        if (!answeredState[currentClass]) {
+            answeredState[currentClass] = [];
+        }
+        
+        // Soal hanya diacak saat memilih kelas
+        currentQuestions = shuffleArray([...quizData[classNumber]]);
+        quizHeader.textContent = `Soal Kelas ${classNumber}`;
+        
+        renderGrid(); // Panggil fungsi baru untuk menampilkan grid
 
         classSelectionScreen.classList.add('hidden');
         quizScreen.classList.remove('hidden');
@@ -402,9 +978,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
+    // --- FUNGSI closeModal KINI HANYA MENGUPDATE TAMPILAN, TIDAK MENGACAK ULANG ---
     function closeModal() {
         questionModal.classList.add('hidden');
-        showQuiz(currentClass);
+        renderGrid(); // Panggil renderGrid, bukan showQuiz
     }
     
     classButtons.forEach(button => {
