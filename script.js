@@ -74,6 +74,78 @@ document.addEventListener('DOMContentLoaded', () => {
     answer: "10",
     explanation: "Manusia memiliki 5 jari di setiap tangan, sehingga totalnya adalah 10 jari tangan."
 },
+{
+    question: "Bunyi sila kedua Pancasila adalah...",
+    options: ["Ketuhanan Yang Maha Esa", "Persatuan Indonesia", "Kemanusiaan yang adil dan beradab"],
+    answer: "Kemanusiaan yang adil dan beradab",
+    explanation: "Bunyi sila kedua adalah 'Kemanusiaan yang adil dan beradab' yang dilambangkan dengan rantai."
+},
+{
+    question: "Contoh aturan yang ada di rumah adalah...",
+    options: ["Memakai seragam", "Mengerjakan PR", "Merapikan mainan setelah bermain"],
+    answer: "Merapikan mainan setelah bermain",
+    explanation: "Merapikan mainan setelah bermain adalah contoh aturan untuk menjaga ketertiban di rumah."
+},
+{
+    question: "Dasar negara Indonesia adalah...",
+    options: ["UUD 1945", "Pancasila", "Garuda"],
+    answer: "Pancasila",
+    explanation: "Pancasila adalah dasar negara dan ideologi bangsa Indonesia."
+},
+{
+    question: "Simbol sila ketiga Pancasila adalah pohon...",
+    options: ["Beringin", "Kelapa", "Pisang"],
+    answer: "Beringin",
+    explanation: "Sila ketiga, 'Persatuan Indonesia', dilambangkan dengan Pohon Beringin."
+},
+{
+    question: "What color is an apple?",
+    options: ["Blue", "Yellow", "Red"],
+    answer: "Red",
+    explanation: "Apel pada umumnya berwarna merah (red)."
+},
+{
+    question: "My name is Budi. 'Nama' in English is...",
+    options: ["Name", "Age", "Class"],
+    answer: "Name",
+    explanation: "Bahasa Inggris dari 'nama' adalah 'name'."
+},
+{
+    question: "How do you say 'satu' in English?",
+    options: ["Two", "Ten", "One"],
+    answer: "One",
+    explanation: "Angka 'satu' dalam bahasa Inggris adalah 'one'."
+},
+{
+    question: "To write, we use a... (pensil)",
+    options: ["Book", "Bag", "Pencil"],
+    answer: "Pencil",
+    explanation: "Untuk menulis (to write), kita menggunakan pensil (pencil)."
+},
+{
+    question: "Sugeng enjing. Yen dibales, wangsulane...",
+    options: ["Sugeng sonten", "Sugeng enjing", "Sugeng dalu"],
+    answer: "Sugeng enjing",
+    explanation: "Sapaan 'Sugeng enjing' (Selamat pagi) dibalas dengan sapaan yang sama."
+},
+{
+    question: "Basa kramane 'tangan' yaiku...",
+    options: ["Suku", "Asta", "Mustaka"],
+    answer: "Asta",
+    explanation: "Bahasa krama (halus) dari tangan adalah asta."
+},
+{
+    question: "Aku duwe adhi, jenenge Sari. 'Adhi' artine...",
+    options: ["Kakak", "Adik", "Teman"],
+    answer: "Adik",
+    explanation: "Kata 'adhi' dalam bahasa Jawa berarti adik."
+},
+{
+    question: "Yen wayah awan, arane sugeng...",
+    options: ["Enjing", "Sonten", "Siang"],
+    answer: "Siang",
+    explanation: "Sapaan untuk waktu siang (awan) adalah 'sugeng siang'."
+},
             { question: "Lambang sila pertama Pancasila adalah...", options: ["Rantai", "Bintang", "Pohon Beringin"], answer: "Bintang", explanation: "Sila pertama, Ketuhanan Yang Maha Esa, dilambangkan dengan bintang." },
             { question: "Sebelum makan, sebaiknya kita ... terlebih dahulu.", options: ["Bermain", "Berdoa", "Tidur"], answer: "Berdoa", explanation: "Berdoa sebelum makan adalah bentuk rasa syukur." },
             { question: "Datang ke sekolah harus ... waktu.", options: ["Terlambat", "Tepat", "Sesukanya"], answer: "Tepat", explanation: "Datang tepat waktu adalah salah satu aturan di sekolah." },
@@ -162,6 +234,78 @@ document.addEventListener('DOMContentLoaded', () => {
     answer: "Ulat",
     explanation: "Siklus hidup kupu-kupu adalah: Telur -> Ulat (larva) -> Kepompong (pupa) -> Kupu-kupu dewasa."
 },
+{
+    question: "Contoh sikap yang menunjukkan persatuan di sekolah adalah...",
+    options: ["Bertengkar dengan teman", "Piket kelas bersama-sama", "Memilih-milih teman"],
+    answer: "Piket kelas bersama-sama",
+    explanation: "Melakukan piket kelas bersama menunjukkan sikap persatuan dan kerja sama."
+},
+{
+    question: "'Bhinneka Tunggal Ika' artinya...",
+    options: ["Bersatu kita teguh", "Berbeda-beda tetapi tetap satu jua", "Rajin pangkal pandai"],
+    answer: "Berbeda-beda tetapi tetap satu jua",
+    explanation: "Semboyan Bhinneka Tunggal Ika memiliki arti 'berbeda-beda tetapi tetap satu jua'."
+},
+{
+    question: "Bunyi sila keempat dipimpin oleh hikmat kebijaksanaan dalam.../...",
+    options: ["Permusyawaratan/Perwakilan", "Keadilan/Sosial", "Persatuan/Indonesia"],
+    answer: "Permusyawaratan/Perwakilan",
+    explanation: "Bunyi sila keempat yang lengkap adalah 'Kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam Permusyawaratan/Perwakilan'."
+},
+{
+    question: "Menjaga kebersihan lingkungan adalah tanggung jawab... warga.",
+    options: ["Sebagian", "Ketua RT", "Semua"],
+    answer: "Semua",
+    explanation: "Kebersihan lingkungan adalah tanggung jawab bersama atau semua warga."
+},
+{
+    question: "I have two... (mata).",
+    options: ["Eyes", "Ears", "Hands"],
+    answer: "Eyes",
+    explanation: "Bahasa Inggris dari 'mata' adalah 'eyes'."
+},
+{
+    question: "A fish lives in the... (air)",
+    options: ["Sky", "Land", "Water"],
+    answer: "Water",
+    explanation: "Ikan (fish) hidup di dalam air (water)."
+},
+{
+    question: "My father's mother is my... (nenek)",
+    options: ["Aunt", "Sister", "Grandmother"],
+    answer: "Grandmother",
+    explanation: "Ibunya ayah kita (father's mother) adalah nenek (grandmother)."
+},
+{
+    question: "The day after Monday is...",
+    options: ["Sunday", "Tuesday", "Wednesday"],
+    answer: "Tuesday",
+    explanation: "Hari setelah Senin (Monday) adalah Selasa (Tuesday)."
+},
+{
+    question: "Yen ketemu Bu Guru wayah awan, ngaturake...",
+    options: ["Sugeng enjing", "Sugeng sonten", "Sugeng siang"],
+    answer: "Sugeng siang",
+    explanation: "Jika bertemu guru pada waktu siang hari (wayah awan), kita mengucapkan 'sugeng siang'."
+},
+{
+    question: "Putra mbarepe Pandhawa yaiku...",
+    options: ["Werkudara", "Janaka", "Yudhistira"],
+    answer: "Yudhistira",
+    explanation: "Anak pertama (putra mbarep) dari Pandawa adalah Yudhistira."
+},
+{
+    question: "Bapak ngunjuk kopi. Tembung 'ngunjuk' basa ngokone...",
+    options: ["Mangan", "Turu", "Ngombe"],
+    answer: "Ngombe",
+    explanation: "'Ngunjuk' adalah bahasa krama dari 'ngombe' (minum)."
+},
+{
+    question: "Ibu tindak peken. Tembung 'tindak' artine...",
+    options: ["Masak", "Tuku", "Lunga/pergi"],
+    answer: "Lunga/pergi",
+    explanation: "'Tindak' adalah bahasa krama dari 'lunga' yang berarti pergi."
+},
             { question: "Membantu teman yang sedang kesusahan sesuai dengan pengamalan sila ke...", options: ["Satu", "Dua", "Tiga"], answer: "Dua", explanation: "Sila kedua, 'Kemanusiaan yang adil dan beradab', mengajarkan kita untuk saling tolong-menolong." },
             { question: "Simbol rantai emas pada Pancasila melambangkan sila ke...", options: ["2", "3", "4"], answer: "2", explanation: "Rantai emas adalah lambang sila kedua Pancasila." },
             { question: "Kepala banteng adalah simbol sila ke...", options: ["Tiga", "Empat", "Lima"], answer: "Empat", explanation: "Kepala banteng adalah lambang sila keempat Pancasila." },
@@ -247,6 +391,78 @@ document.addEventListener('DOMContentLoaded', () => {
     options: ["95", "105", "115"],
     answer: "105",
     explanation: "Hasil dari perkalian 15 dikali 7 adalah 105."
+},
+{
+    question: "Setiap anak memiliki hak untuk ... di rumah.",
+    options: ["Terus menerus bekerja", "Mendapatkan kasih sayang", "Membersihkan rumah sendirian"],
+    answer: "Mendapatkan kasih sayang",
+    explanation: "Mendapatkan kasih sayang dari orang tua adalah salah satu hak dasar anak di rumah."
+},
+{
+    question: "My hobby is reading a...",
+    options: ["Ball", "Doll", "Book"],
+    answer: "Book",
+    explanation: "Hobi membaca (reading) berhubungan dengan buku (book)."
+},
+{
+    question: "Aksara Jawa 'ha' yen ditulis yaiku...",
+    options: ["ꦤ", "ꦲ", "ꦕ"],
+    answer: "ꦲ",
+    explanation: "Aksara 'ha' dalam tulisan Jawa adalah ꦲ."
+},
+{
+    question: "Menjaga nama baik sekolah adalah tanggung jawab...",
+    options: ["Hanya guru", "Hanya kepala sekolah", "Semua warga sekolah"],
+    answer: "Semua warga sekolah",
+    explanation: "Setiap orang yang menjadi bagian dari sekolah (guru, siswa, staf) bertanggung jawab menjaga nama baiknya."
+},
+{
+    question: "I go to bed at nine o'clock in the... (malam)",
+    options: ["Morning", "Night", "Afternoon"],
+    answer: "Night",
+    explanation: "Pergi tidur (go to bed) biasanya dilakukan pada malam hari (night)."
+},
+{
+    question: "Papan kanggo golek ilmu arane...",
+    options: ["Pasar", "Omah", "Sekolah"],
+    answer: "Sekolah",
+    explanation: "Tempat (papan) untuk mencari ilmu (golek ilmu) disebut sekolah."
+},
+{
+    question: "Hak adalah sesuatu yang kita...",
+    options: ["Berikan", "Lupakan", "Dapatkan/terima"],
+    answer: "Dapatkan/terima",
+    explanation: "Hak adalah segala sesuatu yang harus kita dapatkan atau terima."
+},
+{
+    question: "A doctor works in a... (rumah sakit).",
+    options: ["School", "Hospital", "Library"],
+    answer: "Hospital",
+    explanation: "Seorang dokter (doctor) bekerja di rumah sakit (hospital)."
+},
+{
+    question: "Aku arep lunga. Basa kramane 'lunga' yaiku...",
+    options: ["Dhahar", "Sare", "Tindak/kesah"],
+    answer: "Tindak/kesah",
+    explanation: "Bahasa krama (halus) dari 'lunga' (pergi) adalah 'tindak' atau 'kesah'."
+},
+{
+    question: "Semboyan bangsa Indonesia yang mengajarkan tentang persatuan adalah...",
+    options: ["Tut Wuri Handayani", "Bhinneka Tunggal Ika", "Merdeka atau Mati"],
+    answer: "Bhinneka Tunggal Ika",
+    explanation: "Bhinneka Tunggal Ika berarti 'berbeda-beda tetapi tetap satu jua', yang mengajarkan persatuan."
+},
+{
+    question: "What time is it? (gambar jam pukul 07:00). It is...",
+    options: ["Seven o'clock", "Eight o'clock", "Nine o'clock"],
+    answer: "Seven o'clock",
+    explanation: "Jam 07:00 dalam bahasa Inggris disebut 'seven o'clock'."
+},
+{
+    question: "Bu Guru lagi ... ing njero kelas. (mulang)",
+    options: ["Dhahar", "Sare", "Mulang"],
+    answer: "Mulang",
+    explanation: "'Mulang' berarti mengajar, yang merupakan pekerjaan seorang guru di dalam kelas."
 },
             { question: "Mengerjakan tugas piket di kelas adalah salah satu bentuk... siswa.", options: ["Hak", "Keinginan", "Kewajiban"], answer: "Kewajiban", explanation: "Piket kelas adalah kewajiban atau tanggung jawab setiap siswa." },
             { question: "Saat ada teman yang berbeda pendapat, sikap kita sebaiknya...", options: ["Memaksa teman setuju", "Menghargai pendapatnya", "Meninggalkannya"], answer: "Menghargai pendapatnya", explanation: "Menghargai perbedaan pendapat adalah sikap yang baik." },
@@ -334,6 +550,78 @@ document.addEventListener('DOMContentLoaded', () => {
     answer: "Menghentikan laju mobil",
     explanation: "Gaya gesek pada sistem pengereman mobil berfungsi untuk memperlambat atau menghentikan laju kendaraan."
 },
+{
+    question: "Ikut serta dalam kegiatan kerja bakti di lingkungan masyarakat adalah contoh...",
+    options: ["Hak", "Kewajiban", "Keinginan"],
+    answer: "Kewajiban",
+    explanation: "Sebagai warga masyarakat, kita memiliki kewajiban untuk ikut serta menjaga kebersihan lingkungan."
+},
+{
+    question: "My sister has long black hair. She is...",
+    options: ["Beautiful", "Ugly", "Old"],
+    answer: "Beautiful",
+    explanation: "Kalimat tersebut mendeskripsikan penampilan yang positif, sehingga 'beautiful' (cantik) adalah kata yang paling sesuai."
+},
+{
+    question: "Tulisan Jawa iki diwaca... (ꦥꦱꦂ)",
+    options: ["Sapar", "Pasar", "Sapa"],
+    answer: "Pasar",
+    explanation: "Rangkaian aksara pa, sa, dan layar menghasilkan bunyi 'Pasar'."
+},
+{
+    question: "Musyawarah untuk mufakat adalah pengamalan sila ke-... Pancasila.",
+    options: ["Dua", "Tiga", "Empat"],
+    answer: "Empat",
+    explanation: "Musyawarah adalah inti dari sila keempat, 'Kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam Permusyawaratan/Perwakilan'."
+},
+{
+    question: "Arrange these words: school - go - I - to - every day",
+    options: ["I to school go every day", "I go to school every day", "School I go to every day"],
+    answer: "I go to school every day",
+    explanation: "Susunan kalimat yang benar dalam bahasa Inggris adalah 'I go to school every day'."
+},
+{
+    question: "Paraga sing duwe watak ala ing crita wayang diarani...",
+    options: ["Protagonis", "Antagonis", "Tritagonis"],
+    answer: "Antagonis",
+    explanation: "Tokoh yang memiliki watak buruk (ala) dan menjadi lawan dari tokoh utama disebut antagonis."
+},
+{
+    question: "Pita yang dicengkeram oleh cakar Garuda Pancasila bertuliskan...",
+    options: ["Indonesia Raya", "Pancasila", "Bhinneka Tunggal Ika"],
+    answer: "Bhinneka Tunggal Ika",
+    explanation: "Pita pada lambang negara Garuda Pancasila bertuliskan semboyan negara, 'Bhinneka Tunggal Ika'."
+},
+{
+    question: "My mother ... (memasak) in the kitchen every morning.",
+    options: ["Cook", "Cooks", "Is cooking"],
+    answer: "Cooks",
+    explanation: "Untuk subjek tunggal (My mother/She) dalam simple present tense, kata kerjanya ditambah akhiran -s."
+},
+{
+    question: "Gamelan Jawa sing digawe saka wesi lan cara nabuhe dithuthuk arane...",
+    options: ["Suling", "Rebab", "Saron/Gong"],
+    answer: "Saron/Gong",
+    explanation: "Saron atau gong adalah contoh gamelan yang terbuat dari logam/besi dan dimainkan dengan cara dipukul (dithuthuk)."
+},
+{
+    question: "Lambang negara kita, Garuda Pancasila, menghadap ke arah...",
+    options: ["Kiri", "Depan", "Kanan"],
+    answer: "Kanan",
+    explanation: "Kepala Garuda Pancasila selalu digambarkan menoleh ke sebelah kanan."
+},
+{
+    question: "Where is the hospital? It is ... the bank. (di seberang)",
+    options: ["Beside", "Behind", "Across from"],
+    answer: "Across from",
+    explanation: "Kata 'across from' digunakan untuk menyatakan posisi yang berseberangan."
+},
+{
+    question: "Aku diwenehi dhuwit dening Eyang. Basa kramane 'diwenehi' yaiku...",
+    options: ["Diparingi", "Dijaluk", "Ditumbasake"],
+    answer: "Diparingi",
+    explanation: "Bahasa krama (halus) dari 'diwenehi' (diberi) adalah 'diparingi'."
+},
             { question: "Menyelesaikan masalah dengan cara berdiskusi untuk mencapai kesepakatan bersama disebut...", options: ["Musyawarah", "Debat", "Pemaksaan"], answer: "Musyawarah", explanation: "Musyawarah adalah ciri khas demokrasi Pancasila, sesuai sila keempat." },
             { question: "Indonesia memiliki banyak suku, agama, dan budaya. Sikap yang harus kita kembangkan adalah...", options: ["Egois", "Toleransi", "Acuh tak acuh"], answer: "Toleransi", explanation: "Toleransi adalah sikap saling menghargai di tengah perbedaan." },
             { question: "Jumlah bulu pada masing-masing sayap Garuda Pancasila melambangkan...", options: ["Tanggal kemerdekaan", "Bulan kemerdekaan", "Tahun kemerdekaan"], answer: "Tanggal kemerdekaan", explanation: "Jumlah bulu pada sayap (17 helai) melambangkan tanggal 17, hari kemerdekaan Indonesia." },
@@ -420,6 +708,78 @@ document.addEventListener('DOMContentLoaded', () => {
     answer: "Ajakan",
     explanation: "Penggunaan kata 'Ayo' menunjukkan bahwa kalimat tersebut adalah kalimat ajakan."
 },
+{
+    question: "Norma yang sanksinya berupa penyesalan atau rasa malu adalah norma...",
+    options: ["Hukum", "Agama", "Kesusilaan"],
+    answer: "Kesusilaan",
+    explanation: "Norma kesusilaan bersumber dari hati nurani manusia, sehingga sanksinya bersifat batiniah seperti penyesalan."
+},
+{
+    question: "My favorite drink is orange juice. I ... like coffee.",
+    options: ["do", "not", "don't"],
+    answer: "don't",
+    explanation: "Untuk menyatakan 'tidak suka' dalam kalimat negatif, kita menggunakan 'do not' atau 'don't'."
+},
+{
+    question: "Tulisan Jawa iki diwaca... (ꦲꦤꦧꦸꦏꦸ)",
+    options: ["Ana buku", "Ana paku", "Ana yuyu"],
+    answer: "Ana buku",
+    explanation: "Rangkaian aksara Ha, Na, Ba + suku, dan Ka + suku dibaca 'Ana buku'."
+},
+{
+    question: "Kepala negara dan kepala pemerintahan Republik Indonesia adalah seorang...",
+    options: ["Ketua DPR", "Presiden", "Ketua MPR"],
+    answer: "Presiden",
+    explanation: "Di Indonesia, Presiden memegang dua peran sekaligus, yaitu sebagai kepala negara dan kepala pemerintahan."
+},
+{
+    question: "Where will the class meeting be held? (Berdasarkan teks pengumuman)",
+    options: ["In the classroom", "In the school hall", "In the teacher's office"],
+    answer: "In the school hall",
+    explanation: "Teks pengumuman menyatakan 'Please join our class meeting ... in the school hall'."
+},
+{
+    question: "Simbah gerah padharanipun. Basa ngokone 'padharan' yaiku...",
+    options: ["Sirah", "Tangan", "Weteng"],
+    answer: "Weteng",
+    explanation: "'Padharan' adalah bahasa krama (halus) dari 'weteng' (perut)."
+},
+{
+    question: "Aturan tidak tertulis yang berlaku di masyarakat disebut...",
+    options: ["Undang-undang", "Norma/adat", "Peraturan pemerintah"],
+    answer: "Norma/adat",
+    explanation: "Norma atau adat istiadat adalah aturan tidak tertulis yang tumbuh dan dijaga oleh masyarakat."
+},
+{
+    question: "A motorcycle has two ..., but a car has four.",
+    options: ["doors", "wheels", "seats"],
+    answer: "wheels",
+    explanation: "Sepeda motor memiliki dua roda (wheels), sedangkan mobil memiliki empat."
+},
+{
+    question: "Sandhangan sing gunane kanggo menehi swara 'i' ing aksara Jawa yaiku...",
+    options: ["Suku", "Wulu", "Pepet"],
+    answer: "Wulu",
+    explanation: "Sandhangan wulu (bentuk seperti koma di atas aksara) berfungsi untuk memberikan bunyi vokal 'i'."
+},
+{
+    question: "Rela berkorban untuk kepentingan bangsa dan negara adalah wujud sikap...",
+    options: ["Individualisme", "Patriotisme/nasionalisme", "Liberalisme"],
+    answer: "Patriotisme/nasionalisme",
+    explanation: "Sikap patriotisme dan nasionalisme adalah rasa cinta tanah air yang diwujudkan dengan rela berkorban."
+},
+{
+    question: "Look at the sky! It is cloudy. I think it will...",
+    options: ["be sunny", "rain", "be hot"],
+    answer: "rain",
+    explanation: "Langit yang mendung (cloudy) adalah pertanda akan turun hujan (rain)."
+},
+{
+    question: "Satriya Pandhawa sing pambarep (paling tuwa) yaiku...",
+    options: ["Bima", "Arjuna", "Puntadewa/Yudhistira"],
+    answer: "Puntadewa/Yudhistira",
+    explanation: "Anak pertama atau sulung dari Pandawa Lima adalah Puntadewa atau Yudhistira."
+},
             { question: "Kegiatan membersihkan selokan bersama-sama di lingkungan masyarakat merupakan wujud nyata dari semangat...", options: ["Individualisme", "Gotong royong", "Persaingan"], answer: "Gotong royong", explanation: "Gotong royong adalah nilai luhur bangsa Indonesia yang berarti bekerja bersama-sama." },
             { question: "Lembaga negara yang bertugas membuat undang-undang bersama Presiden adalah...", options: ["Mahkamah Agung (MA)", "Dewan Perwakilan Rakyat (DPR)", "Komisi Yudisial (KY)"], answer: "Dewan Perwakilan Rakyat (DPR)", explanation: "Fungsi legislasi (membuat UU) dipegang oleh DPR bersama dengan Presiden." },
             { question: "Menghormati teman yang sedang menjalankan ibadah puasa adalah contoh perilaku...", options: ["Toleransi beragama", "Kebebasan berpendapat", "Kewajiban belajar"], answer: "Toleransi beragama", explanation: "Sikap tersebut menunjukkan rasa hormat dan toleransi terhadap keyakinan orang lain." },
@@ -499,6 +859,78 @@ document.addEventListener('DOMContentLoaded', () => {
     options: ["Anak laki-laki", "Anak perempuan", "Semua anak"],
     answer: "Anak perempuan",
     explanation: "Menstruasi adalah tanda bahwa sistem reproduksi pada anak perempuan sudah mulai aktif."
+},
+{
+    question: "Sikap yang harus kita miliki dalam menghadapi kemajuan teknologi dan budaya asing adalah...",
+    options: ["Menutup diri sepenuhnya", "Menerima semua budaya tanpa terkecuali", "Menyaring budaya asing sesuai dengan nilai-nilai Pancasila"],
+    answer: "Menyaring budaya asing sesuai dengan nilai-nilai Pancasila",
+    explanation: "Sikap yang bijaksana adalah bersikap terbuka namun tetap menyaring budaya asing agar sesuai dengan kepribadian bangsa."
+},
+{
+    question: "Why did Malin Kundang go sailing?",
+    options: ["To have a vacation", "To get a better life", "To meet his friends"],
+    answer: "To get a better life",
+    explanation: "Teks tersebut menyatakan bahwa Malin Kundang pergi berlayar untuk mendapatkan kehidupan yang lebih baik."
+},
+{
+    question: "Ukara 'Simbah lagi lara untu' yen dikramakake sing bener dadi...",
+    options: ["Simbah nembe sakit untu", "Eyang nembe gerah waja", "Eyang lagi lara waja"],
+    answer: "Eyang nembe gerah waja",
+    explanation: "Bentuk krama alus yang paling tepat adalah 'Eyang nembe gerah waja'."
+},
+{
+    question: "Landasan idiil negara Indonesia adalah...",
+    options: ["UUD 1945", "Pancasila", "Bhinneka Tunggal Ika"],
+    answer: "Pancasila",
+    explanation: "Pancasila merupakan landasan idiil (dasar ideologi) bangsa Indonesia."
+},
+{
+    question: "First, boil the water. Then, put the instant noodles. The text is a part of a...",
+    options: ["Narrative text", "Descriptive text", "Procedure text"],
+    answer: "Procedure text",
+    explanation: "Teks tersebut memberikan langkah-langkah atau instruksi, yang merupakan ciri dari teks prosedur."
+},
+{
+    question: "Watake Raden Arjuna yaiku...",
+    options: ["Seneng tetulung, anteng, lan sabar", "Jujur, prasaja, lan kendel", "Adigang, adigung, adiguna"],
+    answer: "Seneng tetulung, anteng, lan sabar",
+    explanation: "Arjuna dikenal memiliki watak yang suka menolong, tenang, dan sabar."
+},
+{
+    question: "Makna yang terkandung dalam alinea keempat Pembukaan UUD 1945 adalah tentang...",
+    options: ["Hak segala bangsa", "Perjuangan kemerdekaan", "Tujuan negara"],
+    answer: "Tujuan negara",
+    explanation: "Alinea keempat Pembukaan UUD 1945 memuat tujuan negara, bentuk negara, dan dasar negara Pancasila."
+},
+{
+    question: "The moral value of the Malin Kundang story is we must ... our parents.",
+    options: ["forget", "respect/love", "leave"],
+    answer: "respect/love",
+    explanation: "Pesan moral dari cerita Malin Kundang adalah kita harus selalu menghormati dan menyayangi orang tua."
+},
+{
+    question: "Aksara Jawa sing gunane kanggo mateni aksara ing pungkasan ukara yaiku...",
+    options: ["Wulu", "Suku", "Pangkon"],
+    answer: "Pangkon",
+    explanation: "Pangkon ( ꧀ ) berfungsi untuk mematikan vokal pada aksara terakhir dalam sebuah kata atau kalimat."
+},
+{
+    question: "Contoh ancaman di era globalisasi yang dapat merusak moral bangsa adalah...",
+    options: ["Kemajuan teknologi", "Pertukaran pelajar", "Narkoba/pergaulan bebas"],
+    answer: "Narkoba/pergaulan bebas",
+    explanation: "Narkoba dan pergaulan bebas adalah contoh dampak negatif globalisasi yang dapat merusak moral."
+},
+{
+    question: "He studied hard for the test, ... he got a good score.",
+    options: ["but", "so", "and"],
+    answer: "so",
+    explanation: "'So' (jadi/sehingga) adalah kata hubung yang tepat untuk menunjukkan sebab-akibat."
+},
+{
+    question: "Pidhato sing ditindakake kanthi maca teks diarani metode...",
+    options: ["Hapalan", "Impromptu", "Naskah"],
+    answer: "Naskah",
+    explanation: "Metode pidato dengan cara membaca teks secara langsung disebut metode naskah."
 },
 {
     question: "Mengapa data dalam sebuah laporan harus akurat?",
@@ -678,6 +1110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     answer: "{(1,a),(2,a),(3,a)}",
     explanation: "Syarat fungsi adalah setiap anggota domain (daerah asal) harus memiliki tepat satu pasangan di kodomain. Pilihan A tidak memenuhi karena 1 memiliki dua pasangan (a dan c)."
 },
+
             { question: "Kedudukan Pancasila sebagai sumber dari segala sumber hukum berarti...", options: ["Pancasila adalah satu-satunya hukum", "Semua peraturan tidak boleh bertentangan dengan Pancasila", "Pancasila dapat diubah oleh hukum"], answer: "Semua peraturan tidak boleh bertentangan dengan Pancasila", explanation: "Artinya, semua hukum dan peraturan yang dibuat di Indonesia harus bersumber dan tidak boleh menyimpang dari nilai-nilai Pancasila." },
             { question: "Peraturan yang kedudukannya paling tinggi di Indonesia adalah...", options: ["Undang-Undang (UU)", "TAP MPR", "UUD NRI Tahun 1945", "Perda"], answer: "UUD NRI Tahun 1945", explanation: "Berdasarkan tata urutan perundang-undangan, UUD NRI Tahun 1945 menempati posisi tertinggi." },
             { question: "Proses mengubah atau melakukan penyesuaian terhadap UUD NRI Tahun 1945 disebut...", options: ["Amandemen", "Yudikatif", "Legislatif", "Konstitusi"], answer: "Amandemen", explanation: "Amandemen adalah proses perubahan resmi terhadap dokumen, khususnya konstitusi atau UUD." },
